@@ -154,20 +154,6 @@ class UserProfile(models.Model):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # NEIGHNOURHOOD_CHOICES=(
     # 'Ashfield',
     # 'Auburn',
