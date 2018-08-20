@@ -36,10 +36,10 @@ name
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('mainpage/',include('acommodation.urls')),
-    # url(r'^admin/',admin.site.urls),
-    #     # url(r'^index/',views.index),
+    # path('admin/', admin.site.urls),
+    # path('mainpage/',include('acommodation.urls')),
+    url(r'^admin/',admin.site.urls),
+    url(r'^$',include("acommodation.urls")),
 
 ]
 

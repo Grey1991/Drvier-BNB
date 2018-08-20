@@ -1,8 +1,9 @@
+from django.conf.urls import url
 from django.urls import path
 
 
 from . import views
 
 urlpatterns = [
-    path('', views.mainPage,name = 'main Page'),
+    url(r'^$', views.mainPage,name = 'main Page'),
 ]
