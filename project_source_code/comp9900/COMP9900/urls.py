@@ -18,7 +18,6 @@ Including another URLconf
 from django.urls import include, path
 from django.conf.urls import url
 from django.contrib import admin
-from acommodation import views
 
 '''
 include() 允许引用其他的 URLconfs 
@@ -37,9 +36,9 @@ name
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    # path('mainpage/',include('acommodation.urls')),
+    # path('mainpage/',include('accommodations.urls')),
     url(r'^admin/',admin.site.urls),
-    url(r'^$',include("acommodation.urls")),
+    url(r'^$', include("accommodations.urls")),
 
 ]
 

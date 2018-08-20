@@ -8,7 +8,7 @@ from django.contrib import admin
 
 
 
-from acommodation import models
+from accommodations import models
 
 admin.site.register(models.User)
-admin.site.register(models.Lodging)
+admin.site.register(models.UserProfile)

@@ -6,8 +6,9 @@
 '''
 from django.shortcuts import render
 from django.http import HttpResponse
-from acommodation.models import *
+from accommodations.models import *
 from datetime import datetime
+
 
 def mainPage(request):
 
