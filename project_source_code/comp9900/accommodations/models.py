@@ -4,11 +4,9 @@ from django.contrib.auth.base_user import AbstractBaseUser,BaseUserManager
 from django.contrib.auth.models import PermissionsMixin
 
 
-
-
 class UserManager(BaseUserManager):
 
-    def create_user(self,email,first_name = None,last_name =None,password = None,date_of_birth = None,is_staff = False,is_admin = False, is_active = True):
+    def create_user(self,email,first_name = None,last_name =None,password = None,date_of_birth = None, is_active = True):
         if not email:
             raise ValueError("empty email! ")
 
@@ -23,10 +21,7 @@ class UserManager(BaseUserManager):
         user_obj.set_date_of_birth(date_of_birth)
         user_obj.first_name = first_name
         user_obj.last_name = last_name
-        user_obj.staff = is_staff
-        user_obj.admin = is_admin
         user_obj.active = is_active
-
         user_obj.save(using=self._db)
         return user_obj
 
@@ -36,9 +31,11 @@ class UserManager(BaseUserManager):
             email,
             password = password,
             first_name= first_name,
-            last_name = last_name,
-            is_staff=True
+            last_name = last_name
+
         )
+        staff.staff = True
+        staff.save(using=self._db)
         return staff
 
     def create_superuser(self,email,first_name = None,last_name =None,password =None):
@@ -46,10 +43,12 @@ class UserManager(BaseUserManager):
             email,
             password=password,
             first_name=first_name,
-            last_name=last_name,
-            is_staff=True,
-            is_admin=True
+            last_name=last_name
+
         )
+        admin.staff = True
+        admin.admin = True
+        admin.save(using=self._db)
         return admin
 
 
@@ -61,7 +60,6 @@ class User(AbstractBaseUser,PermissionsMixin):
         verbose_name="email address",
         max_length=255,
         unique=True)
-    email_confirm = models.BooleanField(default=False)
     USERNAME_FIELD = "email"
 
     '''
@@ -84,10 +82,8 @@ class User(AbstractBaseUser,PermissionsMixin):
 
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
-    date_of_birth  = models.DateField(auto_created=True)
+    date_of_birth  = models.DateField()
     REQUIRED_FIELDS = ['first_name','last_name']
-
-
 
     object = UserManager()
 
@@ -105,10 +101,10 @@ class User(AbstractBaseUser,PermissionsMixin):
         return self.email
     def get_short_name(self):
         return self.email
+
     @property
     def is_staff(self):
         return self.staff
-
     @property
     def is_admin(self):
         return self.admin
@@ -147,8 +143,6 @@ class UserProfile(models.Model):
     image = models.ImageField(null=True)
     user_description = models.TextField(max_length=100, blank=True, null=True)
     user_phone = models.CharField(max_length=15, blank=True, null=True)
-
-
 
 
 

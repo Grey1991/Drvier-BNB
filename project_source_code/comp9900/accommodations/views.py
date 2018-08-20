@@ -6,13 +6,32 @@
 '''
 from django.shortcuts import render
 from django.http import HttpResponse
-from accommodations.models import *
-from datetime import datetime
+from django.contrib.auth import authenticate, login
+
 
 
 def mainPage(request):
+    return render(request,"mainpage.html")
 
-    return render(request,"register.html")
 
 
+
+def user_login(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        user = authenticate(email=email, password=password)
+        print(user)
+        if user:
+            if user.is_active:
+                login(request, user)
+                return render(request, 'mainpage.html', {})
+            else:
+                return HttpResponse("please confirm your email account!")
+
+        else:
+            print ("Invalid login details: {0}, {1}".format(email, password))
+            return HttpResponse("Invalid login details supplied.")
+    else:
+        return render(request, 'register.html', {})
 

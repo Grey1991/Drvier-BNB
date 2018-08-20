@@ -5,5 +5,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.mainPage,name = 'main Page'),
+    url(r'^$', views.user_login, name = 'login'),
+
 ]
