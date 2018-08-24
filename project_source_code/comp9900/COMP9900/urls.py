@@ -34,7 +34,6 @@ kwargs : dict() -> view function
 name 
 '''
 
-
 urlpatterns = [
     # path('admin/', admin.site.urls),
     # path('mainpage/',include('accommodations.urls')),

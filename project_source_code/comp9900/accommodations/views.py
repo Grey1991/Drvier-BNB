@@ -33,5 +33,5 @@ def user_login(request):
             print ("Invalid login details: {0}, {1}".format(email, password))
             return HttpResponse("Invalid login details supplied.")
     else:
-        return render(request, 'register.html', {})
+        return render(request, 'login.html', {})
 

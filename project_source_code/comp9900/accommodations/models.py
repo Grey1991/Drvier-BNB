@@ -3,7 +3,6 @@ from datetime import datetime
 from django.contrib.auth.base_user import AbstractBaseUser,BaseUserManager
 from django.contrib.auth.models import PermissionsMixin
 
-
 class UserManager(BaseUserManager):
 
     def create_user(self,email,first_name = None,last_name =None,password = None,date_of_birth = None, is_active = True):
@@ -16,7 +15,6 @@ class UserManager(BaseUserManager):
         user_obj = self.model(
             email = self.normalize_email(email)
         )
-
         user_obj.set_password(password)
         user_obj.set_date_of_birth(date_of_birth)
         user_obj.first_name = first_name
@@ -143,6 +141,8 @@ class UserProfile(models.Model):
     image = models.ImageField(null=True)
     user_description = models.TextField(max_length=100, blank=True, null=True)
     user_phone = models.CharField(max_length=15, blank=True, null=True)
+
+
 
 
 
