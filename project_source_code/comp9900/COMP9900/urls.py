@@ -39,7 +39,8 @@ urlpatterns = [
     # path('mainpage/',include('accommodations.urls')),
     url(r'^admin/',admin.site.urls),
     url(r'^$', include("accommodations.urls")),
-    url(r'^register', views.user_login),
+    url(r'^login/', views.user_login),
+    url(r'^index/', views.mainPage),
 
 ]
 
