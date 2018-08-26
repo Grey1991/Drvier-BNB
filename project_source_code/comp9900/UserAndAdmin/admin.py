@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.models import Group
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from .forms import UserAdminCreationForm, UserAdminChangeForm
-from .models import User, UserProfile
+from .models import User, UserProfile,Property
 # 将 model 产生的表 注册到 后台
 # 实现 数据库后台的数据操作
 
@@ -20,8 +20,8 @@ class UserAdmin(BaseUserAdmin):
     list_filter = ('admin',)
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
-        ('Personal info', {'fields': ()}),
-        ('Permissions', {'fields': ('admin',)}),
+        ('Personal info', {'fields': ('first_name','last_name','date_of_birth')}),
+        ('Permissions', {'fields': ('admin','staff','active')}),
     )
     # add_fieldsets is not a standard ModelAdmin attribute. UserAdmin
     # overrides get_fieldsets to use this attribute when creating a user.
@@ -36,8 +36,7 @@ class UserAdmin(BaseUserAdmin):
     filter_horizontal = ()
 
 
-
-
 admin.site.register(User, UserAdmin)
+admin.site.register(Property)
 admin.site.register(UserProfile)
 admin.site.unregister(Group)
