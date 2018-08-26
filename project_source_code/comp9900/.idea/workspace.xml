@@ -1,33 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2525402b-e4c3-4903-9065-02ec57dfece4" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/UserAndAdmin/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserAndAdmin/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserAndAdmin/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserAndAdmin/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/acomodation/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/acomodation/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0057de4b-aaa1-41b4-bbe8-f1de55e6a1c7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0057de4b-aaa1-41b4-bbe8-f1de55e6a1c7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/COMP9900/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/COMP9900/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/COMP9900/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/COMP9900/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAndAdmin/migrations/0002_auto_20180820_0955.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAndAdmin/migrations/0003_auto_20180820_1009.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAndAdmin/migrations/0004_auto_20180820_1142.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/accommodations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserAndAdmin/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accommodations/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserAndAdmin/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accommodations/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserAndAdmin/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accommodations/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserAndAdmin/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accommodations/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserAndAdmin/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accommodations/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/accommodations/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserAndAdmin/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accommodations/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/accommodations/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/acomodation/login2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/acomodation/mainpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/acomodation/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/acomodation/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/acomodation/register.html" afterDir="false" />
-    </list>
+    <list default="true" id="2525402b-e4c3-4903-9065-02ec57dfece4" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,8 +86,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/UserAndAdmin/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="33" column="12" lean-forward="true" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+            <state relative-caret-position="358">
+              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
               <folding>
                 <element signature="e#16#61#0" expanded="true" />
               </folding>
@@ -126,15 +100,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
               <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="deprecation.py" pinned="false" current-in-tab="false">
-        <entry file="file:///anaconda3/lib/python3.6/site-packages/django/utils/deprecation.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1290">
-              <caret line="96" selection-start-line="96" selection-end-line="96" />
             </state>
           </provider>
         </entry>
@@ -378,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1535117742073</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="user register and log update">
+      <created>1535254642420</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1535254642420</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -397,13 +369,13 @@
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32969698" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32969698" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.23636363" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.4278788" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32969698" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.33454546" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.084848486" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4987013" visible="true" weight="0.1502146" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.15878788" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4987013" visible="true" weight="0.13161659" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.032904148" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.14520743" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32848486" />
       <window_info anchor="right" id="SciView" order="3" weight="0.3297568" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -416,7 +388,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Database Console" order="14" weight="0.21090908" />
+      <window_info anchor="bottom" id="Database Console" order="14" weight="0.22424242" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -452,7 +424,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="user register pages upload" />
-    <option name="LAST_COMMIT_MESSAGE" value="user register pages upload" />
+    <MESSAGE value="user register and log update" />
+    <option name="LAST_COMMIT_MESSAGE" value="user register and log update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -675,13 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://0057de4b-aaa1-41b4-bbe8-f1de55e6a1c7/schema/comp9900db/table/UserAndAdmin_user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///anaconda3/lib/python3.6/site-packages/django/forms/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1002">
@@ -779,10 +745,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://0057de4b-aaa1-41b4-bbe8-f1de55e6a1c7/schema/comp9900db/table/UserAndAdmin_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/UserAndAdmin/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="33" column="12" lean-forward="true" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+        <state relative-caret-position="358">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
           <folding>
             <element signature="e#16#61#0" expanded="true" />
           </folding>
