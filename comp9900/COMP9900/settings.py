@@ -98,6 +98,10 @@ DATABASES = {
         'PASSWORD': '11111111',
         'HOST': 'kevifunaurdb.cbod751s2re1.ap-southeast-2.rds.amazonaws.com',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
+        'OPTIONS': {
+                      "init_command": "SET sql_mode='STRICT_TRANS_TABLES'",
+        }
+
     }
 }
 
