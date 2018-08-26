@@ -11,6 +11,7 @@
        <form action="{%  url 'userandadmin:login' %}" method="post">
            {% csrf_token %}
             <p>
+           <p> {{ message }}</p>
                 <label for="id_username">Email address：</label>
                 <input type="text" id="id_username" name="email" placeholder="Email address" autofocus required />
             </p>
@@ -22,7 +23,6 @@
             <input type="submit" value="Sign up">
         </form>
     </div>
-
 
 {% endblock content %}
 

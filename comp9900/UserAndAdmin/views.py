@@ -51,23 +51,32 @@ def register(request):
 
 def login(request):
     if request.method == 'POST':
+        #  前端 保证 email  password 有值
         email = request.POST.get('email',None)
         password = request.POST.get('password',None)
+        # 检查该用户 邮箱是否存在 并 确认
+        _email = models.User.object.filter(email=email)
+        if not _email.exists():
+            message = "email account doesn't exist!"
+            return render(request, 'login.html', locals())
 
-        _is_active = models.User.object.filter(email=email).values()
+        _is_active =_email[0].active
+        if not _is_active:
+            message = "please confirm your email account!"
+            return render(request, 'login.html',locals())
 
         user = auth.authenticate(email=email, password=password)
-        if user is not None:
-            # 是否验证邮箱
-            if user.is_active:
-                auth.login(request,user)
-                return redirect("userandadmin:index")
-            else:
-                return HttpResponse("please confirm your email account!")
+        if user:
+            auth.logout(request,user)
+            return redirect("userandadmin:index")
         else:
-            return HttpResponse("Invalid login details supplied.")
-    else:
-        return render(request, 'login.html')
+            message = "Your email or password is incorrect. "
+            return render(request, 'login.html',locals())
+    return render(request,'login.html')
+
+
+
+
 
 def logout(request):
     auth.logout(request)
