@@ -29,7 +29,7 @@ def register(request):
             password2 = register_form.cleaned_data["password2"]
 
             if password1 != password2:
-                message :"passwords do not match!"
+                message ="passwords do not match!"
                 return render(request,'register.html',locals())
 
             same_email_user = models.User.object.filter(email=email)
