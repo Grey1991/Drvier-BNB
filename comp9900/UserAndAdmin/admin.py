@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.models import Group
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from .forms import UserAdminCreationForm, UserAdminChangeForm
-from .models import User, UserProfile,Property
+from .models import User, UserProfile
 # 将 model 产生的表 注册到 后台
 # 实现 数据库后台的数据操作
 
@@ -37,6 +37,5 @@ class UserAdmin(BaseUserAdmin):
 
 
 admin.site.register(User, UserAdmin)
-admin.site.register(Property)
 admin.site.register(UserProfile)
 admin.site.unregister(Group)

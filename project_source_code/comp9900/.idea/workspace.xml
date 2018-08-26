@@ -1,9 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="2525402b-e4c3-4903-9065-02ec57dfece4" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/property/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/property/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/project_source_code.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/project_source_code.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/COMP9900.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/COMP9900.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0057de4b-aaa1-41b4-bbe8-f1de55e6a1c7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0057de4b-aaa1-41b4-bbe8-f1de55e6a1c7.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/COMP9900/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/COMP9900/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/COMP9900/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/COMP9900/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accommodations/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/accommodations/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accommodations/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accommodations/migrations/0002_auto_20180820_0955.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accommodations/migrations/0003_auto_20180820_1009.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accommodations/migrations/0004_auto_20180820_1142.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accommodations/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/accommodations/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accommodations/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/accommodations/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accommodations/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accommodations/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/acomodation/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/acomodation/login.html" afterDir="false" />
+    </list>
+=======
     <list default="true" id="2525402b-e4c3-4903-9065-02ec57dfece4" name="Default" comment="" />
+>>>>>>> refs/remotes/origin/master
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,15 +68,63 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FUSProjectUsageTrigger">
+<<<<<<< HEAD
+    <session id="-1187352909">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="19" />
+          <entry key="py" value="1285" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="19" />
+          <entry key="Python" value="1285" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="accommodations_user" value="1" />
+          <entry key="accommodations_user_groups" value="1" />
+          <entry key="django_migrations" value="1" />
+          <entry key="html" value="3" />
+          <entry key="py" value="68" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Database Element" value="3" />
+          <entry key="HTML" value="3" />
+          <entry key="Python" value="68" />
+=======
     <session id="-1953161724">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.open.time.9" value="1" />
           <entry key="project.opened" value="1" />
+>>>>>>> refs/remotes/origin/master
         </counts>
       </usages-collector>
     </session>
   </component>
+<<<<<<< HEAD
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/accommodations/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3971">
+              <caret line="209" selection-start-line="209" selection-end-line="209" />
+=======
   <component name="FavoritesManager">
     <favorites_list name="comp9900" />
   </component>
@@ -62,6 +135,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1260">
               <caret line="84" column="25" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="25" />
+>>>>>>> refs/remotes/origin/master
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -69,11 +143,19 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/accommodations/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="26" selection-start-line="10" selection-start-column="30" selection-end-line="11" selection-end-column="26" />
+=======
       <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UserAndAdmin/forms.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="461">
               <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+>>>>>>> refs/remotes/origin/master
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
                 <element signature="e#2513#3473#0" />
@@ -83,6 +165,24 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/property/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="10" column="96" lean-forward="true" selection-start-line="10" selection-start-column="96" selection-end-line="10" selection-end-column="96" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/property/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="5" column="28" lean-forward="true" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+=======
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UserAndAdmin/views.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -90,11 +190,24 @@
               <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
               <folding>
                 <element signature="e#16#61#0" expanded="true" />
+>>>>>>> refs/remotes/origin/master
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/property/tests.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/accommodations/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+=======
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/acomodation/login.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -112,10 +225,18 @@
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
+>>>>>>> refs/remotes/origin/master
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/COMP9900/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="8" selection-start-column="8" selection-end-column="8" />
+=======
       <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UserAndAdmin/admin.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -125,10 +246,29 @@
                 <element signature="e#0#32#0" expanded="true" />
                 <element signature="e#320#1268#0" />
               </folding>
+>>>>>>> refs/remotes/origin/master
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file pinned="false" current-in-tab="true">
+        <entry file="das://0057de4b-aaa1-41b4-bbe8-f1de55e6a1c7/schema/comp9900db/table/django_migrations">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/accommodations/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+=======
       <file leaf-file-name="apps.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UserAndAdmin/apps.py">
           <provider selected="true" editor-type-id="text-editor" />
@@ -141,16 +281,20 @@
               <caret line="67" column="92" selection-start-line="67" selection-start-column="92" selection-end-line="67" selection-end-column="92" />
               <folding>
                 <element signature="n#style#0;n#!!top" />
+>>>>>>> refs/remotes/origin/master
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+=======
       <file leaf-file-name="tests.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UserAndAdmin/tests.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
+>>>>>>> refs/remotes/origin/master
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -158,8 +302,8 @@
       <list>
         <option value="CSS File" />
         <option value="JavaScript File" />
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -178,6 +322,31 @@
         <option value="$PROJECT_DIR$/acommodation/views.py" />
         <option value="$PROJECT_DIR$/acommodation/models.py" />
         <option value="/anaconda3/lib/python3.6/site-packages/django/contrib/auth/base_user.py" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/accommodations/forms.py" />
+        <option value="$PROJECT_DIR$/template/acomodation/CSS/register.css" />
+        <option value="$PROJECT_DIR$/template/acomodation/mainpage.html" />
+        <option value="$PROJECT_DIR$/template/acomodation/register.html" />
+        <option value="$PROJECT_DIR$/template/acomodation/login.html" />
+        <option value="$PROJECT_DIR$/house/migrations/urls.py" />
+        <option value="$PROJECT_DIR$/accommodations/views.py" />
+        <option value="$PROJECT_DIR$/COMP9900/urls.py" />
+        <option value="$PROJECT_DIR$/COMP9900/settings.py" />
+        <option value="$PROJECT_DIR$/house/urls.py" />
+        <option value="$PROJECT_DIR$/house/views.py" />
+        <option value="$PROJECT_DIR$/house/models.py" />
+        <option value="$PROJECT_DIR$/accommodations/urls.py" />
+        <option value="$PROJECT_DIR$/property/urls.py" />
+        <option value="$PROJECT_DIR$/accommodations/migrations/__init__.py" />
+        <option value="$PROJECT_DIR$/property/migrations/__init__.py" />
+        <option value="$PROJECT_DIR$/property/apps.py" />
+        <option value="$PROJECT_DIR$/property/migrations/0001_initial.py" />
+        <option value="$PROJECT_DIR$/accommodations/models.py" />
+        <option value="$PROJECT_DIR$/accommodations/admin.py" />
+        <option value="$PROJECT_DIR$/accommodations/migrations/0001_initial.py" />
+        <option value="$PROJECT_DIR$/property/admin.py" />
+        <option value="$PROJECT_DIR$/property/models.py" />
+=======
         <option value="$PROJECT_DIR$/accommodations/migrations/__init__.py" />
         <option value="$PROJECT_DIR$/template/acomodation/CSS/register.css" />
         <option value="$PROJECT_DIR$/template/acomodation/mainpage.html" />
@@ -198,6 +367,7 @@
         <option value="$PROJECT_DIR$/template/acomodation/register.html" />
         <option value="$PROJECT_DIR$/UserAndAdmin/forms.py" />
         <option value="$PROJECT_DIR$/UserAndAdmin/views.py" />
+>>>>>>> refs/remotes/origin/master
       </list>
     </option>
   </component>
@@ -208,9 +378,14 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
+<<<<<<< HEAD
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
+=======
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
+>>>>>>> refs/remotes/origin/master
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -220,6 +395,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -230,6 +406,9 @@
             <path>
               <item name="comp9900" type="b2602c69:ProjectViewProjectNode" />
               <item name="comp9900" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="property" type="462c0819:PsiDirectoryNode" />
+=======
               <item name="COMP9900" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -242,10 +421,15 @@
               <item name="comp9900" type="462c0819:PsiDirectoryNode" />
               <item name="template" type="462c0819:PsiDirectoryNode" />
               <item name="acomodation" type="462c0819:PsiDirectoryNode" />
+>>>>>>> refs/remotes/origin/master
             </path>
             <path>
               <item name="comp9900" type="b2602c69:ProjectViewProjectNode" />
               <item name="comp9900" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="property" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+=======
               <item name="UserAndAdmin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -255,18 +439,19 @@
             <path>
               <item name="comp9900" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+>>>>>>> refs/remotes/origin/master
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL&#10;PostgreSQL" />
+    <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -275,8 +460,12 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+<<<<<<< HEAD
+      <recent name="$PROJECT_DIR$/house" />
+=======
       <recent name="$PROJECT_DIR$/template/acomodation" />
       <recent name="$PROJECT_DIR$/template" />
+>>>>>>> refs/remotes/origin/master
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/acommodation" />
     </key>
@@ -316,6 +505,7 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
+      <method v="2" />
     </configuration>
   </component>
   <component name="SvnConfiguration">
@@ -365,6 +555,30 @@
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
+<<<<<<< HEAD
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20100144" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.38072288" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32969698" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32891566" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.24096386" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.33373493" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32891566" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.3297568" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.21888413" />
+=======
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32969698" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32969698" />
@@ -388,6 +602,7 @@
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.22424242" />
+>>>>>>> refs/remotes/origin/master
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -439,13 +654,135 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
     <entry file="das://c9f08793-99e1-405b-b0ce-77e658900aed/schema/comp9900db/table/django_admin_log" />
     <entry file="das://c9f08793-99e1-405b-b0ce-77e658900aed/schema/comp9900db/table/auth_user_user_permissions" />
+>>>>>>> refs/remotes/origin/master
     <entry file="das://c9f08793-99e1-405b-b0ce-77e658900aed/schema/comp9900db/table/auth_user_groups" />
     <entry file="file://$PROJECT_DIR$/acommodation/migrations/0003_auto_20180819_0857.py" />
     <entry file="das://c9f08793-99e1-405b-b0ce-77e658900aed/schema/comp9900db/table/acommodation_user.sql" />
     <entry file="das://c9f08793-99e1-405b-b0ce-77e658900aed/schema/comp9900db/table/auth_user" />
     <entry file="das://c9f08793-99e1-405b-b0ce-77e658900aed/schema/comp9900db/table/acommodation_user" />
+<<<<<<< HEAD
+    <entry file="das://0057de4b-aaa1-41b4-bbe8-f1de55e6a1c7/schema/comp9900db/table/acommodation_lodging" />
+    <entry file="das://0057de4b-aaa1-41b4-bbe8-f1de55e6a1c7/schema/comp9900db/table/acommodation_user" />
+    <entry file="das://0057de4b-aaa1-41b4-bbe8-f1de55e6a1c7/schema/comp9900db/table/auth_user" />
+    <entry file="file://$PROJECT_DIR$/template/acomodation/JS/register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///anaconda3/lib/python3.6/site-packages/django/db/models/manager.py" />
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.1/python_stubs/1995955354/builtins.py" />
+    <entry file="file:///anaconda3/lib/python3.6/site-packages/django/contrib/auth/base_user.py" />
+    <entry file="das://0057de4b-aaa1-41b4-bbe8-f1de55e6a1c7/schema/comp9900db/table/accommodations_user.sql" />
+    <entry file="file:///anaconda3/lib/python3.6/site-packages/django/forms/models.py" />
+    <entry file="file://$PROJECT_DIR$/template/acomodation/CSS/register.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///anaconda3/lib/python3.6/site-packages/django/urls/conf.py" />
+    <entry file="file:///anaconda3/lib/python3.6/site-packages/django/contrib/auth/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/COMP9900/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/mainpage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accommodations/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/importlib/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/venv/lib/python3.6/site-packages/django/core/management/commands/runserver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/venv/lib/python3.6/site-packages/django/utils/autoreload.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="247" selection-start-line="247" selection-end-line="247" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accommodations/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+          <folding>
+            <element signature="e#16#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/COMP9900/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="45" column="12" lean-forward="true" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
+          <folding>
+            <element signature="e#645#682#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/COMP9900/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="44" column="14" lean-forward="true" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="86" column="6" selection-start-line="86" selection-start-column="6" selection-end-line="86" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accommodations/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="33" lean-forward="true" selection-start-column="33" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+=======
     <entry file="file://$PROJECT_DIR$/UserAndAdmin/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -595,6 +932,7 @@
         </state>
       </provider>
     </entry>
+>>>>>>> refs/remotes/origin/master
     <entry file="das://0057de4b-aaa1-41b4-bbe8-f1de55e6a1c7/schema/comp9900db/table/accommodations_user">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -602,6 +940,88 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/accommodations/migrations/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accommodations/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="35" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/property/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/property/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/property/migrations/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/property/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/property/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/property/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://0057de4b-aaa1-41b4-bbe8-f1de55e6a1c7/schema/comp9900db/table/accommodations_user_groups">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accommodations/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3971">
+          <caret line="209" selection-start-line="209" selection-end-line="209" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accommodations/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accommodations/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="26" selection-start-line="10" selection-start-column="30" selection-end-line="11" selection-end-column="26" />
+=======
     <entry file="file://$PROJECT_DIR$/COMP9900/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
@@ -692,12 +1112,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+>>>>>>> refs/remotes/origin/master
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/accommodations/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1113">
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accommodations/migrations/0002_auto_20180825_1511.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/property/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/property/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="28" lean-forward="true" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+=======
     <entry file="file://$PROJECT_DIR$/UserAndAdmin/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -718,10 +1160,38 @@
           <caret line="84" column="25" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="25" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
+>>>>>>> refs/remotes/origin/master
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/property/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="10" column="96" lean-forward="true" selection-start-line="10" selection-start-column="96" selection-end-line="10" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accommodations/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/COMP9900/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://0057de4b-aaa1-41b4-bbe8-f1de55e6a1c7/schema/comp9900db/table/django_migrations">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+=======
     <entry file="das://0057de4b-aaa1-41b4-bbe8-f1de55e6a1c7/schema/comp9900db/table/UserAndAdmin_user">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -758,6 +1228,7 @@
           <folding>
             <element signature="n#style#0;n#!!top" />
           </folding>
+>>>>>>> refs/remotes/origin/master
         </state>
       </provider>
     </entry>

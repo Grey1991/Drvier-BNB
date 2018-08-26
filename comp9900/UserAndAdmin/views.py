@@ -78,7 +78,7 @@ def login(request):
 
         user = auth.authenticate(email=email, password=password)
         if user:
-            auth.logout(request,user)
+            auth.login(request,user)
             return redirect("userandadmin:index")
         else:
             message = "Your email or password is incorrect. "

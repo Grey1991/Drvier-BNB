@@ -36,7 +36,15 @@ urlpatterns = [
 
 
     url(r'^admin/',admin.site.urls),
+<<<<<<< HEAD
+    # url(r'^$', include("accommodations.urls")),
+    url(r'^login/', views.user_login),
+    url(r'^index/', views.mainPage),
+=======
     url(r"^index/", include("UserAndAdmin.urls")),
+>>>>>>> refs/remotes/origin/master
+
+    url(r'^$', include('property.urls'))
 
 ]
 
