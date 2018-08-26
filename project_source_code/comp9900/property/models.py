@@ -7,7 +7,6 @@ class Property(models.Model):
     user_ID = models.ForeignKey('accommodations.User', on_delete=models.CASCADE)
     price = models.FloatField(default=0.0)
     status = models.BooleanField(default=False)
-    address = models.ForeignKey('Address', on_delete=models.CASCADE, related_name='Address.address+')
     images = models.ForeignKey('Images', on_delete=models.CASCADE, related_name='Image.images+')
     TYPE_PROPERTY_CHOICES = (
         ('H', 'House'),
@@ -61,3 +60,4 @@ class Address(models.Model):
 
 class Images(models.Model):
     image = models.ImageField(upload_to='img', height_field=None, width_field=None, max_length=100)
+    aid = models.ForeignKey('property', on_delete=models.CASCADE, related_name='Property.aid+')
