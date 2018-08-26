@@ -18,8 +18,8 @@ def mainPage(request):
 
 def user_login(request):
     if request.method == 'POST':
-        email = request.POST.get('email')
-        password = request.POST.get('password')
+        email = request.POST.get('u')
+        password = request.POST.get('p')
         user = authenticate(email=email, password=password)
         print(user)
         if user:

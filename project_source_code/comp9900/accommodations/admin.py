@@ -8,18 +8,12 @@ from accommodations import models
 # 实现 数据库后台的数据操作
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 admin.site.register(models.User)
 admin.site.register(models.UserProfile)
 admin.site.unregister(Group)
+
+# admin.site.register(models.Property)
+# admin.site.register(models.Address)
+# admin.site.register(models.Images)
+
+
