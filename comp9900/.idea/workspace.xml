@@ -118,7 +118,7 @@
       <file leaf-file-name="register.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/template/acomodation/register.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
+            <state relative-caret-position="174">
               <caret line="67" column="92" selection-start-line="67" selection-start-column="92" selection-end-line="67" selection-end-column="92" />
             </state>
           </provider>
@@ -341,11 +341,11 @@
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32969698" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32969698" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.4278788" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.37454545" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32969698" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.33454546" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.22424242" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4987013" visible="true" weight="0.1602289" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.44" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4987013" visible="true" weight="0.11802575" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" visible="true" weight="0.119456366" />
       <window_info anchor="right" id="SciView" order="3" weight="0.3297568" />
@@ -734,7 +734,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/template/acomodation/register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
+        <state relative-caret-position="174">
           <caret line="67" column="92" selection-start-line="67" selection-start-column="92" selection-end-line="67" selection-end-column="92" />
         </state>
       </provider>
