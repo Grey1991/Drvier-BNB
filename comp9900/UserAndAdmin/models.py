@@ -124,6 +124,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         return True
 
 
+
 class UserProfile(models.Model):
     '''
     个人信息

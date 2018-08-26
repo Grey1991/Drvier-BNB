@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'UserAndAdmin',
-    'Property'
+    'Property',
 ]
 
 # 重写 User

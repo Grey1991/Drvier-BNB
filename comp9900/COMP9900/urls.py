@@ -40,6 +40,7 @@ urlpatterns = [
     url(r"^add_property/", include("Property.urls")),
 
 
+
 ]
 
 
