@@ -8,13 +8,13 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib import auth
 from UserAndAdmin import forms, models
+from django.contrib import messages
+from django.core.mail import send_mail
+from COMP9900 import settings
 
 
 def index(request):
     return render(request, "index.html")
-
-
-
 
 def register(request):
 
@@ -37,12 +37,23 @@ def register(request):
                 message = "Email already exists!"
                 return render(request,'register.html',locals())
                 # 当一切都OK的情况下，创建新用户
+
             new_user = models.User()
             new_user.first_name = first_name
             new_user.last_name = last_name
             new_user.set_password(password1)
             new_user.email = email
             new_user.save()
+            #  发送邮件
+
+            subject = "Thank you for your registration "
+            message = "welcome to NSWLodge! we are very much appreciate your bussiness./n we will be in touch soon."
+            from_email = settings.EMAIL_HOST_USER
+            to_list = [new_user.email]
+            send_mail(subject,message,from_email,to_list,fail_silently=True)
+
+
+
         return redirect('userandadmin:login')  # 自动跳转到登录页面
     else:
         return render(request, 'register.html')
