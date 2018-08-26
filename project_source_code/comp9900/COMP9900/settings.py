@@ -41,11 +41,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     'accommodations',
     'property'
+=======
+    'UserAndAdmin'
+>>>>>>> refs/remotes/origin/master
 ]
 
-AUTH_USER_MODEL = 'accommodations.User'
+# 重写 User
+AUTH_USER_MODEL = 'UserAndAdmin.User'
 
 
 MIDDLEWARE = [

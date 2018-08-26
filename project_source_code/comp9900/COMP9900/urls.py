@@ -15,10 +15,8 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.urls import include, path
-from django.conf.urls import url
+from django.conf.urls import url,include
 from django.contrib import admin
-from accommodations import views
 
 '''
 include() 允许引用其他的 URLconfs 
@@ -34,14 +32,17 @@ kwargs : dict() -> view function
 name 
 '''
 
-
 urlpatterns = [
-    # path('admin/', admin.site.urls),
-    # path('mainpage/',include('accommodations.urls')),
+
+
     url(r'^admin/',admin.site.urls),
+<<<<<<< HEAD
     # url(r'^$', include("accommodations.urls")),
     url(r'^login/', views.user_login),
     url(r'^index/', views.mainPage),
+=======
+    url(r"^index/", include("UserAndAdmin.urls")),
+>>>>>>> refs/remotes/origin/master
 
     url(r'^$', include('property.urls'))
 
