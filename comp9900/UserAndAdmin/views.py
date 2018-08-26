@@ -40,7 +40,7 @@ def register(request):
             new_user = models.User()
             new_user.first_name = first_name
             new_user.last_name = last_name
-            new_user.password = password1
+            new_user.set_password(password1)
             new_user.email = email
             new_user.save()
         return redirect('userandadmin:login')  # 自动跳转到登录页面
@@ -53,6 +53,9 @@ def login(request):
     if request.method == 'POST':
         email = request.POST.get('email',None)
         password = request.POST.get('password',None)
+
+        _is_active = models.User.object.filter(email=email).values()
+
         user = auth.authenticate(email=email, password=password)
         if user is not None:
             # 是否验证邮箱
