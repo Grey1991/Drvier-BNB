@@ -37,6 +37,8 @@ urlpatterns = [
 
     url(r'^admin/',admin.site.urls),
     url(r"^index/", include("UserAndAdmin.urls")),
+    url(r"^add_property/", include("Property.urls")),
+
 
 ]
 

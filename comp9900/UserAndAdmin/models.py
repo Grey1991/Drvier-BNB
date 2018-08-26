@@ -154,7 +154,7 @@ class Property(models.Model):
         隐藏字段：user_ID、property_ID、Image_ID、注册时间 created_at、最后信息跟新时间updated_at
         显示在网页上的字段：
         1. 价格（price）
-        2. 房源类型：property、apartment、studio
+        2. 房源类型：Property、apartment、studio
         3. 地点（address）
         4. 入住时间
         5. 入住人数
