@@ -7,9 +7,21 @@
 {% block content %}
 
     <h1> search module </h1>
+
+
+
     <form action="{% url 'property:search' %}" method="GET">
-        <input name="q" value="{{ request.GET.q }}" placeholder="e.g. Sydney">
-        <button type="submit">Search</button>
+
+        <input name="q" value="" placeholder="e.g. Sydney" style="
+                                                            width: 400px;
+                                                            height: 40px;
+                                                            border-width: 3px;
+                                                            border-radius: 8px;
+                                                            border-color:  lightblue;">
+        <button type="submit" style="
+                height:  40px;
+                width: 80px;
+                background-color: lightskyblue;">Search</button>
     </form>
 
 
