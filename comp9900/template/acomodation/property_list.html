@@ -5,6 +5,14 @@
 
 {% block content %}
 
-    {{ items}}
+{% for property in properties %}
+    "==========================="
+    {{ property.price }}<br/>
+    {{ property.types_property}}<br/>
+    {{ property.city }}<br/>
+    {{ property.state }}<br/>
+    {{ property.address }}<br/>
+
+{% endfor %}
 
 {% endblock content %}

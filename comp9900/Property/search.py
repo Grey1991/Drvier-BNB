@@ -18,7 +18,7 @@ def simple_search(request):
                                              ).distinct()
 
     context = {
-        'items': results
+        'properties': results
     }
 
     return render(request, template, context)
