@@ -7,6 +7,11 @@
 {% block content %}
 
     <h1> search module </h1>
+    <form action="{% url 'property:search' %}" method="GET">
+        <input name="q" value="{{ request.GET.q }}" placeholder="e.g. Sydney">
+        <button type="submit">Search</button>
+    </form>
+
 
 {% endblock content %}
 

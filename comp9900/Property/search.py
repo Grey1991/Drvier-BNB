@@ -8,11 +8,17 @@ import time
 
 
 def simple_search(request):
-    template = 'search_list.html'
+    template = 'property_list.html'
     query = request.GET.get('q')
     results = models.Property.objects.filter(Q(province__icontains=query) |
                                              Q(city__icontains=query) |
                                              Q(state__icontains=query) |
-                                             Q(address__icontains=query) |
-                                             Q(postcode__exact=int(query))
+                                             Q(address__icontains=query)
+                                             # Q(postcode__exact=int(query))
                                              ).distinct()
+
+    context = {
+        'items': results
+    }
+
+    return render(request, template, context)
