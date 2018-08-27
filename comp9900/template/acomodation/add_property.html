@@ -37,8 +37,6 @@
                     <div class="panel-body">
                         <form action="{% url 'property:add_property' %}" method="post">
                             {% csrf_token %}
-{#                            {{ address_form.as_ul}}#}
-{#                            {{ images_form.as_ul}}#}
                             {{ property_form.as_ul}}
                             <input type="submit" value="Add My Property" class="btn btn-info btn-block">
                         </form>

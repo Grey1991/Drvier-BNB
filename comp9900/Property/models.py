@@ -12,10 +12,19 @@ class Property(models.Model):
         ('O', 'others'),
     )
     types_property = models.CharField(max_length=1, choices=TYPE_PROPERTY_CHOICES, default='O')
+
+    '''
+    address
+    '''
+    province = models.CharField(max_length=20, blank=False, null=False)
+    city = models.CharField(max_length=20, blank=False, null=False)
+    state = models.CharField(max_length=20, blank=False, null=False)
+    address = models.CharField(max_length=200, blank=False, null=False)
+    postcode = models.IntegerField(default=0, blank=False, null=False)
+
     capacity = models.PositiveIntegerField(default=0)
     num_bathrooms = models.PositiveIntegerField(default=0)
     num_bedrooms = models.PositiveIntegerField(default=0)
-
     num_double_bed = models.PositiveIntegerField(default=0)
     num_single_bed = models.PositiveIntegerField(default=0)
     num_sofa_bed = models.PositiveIntegerField(default=0)
@@ -48,15 +57,18 @@ class Property(models.Model):
     status = models.BooleanField(default=False)
 
 
-class Address(models.Model):
-    pid = models.OneToOneField(Property, on_delete=models.CASCADE, related_name='Property.pid+')
-    province = models.CharField(max_length=20)
-    city = models.CharField(max_length=20)
-    state = models.CharField(max_length=20)
-    address = models.CharField(max_length=200)
-    postcode = models.IntegerField(default=0)
+# class Address(models.Model):
+#     pid = models.OneToOneField(Property, on_delete=models.CASCADE, related_name='Property.pid+')
+#     province = models.CharField(max_length=20)
+#     city = models.CharField(max_length=20)
+#     state = models.CharField(max_length=20)
+#     address = models.CharField(max_length=200)
+#     postcode = models.IntegerField(default=0)
 
 
 class Images(models.Model):
-    pid = models.ForeignKey(Property, on_delete=models.CASCADE, related_name='Property.pid+')
-    image = models.ImageField(upload_to='img', height_field=None, width_field=None, max_length=100)
+    pid = models.ForeignKey(Property, verbose_name='owner', on_delete=models.CASCADE, related_name='Property.pid+')
+    image = models.ImageField(upload_to='img', height_field=None, width_field=None, max_length=100,blank=True, null=True)
+
+    # def __unicode__(self):
+    #     return '%s %s' % (self.pid, self.image)

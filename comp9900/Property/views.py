@@ -7,19 +7,26 @@ import time
 
 def add_property(request):
     if request.method == "POST":
+
         property_form = forms.PropertyForm(request.POST)
         if property_form.is_valid():
             user_ID = property_form.cleaned_data['user_ID']
             price = property_form.cleaned_data['price']
             types_property = property_form.cleaned_data['types_property']
-            capacity = property_form.cleaned_data['capacity']
-            area = property_form.cleaned_data['area']
 
+            province = property_form.cleaned_data['province']
+            city = property_form.cleaned_data['city']
+            state = property_form.cleaned_data['state']
+            address = property_form.cleaned_data['address']
+            postcode = property_form.cleaned_data['postcode']
+
+            capacity = property_form.cleaned_data['capacity']
             num_bathrooms = property_form.cleaned_data['num_bathrooms']
             num_bedrooms = property_form.cleaned_data['num_bedrooms']
             num_double_bed = property_form.cleaned_data['num_double_bed']
             num_single_bed = property_form.cleaned_data['num_single_bed']
             num_sofa_bed = property_form.cleaned_data['num_sofa_bed']
+            area = property_form.cleaned_data['area']
 
             kitchen = property_form.cleaned_data['kitchen']
             in_unit_washer = property_form.cleaned_data['in_unit_washer']
@@ -44,15 +51,21 @@ def add_property(request):
             new_property = models.Property()
             new_property.user_ID = user_ID
             new_property.price = price
-            new_property.capacity = capacity
             new_property.types_property = types_property
-            new_property.capacity = area
 
+            new_property.province = province
+            new_property.city = city
+            new_property.state = state
+            new_property.address = address
+            new_property.postcode = postcode
+
+            new_property.capacity = capacity
             new_property.num_bathrooms = num_bathrooms
             new_property.num_bedroom = num_bedrooms
-            new_property.capacity = num_double_bed
-            new_property.capacity = num_single_bed
-            new_property.capacity = num_sofa_bed
+            new_property.num_double_bed = num_double_bed
+            new_property.num_single_bed = num_single_bed
+            new_property.num_sofa_bed = num_sofa_bed
+            new_property.area = area
 
             new_property.kitchen = kitchen
             new_property.in_unit_washer = in_unit_washer
@@ -77,14 +90,16 @@ def add_property(request):
             # new_property.longitude = 0.0
             # new_property.latitude = 0.0
 
-            new_property.created_at = time.asctime( time.localtime(time.time()))#
-            new_property.updated_at = time.asctime( time.localtime(time.time()))
+            new_property.created_at = time.asctime(time.localtime(time.time()))#
+            new_property.updated_at = time.asctime(time.localtime(time.time()))
 
             new_property.save()
-
+            # img = forms.Images(img_url=request.FILES.get('img'))
+            # img.save()
             return HttpResponse('add a property successfully!')
     else:
         property_form = forms.PropertyForm()
-        address_form = forms.Address()
-        images_form = forms.Images()
-        return render(request, 'add_property.html',{'property_form':property_form, 'address_form':address_form, 'images_form':images_form})
+        return render(request, 'add_property.html',{'property_form':property_form})
+
+
+
