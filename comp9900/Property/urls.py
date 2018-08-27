@@ -8,3 +8,5 @@ urlpatterns = [
     # url(r'^$', views.property_signup, name='welcome'),
     url(r'^$', views.add_property,name="add_property"),
 ]
+
+
