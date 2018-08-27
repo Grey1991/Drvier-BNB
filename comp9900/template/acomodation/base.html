@@ -12,19 +12,19 @@
 <body>
 
 
-<nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid">
+
+
+<nav class="navbar navbar-default" role="navigation" style="background: lightgray">
+    <div class="container-fluid ">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">NSW Lodging</a>
+            <a class="navbar-brand" href="{%  url 'userandadmin:index' %}" style="color: white">NSW Lodging</a>
         </div>
         <ul class="nav navbar-nav navbar-right">
 
             {% if user.is_authenticated %}
-                <div class="btn-group">
 
-
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                <div class="btn-group" >
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="background: lightgray">
                         {{ user.first_name }}
                         <span class="caret"></span>
                     </button>
@@ -35,9 +35,8 @@
 
             {% else %}
 
-                <div class="btn-group">
                     <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="background: lightgray">
                             My profile
                             <span class="caret"></span>
                         </button>
@@ -46,9 +45,9 @@
                             <li><a href="{%  url "userandadmin:register" %}">sign up</a></li>
                         </ul>
                     </div>
-                </div>
             {% endif %}
-            </div>
+
+
         </ul>
     </div>
 </nav>

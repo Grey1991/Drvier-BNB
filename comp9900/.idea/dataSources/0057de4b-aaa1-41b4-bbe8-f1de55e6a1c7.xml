@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="Django default">
-  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.11">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.7">
     <root id="1">
-      <ServerVersion>5.7.22</ServerVersion>
-      <DefaultEngine>InnoDB</DefaultEngine>
-      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
       <DefaultCasing>exact</DefaultCasing>
     </root>
     <schema id="2" parent="1" name="comp9900db">
@@ -915,20 +912,48 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="230" parent="2" name="Property_address"/>
-    <table id="231" parent="2" name="Property_images"/>
-    <table id="232" parent="2" name="Property_property"/>
-    <table id="233" parent="2" name="UserAndAdmin_user"/>
-    <table id="234" parent="2" name="UserAndAdmin_user_groups"/>
-    <table id="235" parent="2" name="UserAndAdmin_user_user_permissions"/>
-    <table id="236" parent="2" name="UserAndAdmin_userprofile"/>
-    <table id="237" parent="2" name="auth_group"/>
-    <table id="238" parent="2" name="auth_group_permissions"/>
-    <table id="239" parent="2" name="auth_permission"/>
-    <table id="240" parent="2" name="django_admin_log"/>
-    <table id="241" parent="2" name="django_content_type"/>
-    <table id="242" parent="2" name="django_migrations"/>
-    <table id="243" parent="2" name="django_session"/>
+    <table id="230" parent="2" name="Property_address">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="231" parent="2" name="Property_images">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="232" parent="2" name="Property_property">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="233" parent="2" name="UserAndAdmin_user">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="234" parent="2" name="UserAndAdmin_user_groups">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="235" parent="2" name="UserAndAdmin_user_user_permissions">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="236" parent="2" name="UserAndAdmin_userprofile">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="237" parent="2" name="auth_group">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="238" parent="2" name="auth_group_permissions">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="239" parent="2" name="auth_permission">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="240" parent="2" name="django_admin_log">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="241" parent="2" name="django_content_type">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="242" parent="2" name="django_migrations">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="243" parent="2" name="django_session">
+      <Engine>InnoDB</Engine>
+    </table>
     <column id="244" parent="230" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
@@ -975,7 +1000,6 @@
     <index id="251" parent="230" name="Property_address_pid_id_8f16a5b0_uniq">
       <ColNames>pid_id</ColNames>
       <Unique>1</Unique>
-      <Type>btree</Type>
     </index>
     <key id="252" parent="230" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1013,7 +1037,6 @@
     </column>
     <index id="258" parent="231" name="Property_images_pid_id_75ae3296_fk_Property_property_id">
       <ColNames>pid_id</ColNames>
-      <Type>btree</Type>
     </index>
     <key id="259" parent="231" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1220,7 +1243,6 @@
     </column>
     <index id="293" parent="232" name="Property_property_user_ID_id_34c02aa3_fk_UserAndAdmin_user_id">
       <ColNames>user_ID_id</ColNames>
-      <Type>btree</Type>
     </index>
     <key id="294" parent="232" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1301,7 +1323,6 @@
     <index id="307" parent="233" name="email">
       <ColNames>email</ColNames>
       <Unique>1</Unique>
-      <Type>btree</Type>
     </index>
     <key id="308" parent="233" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1335,11 +1356,9 @@
       <ColNames>user_id
 group_id</ColNames>
       <Unique>1</Unique>
-      <Type>btree</Type>
     </index>
     <index id="314" parent="234" name="UserAndAdmin_user_groups_group_id_3a2294be_fk_auth_group_id">
       <ColNames>group_id</ColNames>
-      <Type>btree</Type>
     </index>
     <key id="315" parent="234" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1386,11 +1405,9 @@ group_id</ColNames>
       <ColNames>user_id
 permission_id</ColNames>
       <Unique>1</Unique>
-      <Type>btree</Type>
     </index>
     <index id="323" parent="235" name="UserAndAdmin_user_us_permission_id_4af668a0_fk_auth_perm">
       <ColNames>permission_id</ColNames>
-      <Type>btree</Type>
     </index>
     <key id="324" parent="235" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1451,7 +1468,6 @@ permission_id</ColNames>
     <index id="334" parent="236" name="user_id">
       <ColNames>user_id</ColNames>
       <Unique>1</Unique>
-      <Type>btree</Type>
     </index>
     <key id="335" parent="236" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1484,7 +1500,6 @@ permission_id</ColNames>
     <index id="340" parent="237" name="name">
       <ColNames>name</ColNames>
       <Unique>1</Unique>
-      <Type>btree</Type>
     </index>
     <key id="341" parent="237" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1518,11 +1533,9 @@ permission_id</ColNames>
       <ColNames>group_id
 permission_id</ColNames>
       <Unique>1</Unique>
-      <Type>btree</Type>
     </index>
     <index id="347" parent="238" name="auth_group_permissio_permission_id_84c5c92e_fk_auth_perm">
       <ColNames>permission_id</ColNames>
-      <Type>btree</Type>
     </index>
     <key id="348" parent="238" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1575,7 +1588,6 @@ permission_id</ColNames>
       <ColNames>content_type_id
 codename</ColNames>
       <Unique>1</Unique>
-      <Type>btree</Type>
     </index>
     <key id="357" parent="239" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1642,11 +1654,9 @@ codename</ColNames>
     </column>
     <index id="368" parent="240" name="django_admin_log_content_type_id_c4bce8eb_fk_django_co">
       <ColNames>content_type_id</ColNames>
-      <Type>btree</Type>
     </index>
     <index id="369" parent="240" name="django_admin_log_user_id_c564eba6_fk_UserAndAdmin_user_id">
       <ColNames>user_id</ColNames>
-      <Type>btree</Type>
     </index>
     <key id="370" parent="240" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1688,7 +1698,6 @@ codename</ColNames>
       <ColNames>app_label
 model</ColNames>
       <Unique>1</Unique>
-      <Type>btree</Type>
     </index>
     <key id="377" parent="241" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1750,7 +1759,6 @@ model</ColNames>
     </column>
     <index id="387" parent="243" name="django_session_expire_date_a5c62663">
       <ColNames>expire_date</ColNames>
-      <Type>btree</Type>
     </index>
     <key id="388" parent="243" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
