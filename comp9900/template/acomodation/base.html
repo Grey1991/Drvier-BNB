@@ -18,8 +18,17 @@
             <a class="navbar-brand" href="{% url 'userandadmin:index' %}" style="color: white">NSW Lodging</a>
         </div>
         <ul class="nav navbar-nav navbar-right">
-
             {% if user.is_authenticated %}
+
+                <div class="btn-group">
+                    <button type="button" style="background: lightgray">
+                        <span >
+                            <a href="{% url "property:add_property" %}">
+                                Add Property
+                            </a>
+                        </span>
+                    </button>
+                </div>
 
                 <div class="btn-group">
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
@@ -32,8 +41,6 @@
                         <li><a href="{% url 'userandadmin:accountsetting' %}"> Account Settings</a></li>
                         <li><a href="{% url 'userandadmin:logout' %}"> log out</a></li>
                     </ul>
-
-
                 </div>
 
             {% else %}
