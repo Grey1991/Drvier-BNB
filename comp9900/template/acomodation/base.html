@@ -12,39 +12,47 @@
 <body>
 
 
-
-
 <nav class="navbar navbar-default" role="navigation" style="background: lightgray">
     <div class="container-fluid ">
         <div class="navbar-header">
-            <a class="navbar-brand" href="{%  url 'userandadmin:index' %}" style="color: white">NSW Lodging</a>
+            <a class="navbar-brand" href="{% url 'userandadmin:index' %}" style="color: white">NSW Lodging</a>
         </div>
         <ul class="nav navbar-nav navbar-right">
 
             {% if user.is_authenticated %}
 
-                <div class="btn-group" >
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="background: lightgray">
+
+
+
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                            style="background: lightgray">
                         {{ user.first_name }}
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a href="{% url 'userandadmin:logout' %}" > log out</a></li>
+                        <li><a href="{% url 'userandadmin:editprofile' %}"> Edit Profile</a></li>
+                        <li><a href="{% url 'userandadmin:accountsetting' %}"> Account Settings</a></li>
+                        <li><a href="{% url 'userandadmin:logout' %}"> log out</a></li>
                     </ul>
+
+
                 </div>
 
             {% else %}
 
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="background: lightgray">
-                            My profile
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a href="{%  url 'userandadmin:login' %}"> log in </a></li>
-                            <li><a href="{%  url "userandadmin:register" %}">sign up</a></li>
-                        </ul>
-                    </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                            style="background: lightgray">
+                        My profile
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'userandadmin:login' %}"> log in </a></li>
+                        <li><a href="{% url "userandadmin:register" %}">sign up</a></li>
+                    </ul>
+                </div>
             {% endif %}
 
 
@@ -53,13 +61,10 @@
 </nav>
 
 
- {% block content %}
+{% block content %}
 {% endblock content %}
 
 </body>
-
-
-
 
 
 </html>

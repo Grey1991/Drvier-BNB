@@ -87,8 +87,12 @@ def login(request):
 
 
 
-
-
 def logout(request):
     auth.logout(request)
     return redirect("userandadmin:index")
+
+def editprofile(request):
+    return render(request,'editprofile.html')
+
+def accountsetting(request):
+    return render(request,'accountsetting.html')

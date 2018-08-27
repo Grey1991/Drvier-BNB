@@ -58,28 +58,8 @@ class RegisterForm(forms.Form):
     email = forms.EmailField(widget=forms.EmailInput(attrs={'class':'form-control'}))
     first_name = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
     last_name = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
+    
 
-    #     model =User
-    #     fields = ('email', 'password', 'first_name','last_name',)
-    #
-    # def clean_password2(self):
-    #
-    #     # 检查2次 密码是否一致
-    #
-    #     password1 = self.cleaned_data.get("password1")
-    #     password2 = self.cleaned_data.get("password2")
-    #
-    #     if password1 and password2 and password1 != password2:
-    #         raise forms.ValidationError("Passwords don't match")
-    #     return True
-    #
-    # def save(self, commit=True):
-    #
-    #     user = super(RegisterForm, self).save(commit=False)
-    #     user.set_password(self.cleaned_data["password1"])
-    #     if commit:
-    #         user.save()
-    #     return user
 
 class UserAdminCreationForm(forms.ModelForm):
     """A form for creating new users. Includes all the required
