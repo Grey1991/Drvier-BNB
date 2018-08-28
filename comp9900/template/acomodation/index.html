@@ -11,6 +11,7 @@
 
 
     <form action="{% url 'property:simple_search' %}" method="GET">
+        {% csrf_token %}
 
         <input name="q" value="" placeholder="e.g. Sydney" style="
                                                             width: 400px;

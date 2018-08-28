@@ -96,7 +96,8 @@ def add_property(request):
             new_property.save()
             # img = forms.Images(img_url=request.FILES.get('img'))
             # img.save()
-            return HttpResponse('add a property successfully!')
+            #return HttpResponse('add a property successfully!')
+            return render(request,'add_success.html')
     else:
         property_form = forms.PropertyForm()
         return render(request, 'add_property.html',{'property_form':property_form})

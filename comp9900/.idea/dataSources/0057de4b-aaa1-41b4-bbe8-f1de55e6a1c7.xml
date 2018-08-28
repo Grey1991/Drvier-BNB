@@ -929,7 +929,7 @@
     <table id="241" parent="2" name="django_migrations"/>
     <table id="242" parent="2" name="django_session"/>
     <routine id="243" parent="2" name="test_insert">
-      <SourceTextLength>792</SourceTextLength>
+      <SourceTextLength>796</SourceTextLength>
       <RoutineKind>procedure</RoutineKind>
     </routine>
     <column id="244" parent="230" name="id">

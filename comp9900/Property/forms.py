@@ -50,16 +50,18 @@ class SearchForm(forms.ModelForm):
     """
     class Meta:
         model = Property
-        field = exclude = ['user_ID','created_at', 'updated_at', 'longitude', 'latitude']
+        field = exclude = ['user_ID','created_at', 'updated_at', 'longitude',
+                           'latitude','num_sofa_bed','ac','num_single_bed',
+                           'kitken','in_unit_washer','elevator','heating',
+                           'tv','blower','bathtub','parking','gyms','swimming_pool',
+                           'party','smoking','couple']
+
         labels = {
             'status': 'Release now?',
             'num_bathrooms': 'Number of Bathrooms',
             'num_bedrooms': 'Number of Bedrooms',
             'num_double_bed': 'Number of DoubleBed',
-            'num_single_bed': 'Number of SingleBed',
-            'num_sofa_bed': 'Number of SofaBed',
-            'ac': 'Air Conditioner',
-            'tv': 'TV',
+
             'wifi': 'WIFI',
             'province': 'Province',
             'city': 'City',
