@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+
+{% block title %} index {% endblock %}
+
+{% block content %}
+
+<form action="{% url 'property:multi_search' %}" method="POST">
+    Price: <input type="text" name="search_query">
+    TYpes: <select name="search_query">
+        <option value="H">House</option>
+        <option value="A">Apartment</option>
+        <option value="S" selected>Studio</option>
+        <option value="O">others</option>
+    </select>
+
+
+
+</form>
+
+
+
+
+
+<div class='col-sm-8 col-sm-offset-2'>
+
+    {% for property in properties %}
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <p>{{ property.price }}</p>
+                        <p>{{ property.types_property}}</p>
+                        <p>{{ property.city }}</p>
+                        <p>{{ property.state }}</p>
+                        <p>{{ property.address }}</p>
+                        <p><a href="" class="btn btn-primary" role="button">View</a></p>
+                    </div>
+                </div>
+            </div>
+        <hr/>
+        </div>
+    {% endfor %}
+
+    <div class="pagination">
+        <span class="step-links">
+            {% if properties.has_previous %}
+                <a href="?page=1&q={{ request.GET.q }}">&laquo; first</a>
+                <a href="?page={{ properties.previous_page_number }}&q={{ request.GET.q }}">previous</a>
+            {% endif %}
+
+            <span class="current">
+                Page {{ properties.number }} of {{ properties.paginator.num_pages }}.
+            </span>
+
+            {% if properties.has_next %}
+                <a href="?page={{ properties.next_page_number }}&q={{ request.GET.q }}">next</a>
+                <a href="?page={{ properties.paginator.num_pages }}&q={{ request.GET.q }}">last &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+
+
+</div>
+{% endblock content %}
