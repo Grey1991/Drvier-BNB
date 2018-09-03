@@ -1,62 +1,34 @@
 from django.db import models
+from django.core.validators import MaxValueValidator, MinValueValidator
+
 
 # Create your models here.
 
-class Property(models.Model):
+
+class TransAndReview(models.Model):
     user_ID = models.ForeignKey('UserAndAdmin.User', on_delete=models.CASCADE)
-    price = models.FloatField(default=0.0)
-    status = models.BooleanField(default=False)
-    TYPE_PROPERTY_CHOICES = (
-        ('H', 'House'),
-        ('A', 'Apartment'),
-        ('S', 'Studio'),
-        ('O', 'others'),
-    )
-    types_property = models.CharField(max_length=1, choices=TYPE_PROPERTY_CHOICES, default='O')
-    capacity = models.IntegerField(default=0)
-    num_bathrooms = models.IntegerField(default=0)
-    num_bedrooms = models.IntegerField(default=0)
-
-    num_double_bed = models.IntegerField(default=0)
-    num_single_bed = models.IntegerField(default=0)
-    num_sofa_bed = models.IntegerField(default=0)
-    area = models.FloatField(default=0.0)
-
-    kitchen = models.BooleanField(default=False)
-    in_unit_washer = models.BooleanField(default=False)
-    wifi = models.BooleanField(default=False)
-    elevator = models.BooleanField(default=False)
-    heating = models.BooleanField(default=False)
-    ac = models.BooleanField(default=False)
-    tv = models.BooleanField(default=False)
-    blower = models.BooleanField(default=False)
-    bathtub = models.BooleanField(default=False)
-
-    parking = models.BooleanField(default=False)
-    gyms = models.BooleanField(default=False)
-    swimming_pool = models.BooleanField(default=False)
-
-    party = models.BooleanField(default=False)
-    pet = models.BooleanField(default=False)
-    smoking = models.BooleanField(default=False)
-    couple = models.BooleanField(default=False)
-
-    longitude = models.FloatField(default=0.0)  # 经度
-    latitude = models.FloatField(default=0.0)  # 纬度
-
+    pid = models.ForeignKey('Property.Property', verbose_name='owner', on_delete=models.CASCADE, related_name='TransAndReview.pid+')
+    comment_time = models.DateTimeField(auto_now_add=True)
+    comment_content = models.CharField(max_length=500, default='')
+    start_time = models.DateTimeField(auto_now_add=True)
+    end_time = models.DateTimeField(auto_now_add=True)
+    ratings = models.IntegerField(validators=[MaxValueValidator(5), MinValueValidator(1)], null=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True, null=True)
 
 
-class Address(models.Model):
-    pid = models.OneToOneField(Property, on_delete=models.CASCADE, related_name='Property.pid+')
-    province = models.CharField(max_length=20)
-    city = models.CharField(max_length=20)
-    state = models.CharField(max_length=20)
-    address = models.CharField(max_length=200)
-    postcode = models.IntegerField(default=0)
+class PendingTrans(models.Model):
+    user_ID = models.ForeignKey('UserAndAdmin.User', on_delete=models.CASCADE)
+    pid = models.ForeignKey('Property.Property', verbose_name='owner', on_delete=models.CASCADE, related_name='PendingTrans.pid+')
+    start_time = models.DateTimeField(auto_now_add=True)
+    end_time = models.DateTimeField(auto_now_add=True)
+    capacity = models.IntegerField(default=0)
+    smoking = models.BooleanField(default=False)
+    party = models.BooleanField(default=False)
+    pet = models.BooleanField(default=False)
+    couple = models.BooleanField(default=False)
+    blower = models.BooleanField(default=False)
+    bathtub = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True, null=True)
 
-
-class Images(models.Model):
-    pid = models.ForeignKey(Property, on_delete=models.CASCADE, related_name='Property.pid+')
-    image = models.ImageField(upload_to='img', height_field=None, width_field=None, max_length=100)
