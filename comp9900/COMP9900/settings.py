@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'UserAndAdmin',
     'Property',
-    'Pending',
 ]
 '''
 设置media
