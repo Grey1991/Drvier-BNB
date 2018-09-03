@@ -8,3 +8,21 @@ I finished and uploaded the draft proposal. Ready to discuss more details about 
 I held the scrum meeting to discusse epics and schedule. Then finish the last version of proposal.
 I learned Google Material Design and Django briefly and recommended to our group.
 I uploaded the proposal for our team.
+
+week4
+Finishing configuration of cloud database including AWS account, start RDS database, config RDS, and connection to RDS.
+Preparation for Front-end Work, which is to compare and studay similar websites, to design detailed pages in our website, to sellect our techniques that would be used, and to learn bootstrap html and css.
+
+week5
+Finishing the design of database structure including designing all the fables, fields, and relation between tables.
+Making the ER-Diagram.
+Implementation of the database in model.py.
+Allocation of agile structure on Trello and assigning the tasks to group members as long as specific steps and deadlines.
+
+week6
+Implementation of "transaction and review table" and "pending transaction" table in database(models.py).
+Fixing thr time-zone problem of our website.
+Adding Pending APP to the project and making it work.
+Learning some front-end technology namely JS and JQuery.
+
+
