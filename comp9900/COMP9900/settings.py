@@ -50,11 +50,7 @@ INSTALLED_APPS = [
     'UserAndAdmin',
     'Property',
 ]
-'''
-设置media
-'''
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media').replace('\\', '/') # media即为图片上传的根路径
-MEDIA_URL = '/media/'
+
 
 # 重写 User
 AUTH_USER_MODEL = 'UserAndAdmin.User'
@@ -155,3 +151,8 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),'acomodation')
 
+'''
+设置media
+'''
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media').replace('\\', '/') # media即为图片上传的根路径，server用的
+MEDIA_URL = '/media/' # 给user用的
