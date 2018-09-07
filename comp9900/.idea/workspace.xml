@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2525402b-e4c3-4903-9065-02ec57dfece4" name="Default" comment="add multi search form">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/COMP9900/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/COMP9900/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/acomodation/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/acomodation/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/acomodation/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/acomodation/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="2525402b-e4c3-4903-9065-02ec57dfece4" name="Default" comment="add multi search form" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +92,7 @@
         <counts>
           <entry key="cell" value="241" />
           <entry key="html" value="2251" />
-          <entry key="py" value="1860" />
+          <entry key="py" value="1867" />
           <entry key="sql" value="102" />
           <entry key="txt" value="201" />
         </counts>
@@ -106,7 +101,7 @@
         <counts>
           <entry key="HTML" value="2251" />
           <entry key="PLAIN_TEXT" value="201" />
-          <entry key="Python" value="1860" />
+          <entry key="Python" value="1867" />
           <entry key="Scratch" value="343" />
         </counts>
       </usages-collector>
@@ -263,8 +258,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/COMP9900/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="35" column="3" lean-forward="true" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="3" />
+            <state relative-caret-position="55">
+              <caret line="27" column="48" lean-forward="true" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -604,13 +599,13 @@
     <frame x="0" y="23" width="1510" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4987013" visible="true" weight="0.17983651" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4987013" visible="true" weight="0.17983651" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5012987" side_tool="true" weight="0.19241774" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="0" weight="0.32969698" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.327551" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.4993895" visible="true" weight="0.19465241" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4993895" visible="true" weight="0.19465241" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.30666667" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -928,8 +923,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/COMP9900/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="35" column="3" lean-forward="true" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="3" />
+        <state relative-caret-position="55">
+          <caret line="27" column="48" lean-forward="true" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
         </state>
       </provider>
     </entry>
