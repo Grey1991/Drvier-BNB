@@ -5,9 +5,18 @@
 
     {% block title %}
     {% endblock %}
+    {% load static %}
 
-{#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"#}
-{#          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">#}
+    <!-- BASE CSS -->
+    <link href="{% static 'acomodation/css/base.css' %}" rel="stylesheet">
+
+    <!-- SPECIFIC CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'acomodation/css/DateTimePicker.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'acomodation/css/owl.carousel.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'acomodation/css/owl.theme.default.css' %}">
+
+    {#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"#}
+    {#          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">#}
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
@@ -25,159 +34,6 @@
 {% load static %}
 
 <style>
-    {#body {#}
-    {#    margin: 0;#}
-    {#    padding: 0;#}
-    {#    width: 100%;#}
-    {#    font-family: "Helvetica Neue", sans-serif;#}
-    {#    font-weight: lighter;#}
-    {#}#}
-    {##}
-    {#header {#}
-    {#    width: 100%;#}
-    {#    height: 100vh;#}
-    {#    background: url('{% static "acomodation/image/Narbar.jpg" %}') no-repeat 50% 50%;#}
-    {#    background-size: cover;#}
-    {#    background-position: center;#}
-    {#}#}
-    {##}
-    {#header h1 {#}
-    {#    margin: 0 auto;#}
-    {#    position: absolute;#}
-    {#    float: bottom;#}
-    {#}#}
-    {##}
-    {#.content {#}
-    {#    width: 94%;#}
-    {#    margin: 4em auto;#}
-    {#    font-size: 20px;#}
-    {#    line-height: 30px;#}
-    {#    text-align: justify;#}
-    {#}#}
-    {##}
-    {#.logo {#}
-    {#    line-height: 60px;#}
-    {#    position: fixed;#}
-    {#    float: left;#}
-    {#    margin: 16px 46px;#}
-    {#    color: #fff;#}
-    {#    font-weight: bold;#}
-    {#    font-size: 20px;#}
-    {#    letter-spacing: 2px;#}
-    {#}#}
-    {##}
-    {#nav {#}
-    {#    position: fixed;#}
-    {#    width: 100%;#}
-    {#    line-height: 60px;#}
-    {#}#}
-    {##}
-    {#nav ul {#}
-    {#    line-height: 60px;#}
-    {#    list-style: none;#}
-    {#    background: rgba(0, 0, 0, 0);#}
-    {#    color: #fff;#}
-    {#    padding: 0;#}
-    {#    text-align: right;#}
-    {#    margin: 0;#}
-    {#    padding-right: 40px;#}
-    {#    transition: 1s;#}
-    {#}#}
-    {##}
-    {#nav.black ul {#}
-    {#    background: #000;#}
-    {#}#}
-    {##}
-    {#nav ul li {#}
-    {#    display: inline-block;#}
-    {#    padding: 16px 40px;;#}
-    {#}#}
-    {##}
-    {#nav ul li a {#}
-    {#    text-decoration: none;#}
-    {#    color: #fff;#}
-    {#    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;#}
-    {#    font-size: 16px;#}
-    {#}#}
-    {##}
-    {#nav ul li a:hover {#}
-    {#    border: 1px solid white;#}
-    {#}#}
-    {##}
-    {#.menu-icon {#}
-    {#    line-height: 60px;#}
-    {#    width: 100%;#}
-    {#    background: #000;#}
-    {#    text-align: right;#}
-    {#    box-sizing: border-box;#}
-    {#    padding: 15px 24px;#}
-    {#    cursor: pointer;#}
-    {#    color: #fff;#}
-    {#    display: none;#}
-    {#}#}
-
-    {#@media (max-width: 786px) {#}
-    {##}
-    {#    .logo {#}
-    {#        position: fixed;#}
-    {#        top: 0;#}
-    {#        margin-top: 16px;#}
-    {#    }#}
-    {##}
-    {#    nav ul {#}
-    {#        max-height: 0px;#}
-    {#        background: #000;#}
-    {#    }#}
-    {##}
-    {#    nav.black ul {#}
-    {#        background: #000;#}
-    {#    }#}
-    {##}
-    {#    .showing {#}
-    {#        max-height: 34em;#}
-    {#    }#}
-    {##}
-    {#    nav ul li {#}
-    {#        box-sizing: border-box;#}
-    {#        width: 100%;#}
-    {#        padding: 24px;#}
-    {#        text-align: center;#}
-    {#    }#}
-    {##}
-    {#    .menu-icon {#}
-    {#        display: block;#}
-    {#    }#}
-    {##}
-    {#}#}
-
-    /* Full-width input fields */
-    {#input[type=text], input[type=password] {#}
-    {#    width: 90%;#}
-    {#    padding: 12px 20px;#}
-    {#    margin: 8px 26px;#}
-    {#    display: inline-block;#}
-    {#    border: 1px solid #ccc;#}
-    {#    box-sizing: border-box;#}
-    {#    font-size: 16px;#}
-    {#}#}
-
-    /* Set a style for all buttons */
-    {#button {#}
-    {#    background-color: #4CAF50;#}
-    {#    color: white;#}
-    {#    padding: 14px 20px;#}
-    {#    margin: 8px 26px;#}
-    {#    border: none;#}
-    {#    cursor: pointer;#}
-    {#    width: 90%;#}
-    {#    font-size: 20px;#}
-    {#}#}
-    {##}
-    {#button:hover {#}
-    {#    opacity: 0.8;#}
-    {#}#}
-
-    /* Center the image and position the close button */
     .imgcontainer {
         text-align: center;
         margin: 24px 12px;
@@ -243,21 +99,24 @@
 
 </style>
 
-
 <div class="wrapper">
     <header>
-        <div class="container">
-            <div class="row">
+        <div class="row">
+            <div class="container">
                 <div class="col--md-3 col-sm-3 col-xs-3">
-                    <a href="{% url 'userandadmin:index' %}" style="color: black;font-size: xx-large;">Driverbnb</a>
-{#                    <a href="index.html" id="logo">#}
-{#                        <img src="img/logo.png" width="190" height="23" alt="" data-retina="true">#}
-{#                    </a>#}
+{#                    <a href="{% url 'userandadmin:index' %}" style="color: black;font-size: xx-large;">Driverbnb</a>#}
+                    <a href="{% url 'userandadmin:index' %}" id="logo">
+                        <img src="{% static 'acomodation/image/LogoMakr.png' %}" width="190" height="23" alt="" data-retina="true">
+                    </a>
                 </div>
                 <nav class="col--md-9 col-sm-9 col-xs-9">
                     <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close"
                        href="javascript:void(0);"><span>Menu mobile</span></a>
                     <div class="main-menu">
+                        <div id="header_menu">
+                            <a href="{% url 'userandadmin:index' %}" style="color: black;font-size: xx-large;"
+                               data-retina="true">Driverbnb</a>
+                        </div>
 
                         <a href="#" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
                         <ul>
@@ -288,59 +147,60 @@
         </div><!-- End container -->
     </header>
 
+
     {#       注册界面#}
 
     <div id="modal-wrapper" class="modal">
         <form class="modal-content animate">
             {% csrf_token %}
             <div class="imgcontainer">
-                <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close"
-                      title="Close PopUp">&times;</span>
+                    <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close"
+                          title="Close PopUp">&times;</span>
                 <img src="{% static 'acomodation/image/2.png' %}" alt="Avatar" class="avatar">
                 <h1 style="text-align:center">Sign up with your email</h1>
                 <input type="text" name="first_name" id="first_name" style="width: 90%;
-                                                                    padding: 12px 20px;
-                                                                    margin: 8px 26px;
-                                                                    display: inline-block;
-                                                                    border: 1px solid #ccc;
-                                                                    box-sizing: border-box;
-                                                                    font-size: 16px;"
+                                                                        padding: 12px 20px;
+                                                                        margin: 8px 26px;
+                                                                        display: inline-block;
+                                                                        border: 1px solid #ccc;
+                                                                        box-sizing: border-box;
+                                                                        font-size: 16px;"
                        placeholder="First name">
                 <input type="text" name="last_name" id="last_name" style="width: 90%;
-                                                                    padding: 12px 20px;
-                                                                    margin: 8px 26px;
-                                                                    display: inline-block;
-                                                                    border: 1px solid #ccc;
-                                                                    box-sizing: border-box;
-                                                                    font-size: 16px;"
+                                                                        padding: 12px 20px;
+                                                                        margin: 8px 26px;
+                                                                        display: inline-block;
+                                                                        border: 1px solid #ccc;
+                                                                        box-sizing: border-box;
+                                                                        font-size: 16px;"
                        placeholder="Last name">
                 <input type="text" name="email" id="email" style="width: 90%;
-                                                                    padding: 12px 20px;
-                                                                    margin: 8px 26px;
-                                                                    display: inline-block;
-                                                                    border: 1px solid #ccc;
-                                                                    box-sizing: border-box;
-                                                                    font-size: 16px;"
+                                                                        padding: 12px 20px;
+                                                                        margin: 8px 26px;
+                                                                        display: inline-block;
+                                                                        border: 1px solid #ccc;
+                                                                        box-sizing: border-box;
+                                                                        font-size: 16px;"
                        placeholder="Email Address">
                 <div class="alert alert-danger" id='email_conflict' style="display: none;">Email already exists!
                 </div>
                 <div class="alert alert-danger" id='email_error' style="display: none;"> invalid email address!
                 </div>
                 <input type="password" name="password1" id="password1" style="width: 90%;
-                                                                    padding: 12px 20px;
-                                                                    margin: 8px 26px;
-                                                                    display: inline-block;
-                                                                    border: 1px solid #ccc;
-                                                                    box-sizing: border-box;
-                                                                    font-size: 16px;"
+                                                                        padding: 12px 20px;
+                                                                        margin: 8px 26px;
+                                                                        display: inline-block;
+                                                                        border: 1px solid #ccc;
+                                                                        box-sizing: border-box;
+                                                                        font-size: 16px;"
                        placeholder="Password">
                 <input type="password" name="password2" id="password2" style="width: 90%;
-                                                                    padding: 12px 20px;
-                                                                    margin: 8px 26px;
-                                                                    display: inline-block;
-                                                                    border: 1px solid #ccc;
-                                                                    box-sizing: border-box;
-                                                                    font-size: 16px;"
+                                                                        padding: 12px 20px;
+                                                                        margin: 8px 26px;
+                                                                        display: inline-block;
+                                                                        border: 1px solid #ccc;
+                                                                        box-sizing: border-box;
+                                                                        font-size: 16px;"
                        placeholder="Confirm Password">
                 <div class="alert alert-danger" id='password_error' style="display: none;"> passwords do not match!
                 </div>
@@ -365,17 +225,17 @@
             {% csrf_token %}
 
             <div class="imgcontainer">
-                <span onclick="document.getElementById('modal-wrapper2').style.display='none'" class="close"
-                      title="Close PopUp">&times;</span>
+                    <span onclick="document.getElementById('modal-wrapper2').style.display='none'" class="close"
+                          title="Close PopUp">&times;</span>
                 <img src="{% static 'acomodation/image/2.png' %}" alt="Avatar" class="avatar">
                 <h1 style="text-align:center">Log in with your email</h1>
                 <input type="text" id="lg_email" name="email" style="width: 90%;
-                                                                    padding: 12px 20px;
-                                                                    margin: 8px 26px;
-                                                                    display: inline-block;
-                                                                    border: 1px solid #ccc;
-                                                                    box-sizing: border-box;
-                                                                    font-size: 16px;"
+                                                                        padding: 12px 20px;
+                                                                        margin: 8px 26px;
+                                                                        display: inline-block;
+                                                                        border: 1px solid #ccc;
+                                                                        box-sizing: border-box;
+                                                                        font-size: 16px;"
                        placeholder="Email address" autofocus required>
                 <div class="alert alert-danger" id='lg_email_invalid' style="display: none;"> invalid email address!
                 </div>
@@ -387,12 +247,12 @@
                 </div>
                 {#                密码#}
                 <input type="password" id="lg_password" name="password" style="width: 90%;
-                                                                    padding: 12px 20px;
-                                                                    margin: 8px 26px;
-                                                                    display: inline-block;
-                                                                    border: 1px solid #ccc;
-                                                                    box-sizing: border-box;
-                                                                    font-size: 16px;"
+                                                                        padding: 12px 20px;
+                                                                        margin: 8px 26px;
+                                                                        display: inline-block;
+                                                                        border: 1px solid #ccc;
+                                                                        box-sizing: border-box;
+                                                                        font-size: 16px;"
                        placeholder="At least 6 characters" required>
                 <div class="alert alert-danger" id='lg_password_error' style="display: none;"> Your email or password is
                     incorrect.
@@ -641,6 +501,18 @@
         </div><!-- End row -->
     </div><!-- End container -->
 </footer><!-- End footer -->
+
+
+<div id="dtBox"></div><!-- End datepicker -->
+
+<!-- COMMON SCRIPTS -->
+<script src="{% static 'acomodation/js/jquery-1.11.2.min.js' %}"></script>
+<script src="{% static 'acomodation/js/common_scripts_min.js' %}"></script>
+<script src="{% static 'acomodation/assets/validate.js' %}"></script>
+<script src="{% static 'acomodation/js/functions.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'acomodation/js/DateTimePicker.js' %}"></script>
+<script type="text/javascript">$("#dtBox").DateTimePicker();</script>
 
 <div id="toTop"></div><!-- Back to top button -->
 </body>

@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2525402b-e4c3-4903-9065-02ec57dfece4" name="Default" comment="add multi search form" />
+    <list default="true" id="2525402b-e4c3-4903-9065-02ec57dfece4" name="Default" comment="add multi search form">
+      <change afterPath="$PROJECT_DIR$/../../AdditionalMaterial-Topic-3-TZ.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../COMP3900_9900_project3_18s2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../[William_S._Vincent]_Django_for_Beginners_Learn_W(b-ok.xyz).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/acomodation/layerslider/css/blank.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/acomodation/layerslider/css/layerslider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/acomodation/layerslider/js/greensock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/acomodation/layerslider/js/layerslider.kreaturamedia.jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/acomodation/layerslider/js/layerslider.transitions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../example/Django2.0-Blog" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../example/django-with-vuejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/acomodation/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/acomodation/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/acomodation/css/animate.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/acomodation/css/animate.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/acomodation/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/acomodation/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/acomodation/css/date_time_picker.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/acomodation/css/date_time_picker.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/acomodation/css/magnific-popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/acomodation/css/magnific-popup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/acomodation/css/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/acomodation/css/menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/acomodation/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/acomodation/css/responsive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/acomodation/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/acomodation/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/acomodation/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/acomodation/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/acomodation/js/bootsrap_datepicker_func.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/acomodation/js/bootsrap_datepicker_func.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/acomodation/js/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/acomodation/js/functions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/acomodation/js/jquery-1.11.2.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/acomodation/js/jquery-1.11.2.min.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +100,7 @@
     <session id="-1217828507">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="13" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="2" />
@@ -91,7 +115,9 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cell" value="241" />
-          <entry key="html" value="2251" />
+          <entry key="css" value="13" />
+          <entry key="html" value="2479" />
+          <entry key="js" value="2" />
           <entry key="py" value="1867" />
           <entry key="sql" value="102" />
           <entry key="txt" value="201" />
@@ -99,7 +125,9 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="2251" />
+          <entry key="CSS" value="13" />
+          <entry key="HTML" value="2479" />
+          <entry key="JavaScript" value="2" />
           <entry key="PLAIN_TEXT" value="201" />
           <entry key="Python" value="1867" />
           <entry key="Scratch" value="343" />
@@ -113,20 +141,23 @@
           <entry key="UserAndAdmin_user_user_permissions" value="1" />
           <entry key="UserAndAdmin_userprofile" value="1" />
           <entry key="auth_group_permissions" value="1" />
-          <entry key="css" value="4" />
-          <entry key="html" value="51" />
-          <entry key="js" value="2" />
-          <entry key="py" value="63" />
+          <entry key="css" value="60" />
+          <entry key="gif" value="1" />
+          <entry key="html" value="62" />
+          <entry key="js" value="13" />
+          <entry key="png" value="4" />
+          <entry key="py" value="64" />
           <entry key="sql" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="4" />
+          <entry key="CSS" value="60" />
           <entry key="Database Element" value="20" />
-          <entry key="HTML" value="51" />
-          <entry key="JavaScript" value="2" />
-          <entry key="Python" value="63" />
+          <entry key="HTML" value="62" />
+          <entry key="Image" value="5" />
+          <entry key="JavaScript" value="13" />
+          <entry key="Python" value="64" />
           <entry key="SQL" value="6" />
           <entry key="Scratch" value="5" />
         </counts>
@@ -200,75 +231,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/acomodation/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1412">
-              <caret line="69" column="70" lean-forward="true" selection-start-line="69" selection-start-column="70" selection-end-line="69" selection-end-column="70" />
-              <folding>
-                <element signature="e#507#512#0#HTML" expanded="true" />
-                <element signature="e#12486#12504#0#HTML" expanded="true" />
-                <element signature="e#13071#13089#0#HTML" expanded="true" />
-                <element signature="e#18282#18287#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UserAndAdmin/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Property/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/acomodation/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="258" column="78" lean-forward="true" selection-start-line="258" selection-start-column="78" selection-end-line="258" selection-end-column="78" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#2;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#3;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#4;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h1#0;n#div#0;n#form#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#div#0;n#form#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="-1403">
+              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/COMP9900/urls.py">
+        <entry file="file://$PROJECT_DIR$/template/acomodation/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="55">
-              <caret line="27" column="48" lean-forward="true" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Property/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+            <state relative-caret-position="2142">
+              <caret line="102" column="12" selection-start-line="102" selection-start-column="12" selection-end-line="102" selection-end-column="12" />
+              <folding>
+                <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -297,6 +274,12 @@
       <find>html</find>
       <find>image/</find>
       <find>container</find>
+      <find>nav</find>
+      <find>pull</find>
+      <find>color: #ffffff,</find>
+      <find>qty</find>
+      <find>pro</find>
+      <find>promo</find>
     </findStrings>
     <replaceStrings>
       <replace>template/acomodation/image</replace>
@@ -305,6 +288,8 @@
       <replace>acomodation/css</replace>
       <replace>acomodation/css/</replace>
       <replace>acomodation/image/</replace>
+      <replace>{color: #ffffff;}</replace>
+      <replace>{color: #ffffff;}</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -313,25 +298,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/manage.py" />
-        <option value="$PROJECT_DIR$/acommodation/__init__.py" />
-        <option value="$PROJECT_DIR$/acommodation/admin.py" />
-        <option value="$PROJECT_DIR$/acommodation/urls.py" />
-        <option value="$PROJECT_DIR$/template/acomodation/JS/register.js" />
-        <option value="$PROJECT_DIR$/acommodation/views.py" />
-        <option value="$PROJECT_DIR$/acommodation/models.py" />
-        <option value="/anaconda3/lib/python3.6/site-packages/django/contrib/auth/base_user.py" />
-        <option value="$PROJECT_DIR$/accommodations/migrations/__init__.py" />
-        <option value="$PROJECT_DIR$/template/acomodation/CSS/register.css" />
-        <option value="$PROJECT_DIR$/template/acomodation/mainpage.html" />
-        <option value="$PROJECT_DIR$/template/index.html" />
-        <option value="/anaconda3/lib/python3.6/site-packages/django/contrib/auth/forms.py" />
-        <option value="$PROJECT_DIR$/accommodations/forms.py" />
-        <option value="$PROJECT_DIR$/accommodations/models.py" />
-        <option value="$PROJECT_DIR$/accommodations/admin.py" />
-        <option value="$PROJECT_DIR$/accommodations/views.py" />
-        <option value="$PROJECT_DIR$/accommodations/urls.py" />
-        <option value="$PROJECT_DIR$/UserAndAdmin/models.py" />
         <option value="$PROJECT_DIR$/UserAndAdmin/admin.py" />
         <option value="$PROJECT_DIR$/Property/apps.py" />
         <option value="$PROJECT_DIR$/Pending/admin.py" />
@@ -359,11 +325,30 @@
         <option value="$PROJECT_DIR$/template/acomodation/loginbase.html" />
         <option value="$PROJECT_DIR$/template/acomodation/property_list.html" />
         <option value="$PROJECT_DIR$/Property/search.py" />
-        <option value="$PROJECT_DIR$/template/acomodation/index.html" />
-        <option value="$PROJECT_DIR$/template/acomodation/base.html" />
         <option value="$PROJECT_DIR$/Property/urls.py" />
         <option value="$PROJECT_DIR$/UserAndAdmin/urls.py" />
         <option value="$PROJECT_DIR$/COMP9900/urls.py" />
+        <option value="$PROJECT_DIR$/template/acomodation/css/responsive.css" />
+        <option value="$PROJECT_DIR$/template/acomodation/css/owl.theme.default.css" />
+        <option value="$PROJECT_DIR$/template/acomodation/css/owl.carousel.css" />
+        <option value="$PROJECT_DIR$/template/acomodation/css/menu.css" />
+        <option value="$PROJECT_DIR$/template/acomodation/css/magnific-popup.css" />
+        <option value="$PROJECT_DIR$/template/acomodation/css/DateTimePicker.css" />
+        <option value="$PROJECT_DIR$/template/acomodation/css/blog.css" />
+        <option value="$PROJECT_DIR$/template/acomodation/css/base.css" />
+        <option value="$PROJECT_DIR$/template/acomodation/js/bootsrap_datepicker_func.js" />
+        <option value="$PROJECT_DIR$/template/acomodation/layerslider/js/greensock.js" />
+        <option value="$PROJECT_DIR$/template/acomodation/css/animate.min.css" />
+        <option value="$PROJECT_DIR$/template/acomodation/layerslider/js/layerslider.transitions.js" />
+        <option value="$PROJECT_DIR$/template/acomodation/layerslider/js/layerslider.kreaturamedia.jquery.js" />
+        <option value="$PROJECT_DIR$/template/acomodation/js/functions.js" />
+        <option value="$PROJECT_DIR$/template/acomodation/js/jquery-1.11.2.min.js" />
+        <option value="$PROJECT_DIR$/template/acomodation/css/bootstrap.min.css" />
+        <option value="$PROJECT_DIR$/template/acomodation/index_1.html" />
+        <option value="$PROJECT_DIR$/template/acomodation/css/date_time_picker.css" />
+        <option value="$PROJECT_DIR$/template/acomodation/base.html" />
+        <option value="$PROJECT_DIR$/template/acomodation/index.html" />
+        <option value="$PROJECT_DIR$/template/acomodation/css/style.css" />
       </list>
     </option>
   </component>
@@ -374,8 +359,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="118" />
     <option name="y" value="23" />
-    <option name="width" value="1510" />
+    <option name="width" value="1506" />
     <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -402,11 +388,6 @@
             <path>
               <item name="comp9900" type="b2602c69:ProjectViewProjectNode" />
               <item name="comp9900" type="462c0819:PsiDirectoryNode" />
-              <item name="Property" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comp9900" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comp9900" type="462c0819:PsiDirectoryNode" />
               <item name="template" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -418,7 +399,17 @@
             <path>
               <item name="comp9900" type="b2602c69:ProjectViewProjectNode" />
               <item name="comp9900" type="462c0819:PsiDirectoryNode" />
-              <item name="UserAndAdmin" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="acomodation" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp9900" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp9900" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="acomodation" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="fontello" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="comp9900" type="b2602c69:ProjectViewProjectNode" />
@@ -444,17 +435,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/template/acomodation" />
+      <recent name="$PROJECT_DIR$/template" />
+      <recent name="$PROJECT_DIR$/template/acomodation/css" />
+      <recent name="$PROJECT_DIR$/template/acomodation/assets" />
+      <recent name="$PROJECT_DIR$/template/acomodation/js" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/template/acomodation" />
       <recent name="$PROJECT_DIR$/template" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/acommodation" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/template/acomodation" />
-      <recent name="$PROJECT_DIR$/template/acomodation/JS" />
-      <recent name="$PROJECT_DIR$/template/acomodation/image" />
-      <recent name="$PROJECT_DIR$/template/acomodation/CSS" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -596,9 +588,34 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1510" height="1027" extended-state="0" />
+    <frame x="118" y="23" width="1506" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4987013" visible="true" weight="0.17486338" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" sideWeight="0.5012987" side_tool="true" weight="0.19241774" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="0" weight="0.32969698" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.327551" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4993895" weight="0.19465241" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.30666667" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.32969698" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32969698" />
+      <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32969698" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4993895" weight="0.4313253" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50061053" side_tool="true" weight="0.37040818" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.19156626" />
+      <window_info anchor="bottom" id="Database Console" order="14" weight="0.3018182" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32967034" />
+      <window_info anchor="right" x="603" y="35" width="474" height="980" id="Database" order="4" weight="0.26656738" />
+    </layout>
+    <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4987013" visible="true" weight="0.17983651" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5012987" side_tool="true" weight="0.19241774" />
@@ -622,7 +639,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32967034" />
       <window_info anchor="right" x="603" y="35" width="474" height="980" id="Database" order="4" weight="0.26656738" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -655,89 +672,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://0057de4b-aaa1-41b4-bbe8-f1de55e6a1c7/schema/comp9900db/table/Property_property.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pending/views.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pending/urls.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Property/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/acomodation/css/register.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/pycharm.jar!/resources/html5-schema/html5/structural.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="131" column="16" selection-start-line="131" selection-start-column="16" selection-end-line="131" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/acomodation/image/Narbar.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../acomodation/acomodation/image/Narbar.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file:///anaconda3/lib/python3.6/site-packages/django/templatetags/static.py" />
-    <entry file="file:///anaconda3/lib/python3.6/site-packages/nbconvert/resources/style.min.css" />
-    <entry file="file://$PROJECT_DIR$/UserAndAdmin/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-994" />
-      </provider>
-    </entry>
-    <entry file="file:///anaconda3/lib/python3.6/site-packages/django/contrib/admin/static/admin/js/vendor/jquery/jquery.js" />
-    <entry file="file:///anaconda3/lib/python3.6/site-packages/spyder/utils/help/js/jquery.js" />
-    <entry file="file://$PROJECT_DIR$/template/acomodation/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="202" lean-forward="true" selection-start-line="202" selection-end-line="202" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///anaconda3/lib/python3.6/site-packages/spyder/utils/help/static/css/default.css" />
-    <entry file="file://$PROJECT_DIR$/COMP9900/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="62" column="14" lean-forward="true" selection-start-line="62" selection-start-column="14" selection-end-line="62" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///anaconda3/lib/python3.6/site-packages/django/http/response.py" />
-    <entry file="file://$PROJECT_DIR$/UserAndAdmin/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/acomodation/index2.html" />
-    <entry file="file://$PROJECT_DIR$/template/acomodation/image/LogoMakr.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file:///anaconda3/lib/python3.6/site-packages/notebook/static/style/style.min.css" />
-    <entry file="file://$PROJECT_DIR$/template/acomodation/accountsetting.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://0057de4b-aaa1-41b4-bbe8-f1de55e6a1c7/schema/comp9900db/table/auth_group_permissions">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/acomodation/editprofile_photos.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4452">
@@ -752,27 +686,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/acomodation/loginbase.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="15" selection-start-column="15" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://0057de4b-aaa1-41b4-bbe8-f1de55e6a1c7/schema/comp9900db/table/Property_images">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/acomodation/css/animate.min.css" />
-    <entry file="file://$PROJECT_DIR$/template/acomodation/assets/validate.js" />
-    <entry file="file://$PROJECT_DIR$/template/acomodation/js/bootsrap_datepicker_func.js" />
-    <entry file="file://$PROJECT_DIR$/Property/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -804,41 +721,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/acomodation/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3129">
-          <caret line="149" selection-start-line="149" selection-end-line="149" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/acomodation/css/base.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/acomodation/css/menu.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2757" />
-      </provider>
-    </entry>
     <entry file="das://0057de4b-aaa1-41b4-bbe8-f1de55e6a1c7/schema/comp9900db/table/UserAndAdmin_user">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/acomodation/css/blog.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/acomodation/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1412">
-          <caret line="69" column="70" lean-forward="true" selection-start-line="69" selection-start-column="70" selection-end-line="69" selection-end-column="70" />
-          <folding>
-            <element signature="e#507#512#0#HTML" expanded="true" />
-            <element signature="e#12486#12504#0#HTML" expanded="true" />
-            <element signature="e#13071#13089#0#HTML" expanded="true" />
-            <element signature="e#18282#18287#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -860,13 +746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="75" column="16" lean-forward="true" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/acomodation/editprofile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
@@ -898,33 +777,245 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/acomodation/base.html">
+    <entry file="file://$PROJECT_DIR$/COMP9900/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="258" column="78" lean-forward="true" selection-start-line="258" selection-start-column="78" selection-end-line="258" selection-end-column="78" />
+        <state relative-caret-position="517">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/editprofile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/css/fontello/css/icon_set_2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-28" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/css/fontello/css/icon_set_1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="57" column="52" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/css/fontello/css/fontello.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="82" column="11" selection-start-line="82" selection-start-column="11" selection-end-line="82" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/css/blog.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="298" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/assets/validate.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/js/bootsrap_datepicker_func.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="24" selection-end-line="24" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/layerslider/css/blank.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/layerslider/css/layerslider.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/layerslider/js/greensock.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="602">
+          <caret line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/layerslider/js/layerslider.transitions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/layerslider/js/layerslider.kreaturamedia.jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/js/jquery-1.11.2.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49255">
+          <caret line="2658" column="48" selection-start-line="2658" selection-start-column="48" selection-end-line="2658" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/js/functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="48" lean-forward="true" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/index_1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="101" column="8" lean-forward="true" selection-start-line="101" selection-start-column="8" selection-end-line="101" selection-end-column="8" />
           <folding>
+            <element signature="n#head#1;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#2;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#3;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#4;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#div#0;n#form#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#1;n#div#0;n#form#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#script#6;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/COMP9900/urls.py">
+    <entry file="file://$PROJECT_DIR$/template/acomodation/image/logo_m.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/image/LogoMakr.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/loginbase.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="27" column="48" lean-forward="true" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
+        <state relative-caret-position="247">
+          <caret line="25" column="92" lean-forward="true" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Property/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="5650" column="28" selection-start-line="5650" selection-start-column="24" selection-end-line="5650" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/css/animate.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="87" column="18" selection-start-line="87" selection-start-column="18" selection-end-line="87" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/css/magnific-popup.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="56" column="1" lean-forward="true" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/css/owl.theme.default.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/css/owl.video.play.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/css/register.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/css/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/css/owl.carousel.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/css/menu.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/css/DateTimePicker.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/css/date_time_picker.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="419" column="58" lean-forward="true" selection-start-line="419" selection-start-column="58" selection-end-line="419" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/css/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="686">
+          <caret line="149" selection-start-line="149" selection-end-line="149" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="586" column="32" lean-forward="true" selection-start-line="586" selection-start-column="32" selection-end-line="586" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1403">
+          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/acomodation/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2142">
+          <caret line="102" column="12" selection-start-line="102" selection-start-column="12" selection-end-line="102" selection-end-column="12" />
+          <folding>
+            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>

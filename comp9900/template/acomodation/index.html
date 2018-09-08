@@ -7,10 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="hotel, bed and breakfast, accommodations, travel, motel">
-    <meta name="description" content="FC Recom - Hotel and Bed&amp;Breakfast">
-    <meta name="author" content="Ansonika">
-    <title>FC Recom - Hotel and Bed&amp;Breakfast</title>
+
     {% load static %}
     <!-- Favicons-->
     <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
@@ -20,13 +17,6 @@
           href="image/apple-touch-icon-114x114-precomposed.png">
     <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"
           href="image/apple-touch-icon-144x144-precomposed.png">
-
-    <!-- BASE CSS -->
-    <link href="{% static 'acomodation/css/base.css' %}" rel="stylesheet">
-
-    <!-- SPECIFIC CSS -->
-    <link rel="stylesheet" type="text/css" href="{% static 'acomodation/css/DateTimePicker.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'acomodation/css/owl.carousel.css' %}">
 
 
 {% endblock %}
@@ -135,11 +125,9 @@
     <!-- End Searchbar ============================================ -->
 
     <div class="container margin_60_35">
-        <h1 class="main_title"><em></em>Welcome to Recom <span>Hotel and Bed&amp;Breakfast</span></h1>
+        <h1 class="main_title"><em></em>Welcome to Driver bnb <span>House and Apartment&amp;Studio</span></h1>
         <p class="lead styled">
-            Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie. Sed ad
-            debet scaevola, ne mel lorem legendos. Unum etiam cum te, an elit assueverit vix, falli aliquam complectitur
-            ex ius.
+            Say something!
         </p>
         <div class="row">
             <div class="col-sm-6">
@@ -345,6 +333,7 @@
         <div class="promo_full_wp">
             <div>
                 <h3>What Clients say<span>Id tale utinam ius, an mei omnium recusabo iracundia.</span></h3>
+
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
@@ -409,14 +398,5 @@
         </div><!-- End promo_full -->
     </section><!-- End section -->
 
-    <div id="dtBox"></div><!-- End datepicker -->
 
-    <!-- COMMON SCRIPTS -->
-    <script src="{% static 'acomodation/js/jquery-1.11.2.min.js' %}"></script>
-    <script src="{% static 'acomodation/js/common_scripts_min.js' %}"></script>
-    <script src="{% static 'acomodation/assets/validate.js' %}"></script>
-    <script src="{% static 'acomodation/js/functions.js' %}"></script>
-
-    <script type="text/javascript" src="{% static 'acomodation/js/DateTimePicker.js' %}"></script>
-    <script type="text/javascript">$("#dtBox").DateTimePicker();</script>
 {% endblock content %}

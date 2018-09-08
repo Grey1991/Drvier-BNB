@@ -12,8 +12,11 @@
 .main-menu ul li a {display: block;padding:10px;}
 			
 /*First level styles */			
-.main-menu > ul > li > a {color: #333; padding: 15px 10px 15px  10px; font-size:14px; margin:0; font-weight:500;}
+.main-menu > ul > li > a {color: #fff; padding: 15px 10px 15px  10px; font-size:14px; margin:0; font-weight:500;}
 .main-menu > ul > li:hover > a {color: #ed5434;}
+
+/*First level styles header colored */		
+header.sticky .main-menu > ul > li > a {color: #333;}
 
 /* Opacity mask when left open */
 .layer {display: none; position: fixed; top: 0; left: 0; width: 100%; min-width: 100%; z-index: 100; min-height: 100%; background-color: #000; opacity: 0; z-index:9;}
@@ -24,7 +27,7 @@
 a.dropdown-toggle.icon-search{display: inline-block;}	
 
 /* IE9 fix that affect the pages with parallax header (ex.single_hotel.html); Issue: submenu disappear when move the cursor to the submenu (only if you did not scroll the page) */
-.ie9 a.show-submenu, .ie9 a.show-submenu-mega{ background:url(../image/fix_ie_9_menu.png);}
+.ie9 a.show-submenu, .ie9 a.show-submenu-mega{ background:url(../img/fix_ie_9_menu.png);}
 		
 /* All styles for screen size over 992px
 ================================================== */
@@ -40,6 +43,9 @@ a.dropdown-toggle.icon-search{display: inline-block;}
 /* Submenu */
 .main-menu ul ul,
 .main-menu ul .menu-wrapper {position: absolute;display: none;z-index: 1;height: auto;left: 0;top: 100%;margin: 0;padding: 0;background: #fff;min-width:190px;-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);box-shadow: 0 6px 12px rgba(0, 0, 0, .175);}
+
+/* Arrows top */
+.main-menu ul ul:before{bottom: 100%;left: 15%;border: solid transparent;content: " ";height: 0;width: 0;position: absolute;pointer-events: none;border-bottom-color: #fff;border-width: 7px;margin-left: -7px;}
 
 .main-menu ul .menu-wrapper ul {-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;border-top: none; margin:0; padding:0;}
 .main-menu ul .menu-wrapper ul:before{border:0;}
@@ -130,13 +136,17 @@ a.show-submenu-mega + .menu-wrapper.show_mega,
 }
 
 .cmn-toggle-switch:focus {outline: none;}
-.cmn-toggle-switch span {display: block;position: absolute;top: 10px;left: 0;right: 0;height: 2px;background: #333;}
+.cmn-toggle-switch span {display: block;position: absolute;top: 10px;left: 0;right: 0;height: 2px;background: #fff;}
 
 .cmn-toggle-switch span::before,
-.cmn-toggle-switch span::after {position: absolute;display: block;left: 0;width: 100%;height:2px;background-color: #333; content: "";}
+.cmn-toggle-switch span::after {position: absolute;display: block;left: 0;width: 100%;height:2px;background-color: #fff; content: "";}
 
 .cmn-toggle-switch span::before {top: -10px;}
 .cmn-toggle-switch span::after {bottom: -10px;}
+
+.sticky .cmn-toggle-switch span::before,
+.sticky .cmn-toggle-switch span::after,
+.sticky .cmn-toggle-switch span {background-color: #333;}
 
 .cmn-toggle-switch__htx span::before,
 .cmn-toggle-switch__htx span::after { -webkit-transition-duration: 0.3s, 0.3s;transition-duration: 0.3s, 0.3s;-webkit-transition-delay: 0.3s, 0;transition-delay: 0.3s, 0;}
