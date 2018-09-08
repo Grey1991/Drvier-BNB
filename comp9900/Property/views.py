@@ -1,16 +1,23 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.forms import modelformset_factory
+
 from Property import forms, models
 from Property import forms
+from .models import Property, Images
+from .forms import PropertyForm, ImageForm
 import time
 
+IMAGE_FILE_TYPES = ['png', 'jpg', 'jpeg']
 
 def add_property(request):
+    ImageFormSet = modelformset_factory(Images, form=ImageForm)
     if request.method == "POST":
-
         property_form = forms.PropertyForm(request.POST)
-        if property_form.is_valid():
-            user_ID = property_form.cleaned_data['user_ID']
+        formset = ImageFormSet(request.POST, request.FILES, queryset=Images.objects.none())
+        if property_form.is_valid() and formset.is_valid():
+            # user_ID = property_form.cleaned_data['user_ID']
+
             price = property_form.cleaned_data['price']
             types_property = property_form.cleaned_data['types_property']
 
@@ -48,8 +55,9 @@ def add_property(request):
             couple = property_form.cleaned_data['couple']
             status = property_form.cleaned_data['status']
 
-            new_property = models.Property()
-            new_property.user_ID = user_ID
+            # new_property = models.Property()
+            new_property = property_form.save(commit=False)
+            new_property.user_ID = request.user
             new_property.price = price
             new_property.types_property = types_property
 
@@ -90,17 +98,38 @@ def add_property(request):
             # new_property.longitude = 0.0
             # new_property.latitude = 0.0
 
-            new_property.created_at = time.asctime(time.localtime(time.time()))#
+            new_property.created_at = time.asctime(time.localtime(time.time()))  #
             new_property.updated_at = time.asctime(time.localtime(time.time()))
-
             new_property.save()
-            # img = forms.Images(img_url=request.FILES.get('img'))
-            # img.save()
-            #return HttpResponse('add a property successfully!')
-            return render(request,'add_success.html')
+
+            # album.album_logo = request.FILES['album_logo']
+            # file_type = album.album_logo.url.split('.')[-1]
+            # file_type = file_type.lower()
+            # if file_type not in IMAGE_FILE_TYPES:
+            #     context = {
+            #         'album': album,
+            #         'form': form,
+            #         'error_message': 'Image file must be PNG, JPG, or JPEG',
+            #     }
+            #     return render(request, 'music/create_album.html', context)
+
+            for form in formset.cleaned_data:
+                image = form['image']
+                photo = Images(pid=new_property, image=image)
+                photo.save()
+
+            return render(request, 'add_successfully.html', {'new_property': new_property})
     else:
         property_form = forms.PropertyForm()
-        return render(request, 'add_property.html',{'property_form':property_form})
+        formset = ImageFormSet(queryset=Images.objects.none())
+        return render(request, 'add_property.html', {'property_form': property_form, 'formset': formset})
+    # if not request.user.is_authenticated():
+    #     return render(request, 'login.html')
+    # else:
 
+
+def property_detail(request, property_id):
+    property = Property.objects.get(id=property_id)
+    return render(request, 'property_detail.html', {'property': property})
 
 
