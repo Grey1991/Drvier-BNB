@@ -1,0 +1,27 @@
+{% extends "loginbase.html" %}
+{% block title %} index {% endblock %}
+
+{% block content %}
+
+    <h1> Details of my property </h1>
+    <div class="container">
+        <div class="row centered-form">
+            <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"> My property
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                     <h2> {{ property.user_ID}} </h2>
+                     <h2> {{ property.images_set.all}} </h2>
+                      {% for image in property.images_set.all %}
+                          <a href="{{image.url}}"><img  src="{{image.url}}" alt="{{image.url}}"></img></a>
+                      {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+

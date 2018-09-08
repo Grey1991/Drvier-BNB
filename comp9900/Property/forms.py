@@ -10,7 +10,7 @@ class PropertyForm(forms.ModelForm):
     # image = forms.ImageField(required=False)
     class Meta:
         model = Property
-        field = exclude = ['created_at', 'updated_at', 'longitude', 'latitude']
+        field = exclude = ['user_ID','created_at', 'updated_at', 'longitude', 'latitude']
         labels = {
             'user_ID': 'Your email',
             'status': 'Release now?',
@@ -28,21 +28,14 @@ class PropertyForm(forms.ModelForm):
         #     'price': NumberInput(attrs={'class': 'special'}), # 关键是这一行
         # }
 
-# class AddressForm(forms.ModelForm):
-#     """
-#     添加地址表单
-#     """
-#     class Meta:
-#         model = Address
-#         fields = '__all__'
 
-# class ImageForm(forms.ModelForm):
-#     """
-#     添加图片表单
-#     """
-#     class Meta:
-#         model = Images
-#         fields = '__all__'
+class ImageForm(forms.ModelForm):
+    """
+    添加图片表单
+    """
+    class Meta:
+        model = Images
+        fields = ('image',)
 
 class SearchForm(forms.ModelForm):
     """
