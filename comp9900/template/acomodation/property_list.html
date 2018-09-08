@@ -6,13 +6,14 @@
 {% block content %}
 
 <form action="{% url 'property:multi_search' %}" method="POST">
-    Price: <input type="text" name="search_query">
-    TYpes: <select name="search_query">
+    Price: <input type="text" name="price">
+    Types: <select name="type">
         <option value="H">House</option>
         <option value="A">Apartment</option>
         <option value="S" selected>Studio</option>
         <option value="O">others</option>
     </select>
+
 
 
 

@@ -2,10 +2,21 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title> NavBar </title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    {% block title %}
+    {% endblock %}
+    {% load static %}
+
+    <!-- BASE CSS -->
+    <link href="{% static 'acomodation/css/base.css' %}" rel="stylesheet">
+
+    <!-- SPECIFIC CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'acomodation/css/DateTimePicker.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'acomodation/css/owl.carousel.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'acomodation/css/owl.theme.default.css' %}">
+
+    {#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"#}
+    {#          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">#}
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
@@ -14,6 +25,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
             integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
             crossorigin="anonymous"></script>
+
+
 </head>
 
 <body>
@@ -21,162 +34,9 @@
 {% load static %}
 
 <style>
-    body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        font-family: "Helvetica Neue", sans-serif;
-        font-weight: lighter;
-    }
-
-    header {
-        width: 100%;
-        height: 100vh;
-        background: url('{% static "acomodation/image/Narbar.jpg" %}') no-repeat 50% 50%;
-        background-size: cover;
-        background-position: center;
-    }
-
-    header h1 {
-        margin: 0 auto;
-        position: absolute;
-        float: bottom;
-    }
-
-    .content {
-        width: 94%;
-        margin: 4em auto;
-        font-size: 20px;
-        line-height: 30px;
-        text-align: justify;
-    }
-
-    .logo {
-        line-height: 60px;
-        position: fixed;
-        float: left;
-        margin: 16px 46px;
-        color: #fff;
-        font-weight: bold;
-        font-size: 20px;
-        letter-spacing: 2px;
-    }
-
-    nav {
-        position: fixed;
-        width: 100%;
-        line-height: 60px;
-    }
-
-    nav ul {
-        line-height: 60px;
-        list-style: none;
-        background: rgba(0, 0, 0, 0);
-        color: #fff;
-        padding: 0;
-        text-align: right;
-        margin: 0;
-        padding-right: 40px;
-        transition: 1s;
-    }
-
-    nav.black ul {
-        background: #000;
-    }
-
-    nav ul li {
-        display: inline-block;
-        padding: 16px 40px;;
-    }
-
-    nav ul li a {
-        text-decoration: none;
-        color: #fff;
-        font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
-        font-size: 16px;
-    }
-
-    nav ul li a:hover {
-        border: 1px solid white;
-    }
-
-    .menu-icon {
-        line-height: 60px;
-        width: 100%;
-        background: #000;
-        text-align: right;
-        box-sizing: border-box;
-        padding: 15px 24px;
-        cursor: pointer;
-        color: #fff;
-        display: none;
-    }
-
-    @media (max-width: 786px) {
-
-        .logo {
-            position: fixed;
-            top: 0;
-            margin-top: 16px;
-        }
-
-        nav ul {
-            max-height: 0px;
-            background: #000;
-        }
-
-        nav.black ul {
-            background: #000;
-        }
-
-        .showing {
-            max-height: 34em;
-        }
-
-        nav ul li {
-            box-sizing: border-box;
-            width: 100%;
-            padding: 24px;
-            text-align: center;
-        }
-
-        .menu-icon {
-            display: block;
-        }
-
-    }
-
-    /* Full-width input fields */
-    input[type=text], input[type=password] {
-        width: 90%;
-        padding: 12px 20px;
-        margin: 8px 26px;
-        display: inline-block;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
-        font-size: 16px;
-    }
-
-    /* Set a style for all buttons */
-    button {
-        background-color: #4CAF50;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 26px;
-        border: none;
-        cursor: pointer;
-        width: 90%;
-        font-size: 20px;
-    }
-
-    button:hover {
-        opacity: 0.8;
-    }
-
-    /* Center the image and position the close button */
     .imgcontainer {
         text-align: center;
-        margin: 24px 0 12px 0;
+        margin: 24px 12px;
         position: relative;
     }
 
@@ -238,47 +98,55 @@
     }
 
 </style>
+
 <div class="wrapper">
     <header>
-        <nav>
-            <div class="menu-icon">
-                <i class="fa fa-bars fa-2x"></i>
-            </div>
-            <div class="logo">
-                <a class="navbar-brand" href="{% url 'userandadmin:index' %}" style="color: white">Driverbnb</a>
-            </div>
-            <div class="menu">
-                <ul class="nav justify-content-end">
-                    {% if user.is_authenticated %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'property:add_address' %}">Become a host</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Trips</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown" data-toggle="dropdown" href="#" role="button"
-                               aria-haspopup="true" aria-expanded="false">{{ user.first_name }}</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{% url 'userandadmin:editprofile' page_id=1 %}">Edit Profile</a>
-                                <a class="dropdown-item" href="{% url 'userandadmin:accountsetting' %}">Account
-                                    Setting</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{% url 'userandadmin:logout' %}">Log out</a>
-                            </div>
-                        </li>
-                    {% else %}
-                        <li><a onclick="document.getElementById('modal-wrapper').style.display='block'" class="btn">Sign
-                            up</a></li>
-                        <li><a onclick="document.getElementById('modal-wrapper2').style.display='block'" class="btn">Log
-                            in</a></li>
-                    {% endif %}
-                </ul>
-            </div>
+        <div class="row">
+            <div class="container">
+                <div class="col--md-3 col-sm-3 col-xs-3">
+{#                    <a href="{% url 'userandadmin:index' %}" style="color: black;font-size: xx-large;">Driverbnb</a>#}
+                    <a href="{% url 'userandadmin:index' %}" id="logo">
+                        <img src="{% static 'acomodation/image/LogoMakr.png' %}" width="190" height="23" alt="" data-retina="true">
+                    </a>
+                </div>
+                <nav class="col--md-9 col-sm-9 col-xs-9">
+                    <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close"
+                       href="javascript:void(0);"><span>Menu mobile</span></a>
+                    <div class="main-menu">
+                        <div id="header_menu">
+                            <a href="{% url 'userandadmin:index' %}" style="color: black;font-size: xx-large;"
+                               data-retina="true">Driverbnb</a>
+                        </div>
 
+                        <a href="#" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
+                        <ul>
+                            {% if user.is_authenticated %}
+                                <li><a href="{% url 'property:add_address' %}">Become a host</a></li>
+                                <li><a href="#">Trips</a></li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);" class="show-submenu">{{ user.first_name }}<i
+                                            class="icon-down-open-mini"></i></a>
+                                    <ul>
+                                        <li><a href="{% url 'userandadmin:editprofile' page_id=1 %}">Edit Profile</a>
+                                        </li>
+                                        <li><a href="{% url 'userandadmin:accountsetting' %}">Account Setting</a></li>
+                                        <li><a href="{% url 'userandadmin:logout' %}">Log out</a></li>
+                                    </ul>
+                                </li>
+                            {% else %}
+                                <li><a onclick="document.getElementById('modal-wrapper').style.display='block'">Sign
+                                    up</a></li>
+                                <li><a onclick="document.getElementById('modal-wrapper2').style.display='block'">Log
+                                    in</a></li>
+                            {% endif %}
+                        </ul>
+                    </div><!-- End main-menu -->
 
-        </nav>
+                </nav>
+            </div><!-- End row -->
+        </div><!-- End container -->
     </header>
+
 
     {#       注册界面#}
 
@@ -286,20 +154,54 @@
         <form class="modal-content animate">
             {% csrf_token %}
             <div class="imgcontainer">
-                <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close"
-                      title="Close PopUp">&times;</span>
+                    <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close"
+                          title="Close PopUp">&times;</span>
                 <img src="{% static 'acomodation/image/2.png' %}" alt="Avatar" class="avatar">
                 <h1 style="text-align:center">Sign up with your email</h1>
-            </div>
-
-            <div class="container">
-                <input type="text" name="first_name" id="first_name" placeholder="First name">
-                <input type="text" name="last_name" id="last_name" placeholder="Last name">
-                <input type="text" name="email" id="email" placeholder="Email Address">
-                <div class="alert alert-danger" id='email_conflict' style="display: none;">Email already exists!</div>
-                <div class="alert alert-danger" id='email_error' style="display: none;"> invalid email address!</div>
-                <input type="password" name="password1" id="password1" placeholder="Password">
-                <input type="password" name="password2" id="password2" placeholder="Confirm Password">
+                <input type="text" name="first_name" id="first_name" style="width: 90%;
+                                                                        padding: 12px 20px;
+                                                                        margin: 8px 26px;
+                                                                        display: inline-block;
+                                                                        border: 1px solid #ccc;
+                                                                        box-sizing: border-box;
+                                                                        font-size: 16px;"
+                       placeholder="First name">
+                <input type="text" name="last_name" id="last_name" style="width: 90%;
+                                                                        padding: 12px 20px;
+                                                                        margin: 8px 26px;
+                                                                        display: inline-block;
+                                                                        border: 1px solid #ccc;
+                                                                        box-sizing: border-box;
+                                                                        font-size: 16px;"
+                       placeholder="Last name">
+                <input type="text" name="email" id="email" style="width: 90%;
+                                                                        padding: 12px 20px;
+                                                                        margin: 8px 26px;
+                                                                        display: inline-block;
+                                                                        border: 1px solid #ccc;
+                                                                        box-sizing: border-box;
+                                                                        font-size: 16px;"
+                       placeholder="Email Address">
+                <div class="alert alert-danger" id='email_conflict' style="display: none;">Email already exists!
+                </div>
+                <div class="alert alert-danger" id='email_error' style="display: none;"> invalid email address!
+                </div>
+                <input type="password" name="password1" id="password1" style="width: 90%;
+                                                                        padding: 12px 20px;
+                                                                        margin: 8px 26px;
+                                                                        display: inline-block;
+                                                                        border: 1px solid #ccc;
+                                                                        box-sizing: border-box;
+                                                                        font-size: 16px;"
+                       placeholder="Password">
+                <input type="password" name="password2" id="password2" style="width: 90%;
+                                                                        padding: 12px 20px;
+                                                                        margin: 8px 26px;
+                                                                        display: inline-block;
+                                                                        border: 1px solid #ccc;
+                                                                        box-sizing: border-box;
+                                                                        font-size: 16px;"
+                       placeholder="Confirm Password">
                 <div class="alert alert-danger" id='password_error' style="display: none;"> passwords do not match!
                 </div>
                 <div class="alert alert-danger" id='password_invaild' style="display: none;"> password should be at
@@ -312,6 +214,7 @@
                 <a href="#" style="text-decoration:none; float:right; margin-right:34px; margin-top:26px;">Forgot
                     Password ?</a>
             </div>
+
         </form>
     </div>
 
@@ -322,15 +225,18 @@
             {% csrf_token %}
 
             <div class="imgcontainer">
-                <span onclick="document.getElementById('modal-wrapper2').style.display='none'" class="close"
-                      title="Close PopUp">&times;</span>
+                    <span onclick="document.getElementById('modal-wrapper2').style.display='none'" class="close"
+                          title="Close PopUp">&times;</span>
                 <img src="{% static 'acomodation/image/2.png' %}" alt="Avatar" class="avatar">
                 <h1 style="text-align:center">Log in with your email</h1>
-            </div>
-
-            <div class="container">
-                {#                邮箱#}
-                <input type="text" id="lg_email" name="email" placeholder="Email address" autofocus required>
+                <input type="text" id="lg_email" name="email" style="width: 90%;
+                                                                        padding: 12px 20px;
+                                                                        margin: 8px 26px;
+                                                                        display: inline-block;
+                                                                        border: 1px solid #ccc;
+                                                                        box-sizing: border-box;
+                                                                        font-size: 16px;"
+                       placeholder="Email address" autofocus required>
                 <div class="alert alert-danger" id='lg_email_invalid' style="display: none;"> invalid email address!
                 </div>
                 <div class="alert alert-danger" id='lg_email_not_confirm' style="display: none;"> please confirm your
@@ -340,7 +246,14 @@
                     exist!
                 </div>
                 {#                密码#}
-                <input type="password" id="lg_password" name="password" placeholder="At least 6 characters" required>
+                <input type="password" id="lg_password" name="password" style="width: 90%;
+                                                                        padding: 12px 20px;
+                                                                        margin: 8px 26px;
+                                                                        display: inline-block;
+                                                                        border: 1px solid #ccc;
+                                                                        box-sizing: border-box;
+                                                                        font-size: 16px;"
+                       placeholder="At least 6 characters" required>
                 <div class="alert alert-danger" id='lg_password_error' style="display: none;"> Your email or password is
                     incorrect.
                 </div>
@@ -506,6 +419,102 @@
 
 </script>
 
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <img src="{% static 'acomodation/image/testimonial_1.jpg' %}" width="141" height="40" alt=""
+                     id="logo_footer" data-retina="true">
+                <ul id="contact_details_footer">
+                    <li>Route de Sablet 1023, Marseille<br>France 01920</li>
+                    <li><a href="tel://004542344599">+45 423 445 998</a> / <a href="#0">
+                        <script data-cfhash='f9e31' type="text/javascript">
+                            !function (t, e, r, n, c, a, p) {
+                                try {
+                                    t = document.currentScript || function () {
+                                        for (t = document.getElementsByTagName('script'), e = t.length; e--;) if (t[e].getAttribute('data-cfhash')) return t[e]
+                                    }();
+                                    if (t && (c = t.previousSibling)) {
+                                        p = t.parentNode;
+                                        if (a = c.getAttribute('data-cfemail')) {
+                                            for (e = '', r = '0x' + a.substr(0, 2) | 0, n = 2; a.length - n; n += 2) e += '%' + ('0' + ('0x' + a.substr(n, 2) ^ r).toString(16)).slice(-2);
+                                            p.replaceChild(document.createTextNode(decodeURIComponent(e)), c)
+                                        }
+                                        p.removeChild(t)
+                                    }
+                                } catch (u) {
+                                }
+                            }()
+                        </script>
+                    </a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-sm-4">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Rooms</a></li>
+                    <li><a href="#">Activities</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-4">
+                <h3>Change language</h3>
+                <ul>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">French</a></li>
+                    <li><a href="#">Spanish</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-4" id="newsletter">
+                <h3>Newsletter</h3>
+                <p>Join our newsletter to keep be informed about offers and news.</p>
+                <div id="message-newsletter_2"></div>
+                <form method="post" action="assets/newsletter.php" name="newsletter_2" id="newsletter_2">
+                    <div class="form-group">
+                        <input name="email_newsletter_2" id="email_newsletter_2" type="email" value=""
+                               placeholder="Your mail" class="form-control">
+                    </div>
+                    <input type="submit" value="Subscribe" class="btn_1 white" id="submit-newsletter_2">
+                </form>
+            </div>
+        </div><!-- End row -->
+        <div class="row">
+            <div class="col-md-12">
+                <div id="social_footer">
+                    <ul>
+                        <li><a href="#"><i class="icon-facebook"></i></a></li>
+                        <li><a href="#"><i class="icon-twitter"></i></a></li>
+                        <li><a href="#"><i class="icon-google"></i></a></li>
+                        <li><a href="#"><i class="icon-instagram"></i></a></li>
+                        <li><a href="#"><i class="icon-pinterest"></i></a></li>
+                        <li><a href="#"><i class="icon-vimeo"></i></a></li>
+                        <li><a href="#"><i class="icon-youtube-play"></i></a></li>
+                    </ul>
+                    <p>Copyright © 2016 <a target="_blank" title="Free CSS Themes" href="http://freecssthemes.com/">FreeCSSThemes</a>
+                        | All Right Reserved</p>
+
+                </div>
+            </div>
+        </div><!-- End row -->
+    </div><!-- End container -->
+</footer><!-- End footer -->
+
+
+<div id="dtBox"></div><!-- End datepicker -->
+
+<!-- COMMON SCRIPTS -->
+<script src="{% static 'acomodation/js/jquery-1.11.2.min.js' %}"></script>
+<script src="{% static 'acomodation/js/common_scripts_min.js' %}"></script>
+<script src="{% static 'acomodation/assets/validate.js' %}"></script>
+<script src="{% static 'acomodation/js/functions.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'acomodation/js/DateTimePicker.js' %}"></script>
+<script type="text/javascript">$("#dtBox").DateTimePicker();</script>
+
+<div id="toTop"></div><!-- Back to top button -->
 </body>
 
 </html>
