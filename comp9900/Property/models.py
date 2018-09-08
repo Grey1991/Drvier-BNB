@@ -11,7 +11,7 @@ class Property(models.Model):
         ('S', 'Studio'),
         ('O', 'others'),
     )
-    types_property = models.CharField(max_length=1, choices=TYPE_PROPERTY_CHOICES, default='O')
+    types_property = models.CharField(max_length=1, choices=TYPE_PROPERTY_CHOICES, default='others')
 
     '''
     address

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="2525402b-e4c3-4903-9065-02ec57dfece4" name="Default" comment="add multi search form">
       <change afterPath="$PROJECT_DIR$/../../AdditionalMaterial-Topic-3-TZ.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../COMP3900_9900_project3_18s2.pdf" afterDir="false" />
@@ -10,80 +11,20 @@
       <change afterPath="$PROJECT_DIR$/../../example/django-with-vuejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
+=======
+    <list default="true" id="63d1fd42-5b61-4cf8-95de-d43a0c304e5c" name="Default Changelist" comment="" />
+>>>>>>> master
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="Django default" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="Django default" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="Django default" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="comp9900db: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="Django default" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="comp9900db: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="Django default" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="comp9900db: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="Property_images: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="Django default" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="comp9900db: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="UserAndAdmin_user: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-    </expand>
-    <select />
-  </component>
-  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
-    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
-  </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="-1953161724">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
     <session id="-1217828507">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+<<<<<<< HEAD
           <entry key="project.closed" value="15" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="1" />
@@ -151,187 +92,57 @@
     <session id="-2041747017">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+=======
+>>>>>>> master
           <entry key="project.closed" value="1" />
-          <entry key="project.open.time.1" value="2" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="34" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Python" value="34" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="py" value="13" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="Python" value="13" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="-429171768">
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="html" value="160" />
-          <entry key="py" value="500" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="HTML" value="160" />
-          <entry key="Python" value="500" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="django_migrations" value="1" />
           <entry key="html" value="2" />
-          <entry key="py" value="5" />
-          <entry key="sql" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Database Element" value="1" />
           <entry key="HTML" value="2" />
-          <entry key="Python" value="5" />
-          <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
     </session>
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="comp9900" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/acomodation/index.html">
+        <entry file="file://$PROJECT_DIR$/template/acomodation/base.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="1218">
               <caret line="58" selection-start-line="58" selection-end-line="58" />
             </state>
+=======
+            <state relative-caret-position="-9460" />
+>>>>>>> master
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/template/acomodation/base.html">
+        <entry file="file://$PROJECT_DIR$/template/acomodation/index.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="-2037">
               <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
+=======
+            <state relative-caret-position="-7680" />
+>>>>>>> master
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CSS File" />
-        <option value="JavaScript File" />
-        <option value="Python Script" />
-        <option value="HTML File" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>property</find>
-      <find>propertyform</find>
-      <find>css</find>
-      <find>template/template/acomodation/image</find>
-      <find>stylesheet</find>
-      <find>template/acomodation/image</find>
-      <find>css/</find>
-      <find>html</find>
-      <find>image/</find>
-      <find>container</find>
-      <find>nav</find>
-      <find>pull</find>
-      <find>color: #ffffff,</find>
-      <find>qty</find>
-      <find>pro</find>
-      <find>promo</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>template/acomodation/image</replace>
-      <replace>image/</replace>
-      <replace>template/acomodation/image/</replace>
-      <replace>acomodation/css</replace>
-      <replace>acomodation/css/</replace>
-      <replace>acomodation/image/</replace>
-      <replace>{color: #ffffff;}</replace>
-      <replace>{color: #ffffff;}</replace>
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/UserAndAdmin/admin.py" />
-        <option value="$PROJECT_DIR$/Property/apps.py" />
-        <option value="$PROJECT_DIR$/Pending/admin.py" />
-        <option value="$PROJECT_DIR$/template/acomodation/login.html" />
-        <option value="$PROJECT_DIR$/template/editprofile.html" />
-        <option value="$PROJECT_DIR$/Property/admin.py" />
-        <option value="$PROJECT_DIR$/template/acomodation/add_property.html" />
-        <option value="$PROJECT_DIR$/Property/models.py" />
-        <option value="$PROJECT_DIR$/Property/forms.py" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/0057de4b-aaa1-41b4-bbe8-f1de55e6a1c7/console.sql" />
-        <option value="$PROJECT_DIR$/template/acomodation/multi_search_list.html" />
-        <option value="$PROJECT_DIR$/template/acomodation/add_success.html" />
-        <option value="$PROJECT_DIR$/Property/views.py" />
-        <option value="$PROJECT_DIR$/template/acomodation/index2.html" />
-        <option value="$PROJECT_DIR$/template/acomodation/register.html" />
-        <option value="$PROJECT_DIR$/COMP9900/settings.py" />
-        <option value="$PROJECT_DIR$/UserAndAdmin/forms.py" />
-        <option value="$PROJECT_DIR$/template/acomodation/accountsetting.html" />
-        <option value="$PROJECT_DIR$/template/editprofile_editprofile.html" />
-        <option value="$PROJECT_DIR$/template/editprofile_photos.html" />
-        <option value="$PROJECT_DIR$/template/acomodation/editprofile.html" />
-        <option value="$PROJECT_DIR$/UserAndAdmin/views.py" />
-        <option value="$PROJECT_DIR$/template/acomodation/editprofile_editprofile.html" />
-        <option value="$PROJECT_DIR$/template/acomodation/editprofile_photos.html" />
-        <option value="$PROJECT_DIR$/template/acomodation/loginbase.html" />
-        <option value="$PROJECT_DIR$/template/acomodation/property_list.html" />
-        <option value="$PROJECT_DIR$/Property/search.py" />
-        <option value="$PROJECT_DIR$/Property/urls.py" />
-        <option value="$PROJECT_DIR$/UserAndAdmin/urls.py" />
-        <option value="$PROJECT_DIR$/COMP9900/urls.py" />
-        <option value="$PROJECT_DIR$/template/acomodation/css/responsive.css" />
-        <option value="$PROJECT_DIR$/template/acomodation/css/owl.theme.default.css" />
-        <option value="$PROJECT_DIR$/template/acomodation/css/owl.carousel.css" />
-        <option value="$PROJECT_DIR$/template/acomodation/css/menu.css" />
-        <option value="$PROJECT_DIR$/template/acomodation/css/magnific-popup.css" />
-        <option value="$PROJECT_DIR$/template/acomodation/css/DateTimePicker.css" />
-        <option value="$PROJECT_DIR$/template/acomodation/css/blog.css" />
-        <option value="$PROJECT_DIR$/template/acomodation/css/base.css" />
-        <option value="$PROJECT_DIR$/template/acomodation/js/bootsrap_datepicker_func.js" />
-        <option value="$PROJECT_DIR$/template/acomodation/layerslider/js/greensock.js" />
-        <option value="$PROJECT_DIR$/template/acomodation/css/animate.min.css" />
-        <option value="$PROJECT_DIR$/template/acomodation/layerslider/js/layerslider.transitions.js" />
-        <option value="$PROJECT_DIR$/template/acomodation/layerslider/js/layerslider.kreaturamedia.jquery.js" />
-        <option value="$PROJECT_DIR$/template/acomodation/js/functions.js" />
-        <option value="$PROJECT_DIR$/template/acomodation/js/jquery-1.11.2.min.js" />
-        <option value="$PROJECT_DIR$/template/acomodation/css/bootstrap.min.css" />
-        <option value="$PROJECT_DIR$/template/acomodation/index_1.html" />
-        <option value="$PROJECT_DIR$/template/acomodation/css/date_time_picker.css" />
-        <option value="$PROJECT_DIR$/template/acomodation/base.html" />
-        <option value="$PROJECT_DIR$/template/acomodation/index.html" />
-        <option value="$PROJECT_DIR$/template/acomodation/css/style.css" />
-      </list>
-    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -345,9 +156,7 @@
     <option name="width" value="1506" />
     <option name="height" value="1027" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -369,24 +178,27 @@
             <path>
               <item name="comp9900" type="b2602c69:ProjectViewProjectNode" />
               <item name="comp9900" type="462c0819:PsiDirectoryNode" />
-              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="Pending" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp9900" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp9900" type="462c0819:PsiDirectoryNode" />
+              <item name="Property" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="comp9900" type="b2602c69:ProjectViewProjectNode" />
               <item name="comp9900" type="462c0819:PsiDirectoryNode" />
               <item name="template" type="462c0819:PsiDirectoryNode" />
-              <item name="acomodation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="comp9900" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comp9900" type="462c0819:PsiDirectoryNode" />
-              <item name="template" type="462c0819:PsiDirectoryNode" />
-              <item name="acomodation" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comp9900" type="b2602c69:ProjectViewProjectNode" />
+<<<<<<< HEAD
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+=======
+              <item name="comp9900" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="acomodation" type="462c0819:PsiDirectoryNode" />
+>>>>>>> master
             </path>
           </expand>
           <select />
@@ -395,32 +207,13 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="redshift&#10;mysql" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL&#10;PostgreSQL" />
-    <property name="database.console.LAST_STATE" value="false" />
-    <property name="database.data.extractors.current.id" value="Tab-separated (TSV)_id" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/template/acomodation" />
-      <recent name="$PROJECT_DIR$/template" />
-      <recent name="$PROJECT_DIR$/template/acomodation/css" />
-      <recent name="$PROJECT_DIR$/template/acomodation/assets" />
-      <recent name="$PROJECT_DIR$/template/acomodation/js" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/template/acomodation" />
-      <recent name="$PROJECT_DIR$/template" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/acommodation" />
-    </key>
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -435,8 +228,8 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="COMP9900" type="Python.DjangoServer" factoryName="Django server">
-      <module name="COMP9900" />
+    <configuration name="comp9900" type="Python.DjangoServer" factoryName="Django server">
+      <module name="comp9900" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -445,14 +238,14 @@
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
       <option name="port" value="8000" />
       <option name="host" value="" />
       <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="http://127.0.0.1:8000/" />
+      <option name="browserUrl" value="" />
       <option name="runTestServer" value="false" />
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
@@ -465,154 +258,49 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2525402b-e4c3-4903-9065-02ec57dfece4" name="Default" comment="" />
-      <created>1534235486871</created>
+      <changelist id="63d1fd42-5b61-4cf8-95de-d43a0c304e5c" name="Default Changelist" comment="" />
+      <created>1536398958087</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1534235486871</updated>
+      <updated>1536398958087</updated>
     </task>
-    <task id="LOCAL-00001" summary="user register pages upload">
-      <created>1534738117228</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1534738117229</updated>
-    </task>
-    <task id="LOCAL-00002" summary="user register pages upload">
-      <created>1535117742073</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1535117742073</updated>
-    </task>
-    <task id="LOCAL-00003" summary="user register and log update">
-      <created>1535254642420</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1535254642420</updated>
-    </task>
-    <task id="LOCAL-00004" summary="add search">
-      <created>1535375572137</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1535375572137</updated>
-    </task>
-    <task id="LOCAL-00005" summary="complete search function">
-      <created>1535379245529</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1535379245529</updated>
-    </task>
-    <task id="LOCAL-00006" summary="modify search result page">
-      <created>1535379988568</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1535379988568</updated>
-    </task>
-    <task id="LOCAL-00007" summary="add test data">
-      <created>1535393892431</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1535393892431</updated>
-    </task>
-    <task id="LOCAL-00008" summary="change index page">
-      <created>1535400069553</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1535400069553</updated>
-    </task>
-    <task id="LOCAL-00009" summary="format the results in property_list page">
-      <created>1535401675226</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1535401675226</updated>
-    </task>
-    <task id="LOCAL-00010" summary="add pagination">
-      <created>1535406596403</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1535406596403</updated>
-    </task>
-    <task id="LOCAL-00011" summary="add multi search form">
-      <created>1535414148658</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1535414148658</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="118" y="23" width="1506" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4987013" visible="true" weight="0.12773225" />
+=======
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+>>>>>>> master
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" sideWeight="0.5012987" side_tool="true" weight="0.19241774" />
-      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="0" weight="0.32969698" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.327551" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4993895" weight="0.19465241" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.30666667" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.32969698" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32969698" />
-      <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32969698" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4993895" weight="0.4313253" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50061053" side_tool="true" weight="0.37040818" />
-      <window_info anchor="bottom" id="Python Console" order="13" weight="0.19156626" />
-      <window_info anchor="bottom" id="Database Console" order="14" weight="0.3018182" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.21925133" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="SciView" />
+      <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+<<<<<<< HEAD
       <window_info anchor="right" id="SciView" order="3" weight="0.329235" />
       <window_info anchor="right" x="603" y="35" width="474" height="980" id="Database" order="4" visible="true" weight="0.11612022" />
+=======
+>>>>>>> master
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4987013" visible="true" weight="0.17983651" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" sideWeight="0.5012987" side_tool="true" weight="0.19241774" />
-      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="0" weight="0.32969698" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.327551" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4993895" visible="true" weight="0.19465241" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.30666667" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.32969698" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32969698" />
-      <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32969698" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4993895" weight="0.4313253" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50061053" side_tool="true" weight="0.37040818" />
-      <window_info anchor="bottom" id="Python Console" order="13" weight="0.19156626" />
-      <window_info anchor="bottom" id="Database Console" order="14" weight="0.3018182" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.32967034" />
-      <window_info anchor="right" x="603" y="35" width="474" height="980" id="Database" order="4" weight="0.26656738" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -620,31 +308,8 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="user register pages upload" />
-    <MESSAGE value="user register and log update" />
-    <MESSAGE value="add search" />
-    <MESSAGE value="complete search function" />
-    <MESSAGE value="modify search result page" />
-    <MESSAGE value="add test data" />
-    <MESSAGE value="change index page" />
-    <MESSAGE value="format the results in property_list page" />
-    <MESSAGE value="add pagination" />
-    <MESSAGE value="add multi search form" />
-    <option name="LAST_COMMIT_MESSAGE" value="add multi search form" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <default-breakpoints>
-        <breakpoint type="python-exception">
-          <properties notifyOnTerminate="true" exception="BaseException">
-            <option name="notifyOnTerminate" value="true" />
-          </properties>
-        </breakpoint>
-      </default-breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/template/acomodation/editprofile_photos.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4452">
@@ -939,10 +604,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/template/acomodation/css/style.css">
+=======
+    <entry file="file://$PROJECT_DIR$/template/acomodation/base.html">
+>>>>>>> master
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="586" column="32" lean-forward="true" selection-start-line="586" selection-start-column="32" selection-end-line="586" selection-end-column="32" />
-        </state>
+        <state relative-caret-position="-9460" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/template/acomodation/add_success.html">
@@ -954,6 +620,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/template/acomodation/index.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1218">
           <caret line="58" selection-start-line="58" selection-end-line="58" />
         </state>
@@ -964,7 +631,71 @@
         <state relative-caret-position="-2037">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
+=======
+        <state relative-caret-position="-7680" />
+>>>>>>> master
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
