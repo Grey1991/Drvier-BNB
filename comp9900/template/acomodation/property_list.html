@@ -4,13 +4,13 @@
 {% block title %}
     <title>Property list</title>
 
-    {% load static %}
-    <!-- Favicons-->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+{#    {% load static %}#}
+{#    <!-- Favicons-->#}
+{#    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">#}
+{#    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">#}
+{#    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">#}
+{#    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">#}
+{#    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">#}
 
 {% endblock %}
 
@@ -26,10 +26,14 @@
 
 
     <!-- SubHeader =============================================== -->
-    <section class="parallax-window" id="short" data-parallax="scroll" data-image-src="{% static 'acomodation/img/sub_header_short.jpg' %}" data-natural-width="1400" data-natural-height="350">
+    {% load static %}
+
+    <section class="parallax-window" id="short" data-parallax="scroll"
+             data-image-src="{% static 'acomodation/img/sub_header_short.jpg' %}" data-natural-width="1400"
+             data-natural-height="350">
         <div id="subheader">
             <h1>Our Wonderfull Rooms</h1>
-    </div><!-- End subheader -->
+        </div><!-- End subheader -->
     </section><!-- End section -->
     <!-- End SubHeader ============================================ -->
 
@@ -58,9 +62,9 @@
                 <!--------------------  room list ---------------------->
                 {% for property in properties %}
                     <div class="row">
-                        <div class="room_desc clearfix" onclick="location.href='room_detail.html';">
+                        <div class="room_desc clearfix" onclick="location.href='{% url "property:property_detail" property.id %}';">
                             <div class="col-md-7">
-                                <figure><img src="{{ property.images_set.all }}" alt="" class="img-responsive"></figure>
+                                <figure><img src="{{ property.images_set.first.image.url }}" alt="" class="img-responsive"></figure>
                             </div>
                             <div class="col-md-5 room_list_desc">
                                 {% if property.types_property == "H" %}
@@ -108,6 +112,23 @@
                                             </div>
                                         </li>
                                     {% endif %}
+                                    {% if property.parking %}
+                                        <li>
+                                            <div class="tooltip_styled tooltip-effect-4">
+                                                <span class="tooltip-item"><i class="icon_set_1_icon-27"></i></span>
+                                                <div class="tooltip-content">Parking Area</div>
+                                            </div>
+                                        </li>
+                                    {% endif %}
+                                    {% if property.pet %}
+                                        <li>
+                                            <div class="tooltip_styled tooltip-effect-4">
+                                                <span class="tooltip-item"><i class="icon_set_1_icon-22"></i></span>
+                                                <div class="tooltip-content">Pets</div>
+                                            </div>
+                                        </li>
+                                    {% endif %}
+
                                 </ul>
                                 <div class="price">from <strong>${{ property.price }}</strong> /night
                                     <small>Breakfast included</small>
