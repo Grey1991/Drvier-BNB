@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.http import HttpResponseRedirect
 from django.forms import modelformset_factory
 
 from Property import forms, models
@@ -117,8 +117,7 @@ def add_property(request):
                 image = form['image']
                 photo = Images(pid=new_property, image=image)
                 photo.save()
-
-            return render(request, 'add_successfully.html', {'new_property': new_property})
+            return render(request, 'add_successfully.html', {'new_property': new_property,'photos':photo})
     else:
         property_form = forms.PropertyForm()
         formset = ImageFormSet(queryset=Images.objects.none())
