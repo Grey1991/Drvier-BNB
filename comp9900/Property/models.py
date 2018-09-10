@@ -67,7 +67,7 @@ class Property(models.Model):
 
 
 class Images(models.Model):
-    pid = models.ForeignKey(Property, verbose_name='owner', on_delete=models.CASCADE, related_name='Property.pid+')
+    pid = models.ForeignKey(Property,  on_delete=models.CASCADE)
     image = models.ImageField(upload_to='img', height_field=None, width_field=None, max_length=100,blank=True, null=True)
 
     # def __unicode__(self):
