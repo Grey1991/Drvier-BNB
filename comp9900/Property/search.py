@@ -7,13 +7,52 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 def simple_search(request):
     template = 'property_list.html'
-    query = request.GET.get('q')
-    property_list = models.Property.objects.filter(Q(province__icontains=query) |
-                                             Q(city__icontains=query) |
-                                             Q(state__icontains=query) |
-                                             Q(address__icontains=query)
+    if request.method == "POST":
+        check_in = request.POST.get('check_in')
+        check_out = request.POST.get('check_out')
+        type = request.POST.get('type')
+        capacity = request.POST.get('adults')
+        city = request.POST.get('city')
+        price = request.POST.get('price')
+    else:
+        check_in = request.GET.get('check_in')
+        check_out = request.GET.get('check_out')
+        type = request.GET.get('type')
+        capacity = request.GET.get('adults')
+        city = request.GET.get('city')
+        price = request.GET.get('price')
+
+
+
+    if not check_in:
+        print ("no check_in")
+    else:
+        print("yes")
+    if not capacity:
+        capacity = 0
+    else:
+        capacity = int(capacity)
+    if not price:
+        price = 0
+    else:
+        price = int(price)
+    if not city:
+        city = ''
+    if type == 'ALL':
+        type = ''
+
+
+    print('check_in: {},check_out: {},type: {},capacity: {},city: {},price: {}'.format(check_in,check_out,type,capacity,city,price),sep='\n')
+
+
+    property_list = models.Property.objects.filter(Q(city__icontains=city) &
+                                             Q(types_property__icontains=type) &
+                                             Q(price__gte=price) &
+                                             Q(capacity__gte=capacity)
                                              # Q(postcode__exact=int(query))
                                              ).distinct()
+
+    property_list = sorted(property_list, key=lambda x: x.price, reverse=False)
 
     # 分页-----------------
     paginator = Paginator(property_list, 10)
@@ -30,9 +69,13 @@ def simple_search(request):
 
     context = {
         'properties': properties,
-        # 'page_range': page_range
+        'city': city,
+        'check_in': check_in,
+        'check_out': check_out,
+        'capacity': capacity,
+        'price': price,
+        'type': type,
     }
-
     return render(request, template, context)
 
 

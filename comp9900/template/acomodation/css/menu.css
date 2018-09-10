@@ -27,7 +27,7 @@ header.sticky .main-menu > ul > li > a {color: #333;}
 a.dropdown-toggle.icon-search{display: inline-block;}	
 
 /* IE9 fix that affect the pages with parallax header (ex.single_hotel.html); Issue: submenu disappear when move the cursor to the submenu (only if you did not scroll the page) */
-.ie9 a.show-submenu, .ie9 a.show-submenu-mega{ background:url(../img/fix_ie_9_menu.png);}
+.ie9 a.show-submenu, .ie9 a.show-submenu-mega{ background:url(../image/fix_ie_9_menu.png);}
 		
 /* All styles for screen size over 992px
 ================================================== */

@@ -300,7 +300,7 @@ img.mfp-img {
 .mfp-preloader {
   width: 30px;
   height: 30px;
-  background: #FFF url(../img/loader.gif) no-repeat center center;
+  background: #FFF url(../image/loader.gif) no-repeat center center;
   opacity: 0.8;
   margin: 0 auto;
   -webkit-animation: rotateplane 1.2s infinite ease-in-out;

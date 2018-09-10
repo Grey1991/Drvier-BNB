@@ -424,7 +424,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-sm-12">
-                <img src="{% static 'acomodation/image/testimonial_1.jpg' %}" width="141" height="40" alt=""
+                <img src="{% static 'acomodation/img/testimonial_1.jpg' %}" width="141" height="40" alt=""
                      id="logo_footer" data-retina="true">
                 <ul id="contact_details_footer">
                     <li>Route de Sablet 1023, Marseille<br>France 01920</li>
@@ -503,7 +503,7 @@
 </footer><!-- End footer -->
 
 
-<div id="dtBox"></div><!-- End datepicker -->
+
 
 <!-- COMMON SCRIPTS -->
 <script src="{% static 'acomodation/js/jquery-1.11.2.min.js' %}"></script>
@@ -511,8 +511,10 @@
 <script src="{% static 'acomodation/assets/validate.js' %}"></script>
 <script src="{% static 'acomodation/js/functions.js' %}"></script>
 
-<script type="text/javascript" src="{% static 'acomodation/js/DateTimePicker.js' %}"></script>
-<script type="text/javascript">$("#dtBox").DateTimePicker();</script>
+
+{% block script %}
+{% endblock %}
+
 
 <div id="toTop"></div><!-- Back to top button -->
 </body>

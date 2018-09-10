@@ -1,53 +1,145 @@
 {% extends "base.html" %}
 
 
-{% block title %} index {% endblock %}
+{% block title %}
+    <title>Property list</title>
+
+    {% load static %}
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+
+{% endblock %}
 
 {% block content %}
 
-<form action="{% url 'property:multi_search' %}" method="POST">
-    Price: <input type="text" name="price">
-    Types: <select name="type">
-        <option value="H">House</option>
-        <option value="A">Apartment</option>
-        <option value="S" selected>Studio</option>
-        <option value="O">others</option>
-    </select>
+
+    <div class="layer"></div>
+    <!-- Mobile menu overlay mask -->
+
+    <div id="preloader">
+        <div data-loader="circle-side"></div>
+    </div><!-- End Preload -->
 
 
+    <!-- SubHeader =============================================== -->
+    <section class="parallax-window" id="short" data-parallax="scroll" data-image-src="{% static 'acomodation/img/sub_header_short.jpg' %}" data-natural-width="1400" data-natural-height="350">
+        <div id="subheader">
+            <h1>Our Wonderfull Rooms</h1>
+    </div><!-- End subheader -->
+    </section><!-- End section -->
+    <!-- End SubHeader ============================================ -->
 
-
-</form>
-
-
-
-
-
-<div class='col-sm-8 col-sm-offset-2'>
-
-    {% for property in properties %}
+    <div class="container margin_60">
         <div class="row">
-            <div class="col-sm-12">
-                <div class="thumbnail">
-                    <div class="caption">
-                        <p>{{ property.price }}</p>
-                        <p>{{ property.types_property}}</p>
-                        <p>{{ property.city }}</p>
-                        <p>{{ property.state }}</p>
-                        <p>{{ property.address }}</p>
-                        <p><a href="" class="btn btn-primary" role="button">View</a></p>
-                    </div>
-                </div>
-            </div>
-        <hr/>
-        </div>
-    {% endfor %}
+            <div class="col-lg-9 col-md-8">
 
-    <div class="pagination">
+                {#                {% for property in properties %}#}
+                {#                    <div class="row">#}
+                {#                        <div class="col-sm-12">#}
+                {#                            <div class="thumbnail">#}
+                {#                                <div class="caption">#}
+                {#                                    <p>{{ property.price }}</p>#}
+                {#                                    <p>{{ property.types_property }}</p>#}
+                {#                                    <p>{{ property.city }}</p>#}
+                {#                                    <p>{{ property.state }}</p>#}
+                {#                                    <p>{{ property.address }}</p>#}
+                {#                                    <p><a href="" class="btn btn-primary" role="button">View</a></p>#}
+                {#                                </div>#}
+                {#                            </div>#}
+                {#                        </div>#}
+                {#                        <hr/>#}
+                {#                    </div>#}
+                {#                {% endfor %}#}
+
+                <!--------------------  room list ---------------------->
+                {% for property in properties %}
+                    <div class="row">
+                        <div class="room_desc clearfix" onclick="location.href='room_detail.html';">
+                            <div class="col-md-7">
+                                <figure><img src="{{ property.images_set.all }}" alt="" class="img-responsive"></figure>
+                            </div>
+                            <div class="col-md-5 room_list_desc">
+                                {% if property.types_property == "H" %}
+                                    <h3>House</h3>
+                                {% elif property.types_property == "A"%}
+                                    <h3>Apartment</h3>
+                                {% elif property.types_property == "S" %}
+                                    <h3>Studio</h3>
+                                {% elif property.types_property == "O" %}
+                                    <h3>Others</h3>
+                                {% endif %}
+                                <p><strong>City:&nbsp;</strong>{{ property.city }}  &nbsp; <strong>State:&nbsp;</strong>{{ property.state }}</p>
+                                <p><strong>Postcode:&nbsp;</strong>{{ property.postcode }}</p>
+                                <p><strong>Address:&nbsp;</strong>{{ property.address }}</p>
+                                <ul>
+                                    {% if property.num_double_bed > 0 %}
+                                        <li>
+                                            <div class="tooltip_styled tooltip-effect-4">
+                                                <span class="tooltip-item"><i class="icon_set_2_icon-104"></i></span>
+                                                <div class="tooltip-content">King size bed X {{ property.num_double_bed }}</div>
+                                            </div>
+                                        </li>
+                                    {% endif %}
+                                    {% if property.wifi %}
+                                        <li>
+                                            <div class="tooltip_styled tooltip-effect-4">
+                                                <span class="tooltip-item"><i class="icon_set_1_icon-86"></i></span>
+                                                <div class="tooltip-content">Free Wifi</div>
+                                            </div>
+                                        </li>
+                                    {% endif %}
+                                    {% if property.num_bathrooms > 0 %}
+                                        <li>
+                                            <div class="tooltip_styled tooltip-effect-4">
+                                                <span class="tooltip-item"><i class="icon_set_2_icon-118"></i></span>
+                                                <div class="tooltip-content">Shower x {{ property.num_bathrooms }}</div>
+                                            </div>
+                                        </li>
+                                    {% endif %}
+                                    {% if property.tv %}
+                                        <li>
+                                            <div class="tooltip_styled tooltip-effect-4">
+                                                <span class="tooltip-item"><i class="icon_set_2_icon-116"></i></span>
+                                                <div class="tooltip-content">Plasma TV</div>
+                                            </div>
+                                        </li>
+                                    {% endif %}
+                                </ul>
+                                <div class="price">from <strong>${{ property.price }}</strong> /night
+                                    <small>Breakfast included</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End row room -->
+                {% endfor %}
+                <!-------   pagination ----------->
+                <div class="pagination">
         <span class="step-links">
             {% if properties.has_previous %}
-                <a href="?page=1&q={{ request.GET.q }}">&laquo; first</a>
-                <a href="?page={{ properties.previous_page_number }}&q={{ request.GET.q }}">previous</a>
+                <form action="{% url 'property:simple_search' %}" method="GET">
+                {% csrf_token %}
+                    <input type="hidden" value="1" name="page">
+                    <input type="hidden" value="{{ check_in }}" name="check_in">
+                    <input type="hidden" value="{{ check_out }}" name="check_out">
+                    <input type="hidden" value="{{ type }}" name="type">
+                    <input type="hidden" value="{{ city }}" name="city">
+                    <input type="hidden" value="{{ price }}" name="price">
+                    <button type="submit">&laquo; first</button>
+                </form>
+                <form action="{% url 'property:simple_search' %}" method="GET">
+                {% csrf_token %}
+                    <input type="hidden" value="{{ properties.previous_page_number }}" name="page">
+                    <input type="hidden" value="{{ check_in }}" name="check_in">
+                    <input type="hidden" value="{{ check_out }}" name="check_out">
+                    <input type="hidden" value="{{ type }}" name="type">
+                    <input type="hidden" value="{{ city }}" name="city">
+                    <input type="hidden" value="{{ price }}" name="price">
+                    <button type="submit">previous</button>
+                </form>
             {% endif %}
 
             <span class="current">
@@ -55,12 +147,68 @@
             </span>
 
             {% if properties.has_next %}
-                <a href="?page={{ properties.next_page_number }}&q={{ request.GET.q }}">next</a>
-                <a href="?page={{ properties.paginator.num_pages }}&q={{ request.GET.q }}">last &raquo;</a>
+                <form action="{% url 'property:simple_search' %}" method="GET">
+                {% csrf_token %}
+                    <input type="hidden" value="{{ properties.next_page_number }}" name="page">
+                    <input type="hidden" value="{{ check_in }}" name="check_in">
+                    <input type="hidden" value="{{ check_out }}" name="check_out">
+                    <input type="hidden" value="{{ type }}" name="type">
+                    <input type="hidden" value="{{ city }}" name="city">
+                    <input type="hidden" value="{{ price }}" name="price">
+                    <button type="submit">next</button>
+                </form>
+                <form action="{% url 'property:simple_search' %}" method="GET">
+                {% csrf_token %}
+                    <input type="hidden" value="{{ properties.paginator.num_pages }}" name="page">
+                    <input type="hidden" value="{{ check_in }}" name="check_in">
+                    <input type="hidden" value="{{ check_out }}" name="check_out">
+                    <input type="hidden" value="{{ type }}" name="type">
+                    <input type="hidden" value="{{ city }}" name="city">
+                    <input type="hidden" value="{{ price }}" name="price">
+                    <button type="submit">last &raquo;</button>
+                </form>
             {% endif %}
         </span>
-    </div>
+                </div>
+                <!-------- end pagination ------------>
+            </div>
 
 
-</div>
-{% endblock content %}
+{#            <div class="col-lg-3 col-md-4 sidebar">#}
+{##}
+{#                <div class="theiaStickySidebar">#}
+{#                    <div class="box_style_3" id="general_facilities">#}
+{#                        <h3>General facilities</h3>#}
+{#                        <ul>#}
+{#                            <li><i class="icon_set_1_icon-86"></i>Free Wifi</li>#}
+{#                            <li><i class="icon_set_2_icon-103"></i>Loundry service</li>#}
+{#                            <li><i class="icon_set_2_icon-110"></i>Swimming pool</li>#}
+{#                            <li><i class="icon_set_1_icon-58"></i>Restaurant</li>#}
+{#                            <li><i class="icon_set_1_icon-27"></i>Parking</li>#}
+{#                        </ul>#}
+{#                    </div>#}
+{#                    <div class="box_style_2">#}
+{#                        <i class="icon_set_1_icon-90"></i>#}
+{#                        <h4>Need help? Call us</h4>#}
+{#                        <a href="tel://004542344599" class="phone">+45 423 445 99</a>#}
+{#                        <small>Monday to Friday 9.00am - 7.30pm</small>#}
+{#                    </div>#}
+{##}
+{#                </div>#}
+{#            </div>#}
+
+        </div><!-- End row -->
+    </div><!-- End container -->
+{% endblock %}
+
+
+
+{% block script %}
+<script src="js/theia-sticky-sidebar.js"></script>
+<script>
+    jQuery('.sidebar').theiaStickySidebar({
+      additionalMarginTop: 80
+    });
+</script>
+{% endblock script %}
+
