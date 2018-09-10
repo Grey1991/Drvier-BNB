@@ -7,6 +7,7 @@
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
       <user-name>comp9900</user-name>
       <introspection-schemas>*:@</introspection-schemas>
     </data-source>
