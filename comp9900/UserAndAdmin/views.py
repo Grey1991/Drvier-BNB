@@ -82,15 +82,46 @@ def login(request):
     return render(request,"index.html")
 
 
-
 def logout(request):
     auth.logout(request)
     return redirect("userandadmin:index")
 
 def editprofile(request,page_id):
     print(page_id)
-
     if page_id == '1':
+        if request.method == "POST":
+            profileForm = forms.editprofileForm(request.POST)
+            print(profileForm.errors)
+            if profileForm.is_valid():
+                first_name = profileForm.cleaned_data['first_name']
+                last_name = profileForm.cleaned_data['last_name']
+                gender =  profileForm.cleaned_data['gender']
+                date_of_birth = profileForm.cleaned_data['date_of_birth']
+                language = profileForm.cleaned_data['language']
+                location = profileForm.cleaned_data['location']
+                user_description = profileForm.cleaned_data['user_description']
+                email = profileForm.cleaned_data["email"]
+
+                user = models.User.object.filter(email= email)
+
+                user.date_of_birth = date_of_birth
+                user.first_name = first_name
+                user.last_name = last_name
+
+                userProfile = models.UserProfile.objects.filter(user=user[0])
+
+                if not userProfile.exists():
+                    userProfile = models.UserProfile()
+                    userProfile.user = models.User.object.get(email = email)
+                    userProfile.location ='default'
+                    userProfile.user_description='null'
+                    userProfile.language='English'
+                    userProfile.gender= 'Male'
+                userProfile.gender = gender
+                userProfile.language = language
+                userProfile.user_description = user_description
+                userProfile.location = location
+                return HttpResponse(1)
         return render(request,'editprofile_editprofile.html')
     elif page_id == '2':
         return render(request,'editprofile_photos.html')

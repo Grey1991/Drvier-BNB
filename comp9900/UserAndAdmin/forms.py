@@ -59,6 +59,19 @@ class RegisterForm(forms.Form):
     last_name = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
     
 
+class editprofileForm(forms.Form):
+    '''
+    更新一个人的信息
+    '''
+    email = forms.EmailField(widget=forms.EmailInput(attrs={'class':'form-control'}))
+    first_name = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
+    last_name = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
+    gender= forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
+    date_of_birth = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
+    language = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
+    location = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
+    user_description = forms.CharField(widget= forms.TextInput(attrs={'class':'form-control'}))
+
 
 class UserAdminCreationForm(forms.ModelForm):
     """A form for creating new users. Includes all the required
