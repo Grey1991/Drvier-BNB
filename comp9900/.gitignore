@@ -1,0 +1,7 @@
+comp9900/COMP9900/__pycache__/*
+comp9900/Property/__pycache__/*
+comp9900/Property/migrations/__pycache__/*
+comp9900/UserAndAdmin/__pycache__/*
+comp9900/UserAndAdmin/migrations/__pycache__/*
+comp9900/.idea/*
+.DS_Store
