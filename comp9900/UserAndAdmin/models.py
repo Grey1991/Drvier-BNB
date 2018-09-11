@@ -89,7 +89,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     
     '''
 
-    def set_date_of_birth(self, raw_date_of_birth):
+    def set_date_of_birth(self, raw_date_of_birth = None):
         if not raw_date_of_birth:
             raw_date_of_birth = datetime.now()
         self.date_of_birth = raw_date_of_birth
@@ -140,18 +140,10 @@ class UserProfile(models.Model):
     )
     user = models.OneToOneField(User, models.CASCADE)
     gender = models.CharField(max_length=3, choices=GENDER_CHOICES, default="U")
+    language = models.CharField(max_length = 10,default = 'English')
     image = models.ImageField(null=True)
     user_description = models.TextField(max_length=100, blank=True, null=True)
-    user_phone = models.CharField(max_length=15, blank=True, null=True)
-
-
-
-
-
-
-
-
-
+    location = models.CharField(max_length =50,default='U')
 
 
 
