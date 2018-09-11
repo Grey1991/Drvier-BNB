@@ -68,6 +68,7 @@ def add_property(request):
             new_property.postcode = postcode
             #yguyguyguyg
             #asdasdasdasdasd
+            #testsadasdasdasdasduncaibwdabsibdaw
 
             new_property.capacity = capacity
             new_property.num_bathrooms = num_bathrooms
