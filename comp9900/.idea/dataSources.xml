@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-<<<<<<< HEAD
-    <data-source source="LOCAL" name="Django default" uuid="9d0b3c14-f90a-44d7-805b-0020eebf10ec">
-=======
-    <data-source source="LOCAL" name="Django default" uuid="cc6fbb63-d271-4bc5-a271-ab5de3d49da0">
->>>>>>> master
+    <data-source source="LOCAL" name="Django default" uuid="441b2bae-095b-45a9-9959-4c478ef87146">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
@@ -14,19 +10,11 @@
       <jdbc-url>jdbc:mysql://kevifunaurdb.cbod751s2re1.ap-southeast-2.rds.amazonaws.com:3306/comp9900db</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
-<<<<<<< HEAD
         <property name="yearIsDateType" value="false" />
         <property name="characterEncoding" value="utf8" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />
         <property name="characterSetResults" value="utf8" />
         <property name="tinyInt1isBit" value="false" />
-=======
-        <property name="zeroDateTimeBehavior" value="convertToNull" />
-        <property name="tinyInt1isBit" value="false" />
-        <property name="characterEncoding" value="utf8" />
-        <property name="characterSetResults" value="utf8" />
-        <property name="yearIsDateType" value="false" />
->>>>>>> master
       </driver-properties>
     </data-source>
   </component>
