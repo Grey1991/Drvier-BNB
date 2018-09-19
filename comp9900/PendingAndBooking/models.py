@@ -15,6 +15,12 @@ class TransAndReview(models.Model):
     ratings = models.IntegerField(validators=[MaxValueValidator(5), MinValueValidator(1)], null=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True, null=True)
+    status_choies = (
+        ('B', 'Booking'),
+        ('C', 'Comfirming'),
+        ('S', 'Success'),
+    )
+    status = models.CharField(max_length=1, choices=status_choies, default='Booking')
 
 
 class PendingTrans(models.Model):
