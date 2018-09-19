@@ -40,14 +40,14 @@
         position: relative;
     }
 
-    .avatar {
+    .avatar1 {
         width: 100px;
         height: 100px;
         border-radius: 50%;
     }
 
     /* The Modal (background) */
-    .modal {
+    .modal1 {
         display: none;
         position: fixed;
         z-index: 1;
@@ -60,7 +60,7 @@
     }
 
     /* Modal Content Box */
-    .modal-content {
+    .modal1-content {
         background-color: #fefefe;
         margin: 4% auto 15% auto;
         border: 1px solid #888;
@@ -158,13 +158,13 @@
 
     {#       注册界面#}
 
-    <div id="modal-wrapper" class="modal">
-        <form class="modal-content animate">
+    <div id="modal-wrapper" class="modal1">
+        <form class="modal1-content animate">
             {% csrf_token %}
             <div class="imgcontainer">
                     <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close"
                           title="Close PopUp">&times;</span>
-                <img src="{% static 'acomodation/image/2.png' %}" alt="Avatar" class="avatar">
+                <img src="{% static 'acomodation/image/2.png' %}" alt="Avatar" class="avatar1">
                 <h1 style="text-align:center">Sign up with your email</h1>
                 <input type="text" name="first_name" id="first_name" style="width: 90%;
                                                                         padding: 12px 20px;
@@ -228,14 +228,14 @@
 
 
     {#登陆界面#}
-    <div id="modal-wrapper2" class="modal">
-        <form class="modal-content animate">
+    <div id="modal-wrapper2" class="modal1">
+        <form class="modal1-content animate">
             {% csrf_token %}
 
             <div class="imgcontainer">
                     <span onclick="document.getElementById('modal-wrapper2').style.display='none'" class="close"
                           title="Close PopUp">&times;</span>
-                <img src="{% static 'acomodation/image/2.png' %}" alt="Avatar" class="avatar">
+                <img src="{% static 'acomodation/image/2.png' %}" alt="Avatar" class="avatar1">
                 <h1 style="text-align:center">Log in with your email</h1>
                 <input type="text" id="lg_email" name="email" style="width: 90%;
                                                                         padding: 12px 20px;

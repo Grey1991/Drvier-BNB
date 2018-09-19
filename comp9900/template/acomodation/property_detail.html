@@ -348,6 +348,7 @@
 
 
 {% block script %}
+    {% load static %}
 <!-- Modal Review -->
 <div class="modal fade" id="myReview" tabindex="-1" role="dialog" aria-labelledby="myReviewLabel" aria-hidden="true">
 	<div class="modal-dialog">
@@ -489,13 +490,13 @@
     }
 });
 </script>
-<script src="js/theia-sticky-sidebar.js"></script>
+<script src="{% static 'acomodation/js/theia-sticky-sidebar.js' %}"></script>
 <script>
     jQuery('#sidebar').theiaStickySidebar({
       additionalMarginTop: 80
     });
 </script>
-<script type="text/javascript" src="js/DateTimePicker.js"></script>
-<script type="text/javascript" src="js/DateTimePicker.js"></script>
+<script type="text/javascript" src="{% static 'acomodation/js/DateTimePicker.js' %}"></script>
+{#<script type="text/javascript" src="{% static 'acomodation/js/DateTimePicker.js' %}"></script>#}
 <script type="text/javascript">$("#dtBox").DateTimePicker();</script>
 {% endblock script %}
