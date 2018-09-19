@@ -37,30 +37,4 @@ class ImageForm(forms.ModelForm):
         model = Images
         fields = ('image',)
 
-class SearchForm(forms.ModelForm):
-    """
-    搜索房屋
-    """
-    class Meta:
-        model = Property
-        field = exclude = ['user_ID','created_at', 'updated_at', 'longitude',
-                           'latitude','num_sofa_bed','ac','num_single_bed',
-                           'kitken','in_unit_washer','elevator','heating',
-                           'tv','blower','bathtub','parking','gyms','swimming_pool',
-                           'party','smoking','couple']
 
-        labels = {
-            'status': 'Release now?',
-            'num_bathrooms': 'Number of Bathrooms',
-            'num_bedrooms': 'Number of Bedrooms',
-            'num_double_bed': 'Number of DoubleBed',
-
-            'wifi': 'WIFI',
-            'province': 'Province',
-            'city': 'City',
-            'state': 'State',
-            'address': 'Address',
-            'postcode': 'Postcode',
-            'capacity': 'Capacity',
-
-        }

@@ -19,14 +19,6 @@
 {% block content %}
 
 
-    <div class="layer"></div>
-    <!-- Mobile menu overlay mask -->
-
-    <div id="preloader">
-        <div data-loader="circle-side"></div>
-    </div><!-- End Preload -->
-
-
     <!------------ picture presentation -------------->
 
     <div class="carousel_in">
@@ -259,12 +251,16 @@
                 </div>
             </div><!-- End col -->
 
+
+            <!----------------- booking -------------->
+
             <div class="col-md-4" id="sidebar">
                 <div class="theiaStickySidebar">
                     <div class="box_style_1">
                         <div id="message-booking"></div>
-                        <form method="post" action="assets/check_avail.php" id="check_avail" autocomplete="off">
-                            <input name="room_type" id="room_type" type="hidden" value="Double room">
+                        <form method="post" action="{% url 'PendingAndBooking:booking' %}" id="check_avail" autocomplete="off">
+
+{#                            <input name="room_type" id="room_type" type="hidden" value="Double room">#}
                             <div class="row">
                                 <div class="col-md-6 col-sm-6">
                                     <div class="form-group">

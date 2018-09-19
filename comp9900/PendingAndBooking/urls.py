@@ -1,6 +1,7 @@
 from django.conf.urls import url
 from . import views
 
+app_name = 'PendingAndBooking'
 urlpatterns = [
-    url(r'^$', views.property_signup, name='property_signup'),
+    url(r'^$', views.booking, name='booking'),
 ]

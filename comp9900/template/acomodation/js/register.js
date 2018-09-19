@@ -9,4 +9,4 @@ $(".next").click(function(){
 	animating = true;
 
 	current_fs = $(this).parent();
-	next_fs = $(this).parent().next();
+	next_fs = $(this).parent().next();}
