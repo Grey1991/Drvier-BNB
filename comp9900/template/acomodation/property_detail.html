@@ -258,76 +258,90 @@
                 <div class="theiaStickySidebar">
                     <div class="box_style_1">
                         <div id="message-booking"></div>
-                        <form method="post" action="{% url 'PendingAndBooking:booking' %}" id="check_avail" autocomplete="off">
+                        {% if user.is_authenticated %}
+                            <form method="post" action="{% url 'PendingAndBooking:booking' %}" id="check_avail"
+                                  autocomplete="off">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="form-group">
+                                            <label>Arrival date</label>
+                                            <input class="startDate1 form-control datepick" type="text"
+                                                   data-field="date"
+                                                   data-startend="start" data-startendelem=".endDate1" readonly
+                                                   placeholder="Arrival" id="check_in" name="check_in">
+                                            <span class="input-icon"><i class="icon-calendar-7"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="form-group">
+                                            <label>Departure date</label>
+                                            <input class="endDate1 form-control datepick" type="text" data-field="date"
+                                                   data-startend="end" data-startendelem=".startDate1" readonly
+                                                   placeholder="Departure" id="check_out" name="check_out">
+                                            <span class="input-icon"><i class="icon-calendar-7"></i></span>
+                                        </div>
+                                    </div>
+                                </div><!-- End row -->
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                        <div class="form-group">
+                                            <label>Adults</label>
+                                            <div class="qty-buttons">
+                                                <input type="button" value="-" class="qtyminus" name="adults">
+                                                <input type="text" name="adults" id="adults" value=""
+                                                       class="qty form-control"
+                                                       placeholder="0">
+                                                <input type="button" value="+" class="qtyplus" name="adults">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                        <div class="form-group">
+                                            <label>Children</label>
+                                            <div class="qty-buttons">
+                                                <input type="button" value="-" class="qtyminus" name="children">
+                                                <input type="text" name="children" id="children" value=""
+                                                       class="qty form-control" placeholder="0">
+                                                <input type="button" value="+" class="qtyplus" name="children">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- End row -->
+                                <div class="row">
 
-{#                            <input name="room_type" id="room_type" type="hidden" value="Double room">#}
-                            <div class="row">
-                                <div class="col-md-6 col-sm-6">
-                                    <div class="form-group">
-                                        <label>Arrival date</label>
-                                        <input class="startDate1 form-control datepick" type="text" data-field="date"
-                                               data-startend="start" data-startendelem=".endDate1" readonly
-                                               placeholder="Arrival" id="check_in" name="check_in">
-                                        <span class="input-icon"><i class="icon-calendar-7"></i></span>
+                                    <div class="col-md-12 col-sm-6">
+                                        <div class="form-group">
+                                            <label>Name</label>
+                                            <input type="text" class="form-control" name="name_booking"
+                                                   id="name_booking"
+                                                   placeholder="Name and Last name">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6 col-sm-6">
-                                    <div class="form-group">
-                                        <label>Departure date</label>
-                                        <input class="endDate1 form-control datepick" type="text" data-field="date"
-                                               data-startend="end" data-startendelem=".startDate1" readonly
-                                               placeholder="Departure" id="check_out" name="check_out">
-                                        <span class="input-icon"><i class="icon-calendar-7"></i></span>
+                                    <div class="col-md-12 col-sm-6">
+                                        <div class="form-group">
+                                            <label>Email</label>
+                                            <input type="text" class="form-control" name="email_booking"
+                                                   id="email_booking"
+                                                   placeholder="Your email">
+                                        </div>
                                     </div>
-                                </div>
-                            </div><!-- End row -->
-                            <div class="row">
-                                <div class="col-md-6 col-sm-6 col-xs-6">
-                                    <div class="form-group">
-                                        <label>Adults</label>
-                                        <div class="qty-buttons">
-                                            <input type="button" value="-" class="qtyminus" name="adults">
-                                            <input type="text" name="adults" id="adults" value="" class="qty form-control"
-                                                   placeholder="0">
-                                            <input type="button" value="+" class="qtyplus" name="adults">
+                                    <div class="col-md-12 col-sm-12">
+                                        <div class="form-group">
+                                            <input type="submit" value="Book now" class="btn_full" id="submit-booking">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-sm-6 col-xs-6">
-                                    <div class="form-group">
-                                        <label>Children</label>
-                                        <div class="qty-buttons">
-                                            <input type="button" value="-" class="qtyminus" name="children">
-                                            <input type="text" name="children" id="children" value=""
-                                                   class="qty form-control" placeholder="0">
-                                            <input type="button" value="+" class="qtyplus" name="children">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- End row -->
-                            <div class="row">
-
-                                <div class="col-md-12 col-sm-6">
-                                    <div class="form-group">
-                                        <label>Name</label>
-                                        <input type="text" class="form-control" name="name_booking" id="name_booking"
-                                               placeholder="Name and Last name">
-                                    </div>
-                                </div>
-                                <div class="col-md-12 col-sm-6">
-                                    <div class="form-group">
-                                        <label>Email</label>
-                                        <input type="text" class="form-control" name="email_booking" id="email_booking"
-                                               placeholder="Your email">
-                                    </div>
-                                </div>
-                                <div class="col-md-12 col-sm-12">
-                                    <div class="form-group">
-                                        <input type="submit" value="Book now" class="btn_full" id="submit-booking">
-                                    </div>
+                            </form>
+                        {% else %}
+                            <div class="col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <button type="submit" class="btn_full" id="submit-booking" onclick="document.getElementById('modal-wrapper').style.display='block'">Please login before booking</button>>
                                 </div>
                             </div>
-                        </form>
+
+{#                            <li><a onclick="document.getElementById('modal-wrapper').style.display='block'">Sign#}
+{#                                    up</a></li>#}
+                        {% endif %}
                         <hr>
                         <a href="#0" class="btn_outline"> or Contact us</a>
                         <a href="tel://004542344599" id="phone_2"><i class="icon_set_1_icon-91"></i>+45 423 445 99</a>

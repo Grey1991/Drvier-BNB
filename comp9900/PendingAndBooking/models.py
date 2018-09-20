@@ -16,7 +16,6 @@ class TransAndReview(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True, null=True)
     status_choies = (
-        ('B', 'Booking'),
         ('C', 'Comfirming'),
         ('S', 'Success'),
     )
