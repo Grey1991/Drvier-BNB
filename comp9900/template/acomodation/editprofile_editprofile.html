@@ -14,7 +14,6 @@
         </div>
 
         <div class="panel-body">
-            <input type="hidden" id="user_email" value="{{ user.email }}">
 
             {#            first name#}
             <div class="row row-condensed space-4">
@@ -22,7 +21,7 @@
                     First Name
                 </label>
                 <div class="col-sm-9">
-                    <input id="user_first_name" name="user[first_name]" size="30" type="text" value="Kevin">
+                    <input id="user_first_name" name="user[first_name]" size="30" type="text" value="{{ user.first_name }}">
                 </div>
             </div>
             <br>
@@ -32,7 +31,7 @@
                     Last Name
                 </label>
                 <div class="col-sm-9">
-                    <input id="user_last_name" name="user[last_name]" size="30" type="text" value="Fang">
+                    <input id="user_last_name" name="user[last_name]" size="30" type="text" value="{{ user.last_name }}">
                 </div>
             </div>
             <br>
@@ -276,6 +275,8 @@
         </div>
     </div>
 
+
+
     <div class="panel panel-info">
         <div class="panel-heading">
             <h3 class="panel-title ">Optional</h3>
@@ -290,7 +291,7 @@
                 <div class="col-sm-9">
 
                     <input id="user_profile_info_current_city" name="user_profile_info[current_city]"
-                           placeholder="Sydney, New South Wales, Australia" size="30" type="text">
+                           value="{{ user.userprofile.location }}" size="30" type="text">
                 </div>
             </div>
             <br>
@@ -305,7 +306,7 @@
                               data-gramm="true" data-txt_gramm_id="3706e70a-8ed4-1692-b335-1cc50dcb633e"
                               data-gramm_id="3706e70a-8ed4-1692-b335-1cc50dcb633e" spellcheck="false"
                               data-gramm_editor="true"
-                              style="z-index: auto; position: relative; line-height: 20.02px; font-size: 14px; transition: none 0s ease 0s; background: transparent !important;">Describe yourself </textarea>
+                              style="z-index: auto; position: relative; line-height: 20.02px; font-size: 14px; transition: none 0s ease 0s; background: transparent !important;">{{ user.userprofile.user_description }} </textarea>
                 </div>
             </div>
         </div>
@@ -332,7 +333,6 @@
                 var language = document.getElementById("user_profile_info_preferred_language").value;
                 var location = document.getElementById('user_profile_info_current_city').value;
                 var user_description = document.getElementById("user_profile_info_about").value;
-                var email = document.getElementById("user_email").value;
 
                 $.ajax({
                     type: "POST",
@@ -345,7 +345,6 @@
                         language : language,
                         location :location,
                         user_description:user_description,
-                        email :email,
                     },
                     success: function (data, status) {
                         if (data == 1) {

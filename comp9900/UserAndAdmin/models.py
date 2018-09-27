@@ -141,7 +141,7 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User, models.CASCADE)
     gender = models.CharField(max_length=3, choices=GENDER_CHOICES, default="U")
     language = models.CharField(max_length = 10,default = 'English')
-    image = models.ImageField(null=True)
+    image = models.ImageField(null=True,blank=None)
     user_description = models.TextField(max_length=100, blank=True, null=True)
     location = models.CharField(max_length =50,default='U')
 

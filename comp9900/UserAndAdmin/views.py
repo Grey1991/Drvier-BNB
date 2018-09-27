@@ -48,7 +48,6 @@ def register(request):
             # send_mail(subject,message,from_email,to_list,fail_silently=True)
 
 
-
         return HttpResponse(2)
     else:
         return render(request,"index.html")
@@ -93,6 +92,7 @@ def editprofile(request,page_id):
             profileForm = forms.editprofileForm(request.POST)
             print(profileForm.errors)
             if profileForm.is_valid():
+
                 first_name = profileForm.cleaned_data['first_name']
                 last_name = profileForm.cleaned_data['last_name']
                 gender =  profileForm.cleaned_data['gender']
@@ -100,27 +100,21 @@ def editprofile(request,page_id):
                 language = profileForm.cleaned_data['language']
                 location = profileForm.cleaned_data['location']
                 user_description = profileForm.cleaned_data['user_description']
-                email = profileForm.cleaned_data["email"]
 
-                user = models.User.object.filter(email= email)
-
-                user.date_of_birth = date_of_birth
+                user = request.user
+                user.date_of_birth = '-'.join(date_of_birth.split(","))
                 user.first_name = first_name
                 user.last_name = last_name
 
-                userProfile = models.UserProfile.objects.filter(user=user[0])
+                userProfile = models.UserProfile()
+                userProfile.user = request.user
 
-                if not userProfile.exists():
-                    userProfile = models.UserProfile()
-                    userProfile.user = models.User.object.get(email = email)
-                    userProfile.location ='default'
-                    userProfile.user_description='null'
-                    userProfile.language='English'
-                    userProfile.gender= 'Male'
-                userProfile.gender = gender
-                userProfile.language = language
-                userProfile.user_description = user_description
-                userProfile.location = location
+                user.userprofile.GENDER_CHOICES = gender
+                user.userprofile.language = language
+                user.userprofile.user_description = user_description
+                user.userprofile.location = location
+                user.save()
+
                 return HttpResponse(1)
         return render(request,'editprofile_editprofile.html')
     elif page_id == '2':
@@ -129,4 +123,22 @@ def editprofile(request,page_id):
         return render(request,'editprofile.html')
 
 def accountsetting(request):
+    if request.method =="POST":
+        passwordChangeForm = forms.passwordChangeForm(request.POST)
+        print(passwordChangeForm.errors)
+        if passwordChangeForm.is_valid():
+            oldpassword = passwordChangeForm.cleaned_data['old_password']
+            newpassword = passwordChangeForm.cleaned_data['new_password']
+
+            user = auth.authenticate(email=request.user.email, password=oldpassword)
+
+            if not user:
+                return HttpResponse(2)
+            else:
+                request.user.set_password(newpassword)
+                request.user.save()
+                return HttpResponse(1)
     return render(request,'accountsetting.html')
+
+
+
