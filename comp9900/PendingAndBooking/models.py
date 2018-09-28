@@ -19,7 +19,15 @@ class TransAndReview(models.Model):
         ('C', 'Comfirming'),
         ('S', 'Success'),
     )
-    status = models.CharField(max_length=1, choices=status_choies, default='Booking')
+    status = models.CharField(max_length=20, choices=status_choies, default='Booking')
+
+    #### review
+    position_review =  models.IntegerField(validators=[MaxValueValidator(5), MinValueValidator(1)], null=False,default=5)
+    comfort_review = models.IntegerField(validators=[MaxValueValidator(5), MinValueValidator(1)], null=False,default = 5)
+    price_review= models.IntegerField(validators=[MaxValueValidator(5), MinValueValidator(1)], null=False,default=5)
+    quality_review= models.IntegerField(validators=[MaxValueValidator(5), MinValueValidator(1)], null=False,default=5)
+
+
 
 
 class PendingTrans(models.Model):

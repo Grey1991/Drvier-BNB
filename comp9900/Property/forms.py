@@ -38,3 +38,16 @@ class ImageForm(forms.ModelForm):
         fields = ('image',)
 
 
+
+
+class AddReviewForm(forms.Form):
+
+    pid =  forms.IntegerField(widget=forms.TextInput(attrs={'class':'form-control'}))
+    position_review = forms.IntegerField(widget=forms.TextInput(attrs={'class':'form-control'}))
+    comfort_review = forms.IntegerField(widget=forms.TextInput(attrs={'class':'form-control'}))
+    price_review= forms.IntegerField(widget=forms.TextInput(attrs={'class':'form-control'}))
+    quality_review = forms.IntegerField(widget=forms.TextInput(attrs={'class':'form-control'}))
+    comment_content = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
+
+
+
