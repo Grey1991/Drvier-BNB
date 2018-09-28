@@ -390,7 +390,7 @@
                     {#review 表单#}
                     <form method="post" name="review">
 
-                        <input type="hidden" id="property_id" value="{{ property }}">
+                        <input type="hidden" id="property_id" value="{{ property_id }}">
 
                         <div class="row">
                             <div class="col-md-6">
@@ -523,7 +523,7 @@
                         }else{
                             alert("something wrong!");
                         }
-                        location.href ="{% url "property:property_detail" property %}"
+                        location.href ="{% url "property:property_detail" property_id %}"
 
                     }
                 })
