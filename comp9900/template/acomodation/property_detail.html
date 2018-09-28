@@ -1,19 +1,16 @@
-
 {% extends "base.html" %}
 {% block title %}
 
 
     <title>Property_detail</title>
 
-{#    <!-- Favicons-->#}
-{#    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">#}
-{#    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">#}
-{#    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">#}
-{#    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">#}
-{#    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">#}
+    {#    <!-- Favicons-->#}
+    {#    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">#}
+    {#    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">#}
+    {#    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">#}
+    {#    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">#}
+    {#    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">#}
 {% endblock %}
-
-
 
 
 {% block content %}
@@ -28,6 +25,7 @@
             </div>
         {% endfor %}
     </div>
+
     <!------------ end picture presentation -------------->
 
     <!------------ detail presentation -------------->
@@ -62,8 +60,10 @@
                         <p>
                             Lorem ipsum dolor sit amet, at omnes deseruisse pri. Quo aeterno legimus insolens ad. Sit cu
                             detraxit constituam, an mel iudico constituto efficiendi. Eu ponderum mediocrem has, vitae
-                            adolescens in pro. Mea liber ridens inermis ei, mei legendos vulputate an, labitur tibique te
-                            qui. Ad cum movet fierent assueverit, mei stet legere ne. Mel at vide soluta, ut utamur antiopam
+                            adolescens in pro. Mea liber ridens inermis ei, mei legendos vulputate an, labitur tibique
+                            te
+                            qui. Ad cum movet fierent assueverit, mei stet legere ne. Mel at vide soluta, ut utamur
+                            antiopam
                             inciderint sed. Ut iriure perpetua voluptaria has, vim postea denique in, mollis pertinax
                             elaboraret sed in. Per no vidit timeam, quis omittam sed at.
                         </p>
@@ -121,28 +121,35 @@
 
                 <hr>
 
+
                 <div class="row">
+
+                    {######################                     写 评论#}
                     <div class="col-md-3">
                         <h3>Reviews</h3>
                         <a href="#" class="btn_1 add_bottom_15" data-toggle="modal" data-target="#myReview">Leave a
                             review</a>
                     </div>
+                    {#########################                评论概况#}
+
                     <div class="col-md-9">
-                        <div id="score_detail"><span>7.5</span>Good
-                            <small>(Based on 34 reviews)</small>
+                        <div id="score_detail"><span>{{ review_summary.average_rating }}</span>Good
+                            <small>(Based on {{ review_summary.num_review }} reviews)</small>
                         </div><!-- End general_rating -->
                         <div class="row" id="rating_summary">
                             <div class="col-md-6">
                                 <ul>
                                     <li>Position
                                         <div class="rating">
-                                            <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
+                                            <i class="icon-star"></i><i class="icon-star"></i><i
+                                                class="icon-star"></i><i
                                                 class="icon-star-empty"></i><i class="icon-star-empty"></i>
                                         </div>
                                     </li>
                                     <li>Comfort
                                         <div class="rating">
-                                            <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
+                                            <i class="icon-star"></i><i class="icon-star"></i><i
+                                                class="icon-star"></i><i
                                                 class="icon-star"></i><i class="icon-star-empty"></i>
                                         </div>
                                     </li>
@@ -152,13 +159,15 @@
                                 <ul>
                                     <li>Price
                                         <div class="rating">
-                                            <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
+                                            <i class="icon-star"></i><i class="icon-star"></i><i
+                                                class="icon-star"></i><i
                                                 class="icon-star-empty"></i><i class="icon-star-empty"></i>
                                         </div>
                                     </li>
                                     <li>Quality
                                         <div class="rating">
-                                            <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
+                                            <i class="icon-star"></i><i class="icon-star"></i><i
+                                                class="icon-star"></i><i
                                                 class="icon-star"></i><i class="icon-star-empty"></i>
                                         </div>
                                     </li>
@@ -167,50 +176,28 @@
                         </div><!-- End row -->
 
                         <hr>
-                        <div class="review_strip_single">
-                            <img src="img/avatar1.jpg" alt="" class="img-circle">
-                            <small> - 10 March 2015 -</small>
-                            <h4>Jhon Doe</h4>
-                            <p>
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum
-                                consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum
-                                primis in faucibus."
-                            </p>
-                            <div class="rating">
-                                <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
-                                    class="icon-star-empty"></i><i class="icon-star-empty"></i>
-                            </div>
-                        </div><!-- End review strip -->
 
-                        <div class="review_strip_single">
-                            <img src="img/avatar2.jpg" alt="" class="img-circle">
-                            <small> - 10 March 2015 -</small>
-                            <h4>Jhon Doe</h4>
-                            <p>
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum
-                                consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum
-                                primis in faucibus."
-                            </p>
-                            <div class="rating">
-                                <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
-                                    class="icon-star-empty"></i><i class="icon-star-empty"></i>
-                            </div>
-                        </div><!-- End review strip -->
 
-                        <div class="review_strip_single last">
-                            <img src="img/avatar3.jpg" alt="" class="img-circle">
-                            <small> - 10 March 2015 -</small>
-                            <h4>Jhon Doe</h4>
-                            <p>
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum
-                                consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum
-                                primis in faucibus."
-                            </p>
-                            <div class="rating">
-                                <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
-                                    class="icon-star-empty"></i><i class="icon-star-empty"></i>
-                            </div>
-                        </div><!-- End review strip -->
+                        {###################                    评论   Property/vires.property_detail #}
+                        {% for review_list in review_lists %}
+                            <div class="review_strip_single">
+                                <img src="img/avatar1.jpg" alt="" class="img-circle">
+                                <small> {{ review_list.time }} -</small>
+                                <h4>{{ review_list.name }}</h4>
+                                <p>
+                                    {{ review_list.review }}
+                                </p>
+                                <div class="rating">
+                                    {% for i in review_list.ratings_p %}
+                                        <i class="icon-star"></i>
+                                    {% endfor %}
+                                    {% for i in review_list.ratings_n %}
+                                        <i class="icon-star-empty"></i>
+                                    {% endfor %}
+                                </div>
+                            </div><!-- End review strip -->
+                        {% endfor %}
+
 
                     </div>
                 </div>
@@ -222,27 +209,32 @@
                     <div class="col-md-9">
                         <ul id="policies">
                             <li><i class="icon_set_1_icon-83"></i><h5>Check-in and check-out.</h5>
-                                <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes
+                                <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum
+                                    omnes
                                     molestie. Sed ad debet scaevola, ne mel lorem legendos. Unum etiam cum te, an elit
                                     assueverit vix, falli aliquam complectitur ex ius.</p>
                             </li>
                             <li><i class="icon_set_1_icon-54"></i><h5>Cancellation</h5>
-                                <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes
+                                <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum
+                                    omnes
                                     molestie. Sed ad debet scaevola, ne mel lorem legendos. Unum etiam cum te, an elit
                                     assueverit vix, falli aliquam complectitur ex ius.</p>
                             </li>
                             <li><i class="icon_set_1_icon-47"></i><h5>Smoking</h5>
-                                <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes
+                                <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum
+                                    omnes
                                     molestie. Sed ad debet scaevola, ne mel lorem legendos. Unum etiam cum te, an elit
                                     assueverit vix, falli aliquam complectitur ex ius.</p>
                             </li>
                             <li><i class="icon_set_1_icon-35"></i><h5>Payments</h5>
-                                <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes
+                                <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum
+                                    omnes
                                     molestie. Sed ad debet scaevola, ne mel lorem legendos. Unum etiam cum te, an elit
                                     assueverit vix, falli aliquam complectitur ex ius.</p>
                             </li>
                             <li><i class="icon_set_1_icon-13"></i><h5>Disable</h5>
-                                <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes
+                                <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum
+                                    omnes
                                     molestie. Sed ad debet scaevola, ne mel lorem legendos. Unum etiam cum te, an elit
                                     assueverit vix, falli aliquam complectitur ex ius.</p>
                             </li>
@@ -336,20 +328,26 @@
                             <div class="row">
                                 <div class="col-md-12 col-sm-12">
                                     <div class="form-group">
-                                        <button type="submit" class="btn_full" id="submit-booking" onclick="document.getElementById('modal-wrapper2').style.display='block'">Please login before booking</button>
+                                        <button type="submit" class="btn_full" id="submit-booking"
+                                                onclick="document.getElementById('modal-wrapper2').style.display='block'">
+                                            Please login before booking
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12 col-sm-12">
                                     <div class="form-group">
-                                        <button type="submit" class="btn_full" id="submit-booking" onclick="document.getElementById('modal-wrapper').style.display='block'">Or Sign up right now</button>
+                                        <button type="submit" class="btn_full" id="submit-booking"
+                                                onclick="document.getElementById('modal-wrapper').style.display='block'">
+                                            Or Sign up right now
+                                        </button>
                                     </div>
                                 </div>
                             </div>
 
-{#                            <li><a onclick="document.getElementById('modal-wrapper').style.display='block'">Sign#}
-{#                                    up</a></li>#}
+                            {#                            <li><a onclick="document.getElementById('modal-wrapper').style.display='block'">Sign#}
+                            {#                                    up</a></li>#}
                         {% endif %}
                         <hr>
                         <a href="#0" class="btn_outline"> or Contact us</a>
@@ -372,154 +370,210 @@
 
 {% block script %}
     {% load static %}
-<!-- Modal Review -->
-<div class="modal fade" id="myReview" tabindex="-1" role="dialog" aria-labelledby="myReviewLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="myReviewLabel" style="font-weight:500;">Write your review</h4>
-			</div>
-			<div class="modal-body">
-				<div id="message-review">
-				</div>
-				<form method="post" action="assets/review.php" name="review" id="review">
-					<div class="row">
-						<div class="col-md-6">
-							<div class="form-group">
-								<input name="name_review" id="name_review" type="text" placeholder="Your name" class="form-control">
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<input name="lastname_review" id="lastname_review" type="text" placeholder="Your last name" class="form-control">
-							</div>
-						</div>
-					</div>
-					<!-- End row -->
-					<div class="row">
-						<div class="col-md-6">
-							<div class="form-group">
-								<input name="email_review" id="email_review" type="email" placeholder="Your email" class="form-control">
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<select class="form-control" name="room_type_review" id="room_type_review">
-									<option value="">Select room type</option>
-									<option value="Single room">Single Room</option>
-									<option value="Double Room">Double Room</option>
-									<option value="King double room">King Double Room</option>
-								</select>
-							</div>
-						</div>
-					</div>
-					<!-- End row -->
-					<hr>
-					<div class="row">
-						<div class="col-md-6">
-							<div class="form-group">
-								<label>Position</label>
-								<select class="form-control" name="position_review" id="position_review">
-									<option value="">Please review</option>
-									<option value="Low">Low</option>
-									<option value="Sufficient">Sufficient</option>
-									<option value="Good">Good</option>
-									<option value="Excellent">Excellent</option>
-									<option value="Superb">Super</option>
-									<option value="Not rated">I don't know</option>
-								</select>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<label>Comfort</label>
-								<select class="form-control" name="comfort_review" id="comfort_review">
-									<option value="">Please review</option>
-									<option value="Low">Low</option>
-									<option value="Sufficient">Sufficient</option>
-									<option value="Good">Good</option>
-									<option value="Excellent">Excellent</option>
-									<option value="Superb">Super</option>
-									<option value="Not rated">I don't know</option>
-								</select>
-							</div>
-						</div>
-					</div>
-					<!-- End row -->
-					<div class="row">
-						<div class="col-md-6">
-							<div class="form-group">
-								<label>Price</label>
-								<select class="form-control" name="price_review" id="price_review">
-									<option value="">Please review</option>
-									<option value="Low">Low</option>
-									<option value="Sufficient">Sufficient</option>
-									<option value="Good">Good</option>
-									<option value="Excellent">Excellent</option>
-									<option value="Superb">Super</option>
-									<option value="Not rated">I don't know</option>
-								</select>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<label>Quality</label>
-								<select class="form-control" name="quality_review" id="quality_review">
-									<option value="">Please review</option>
-									<option value="Low">Low</option>
-									<option value="Sufficient">Sufficient</option>
-									<option value="Good">Good</option>
-									<option value="Excellent">Excellent</option>
-									<option value="Superb">Super</option>
-									<option value="Not rated">I don't know</option>
-								</select>
-							</div>
-						</div>
-					</div>
-					<!-- End row -->
-					<div class="form-group">
-						<textarea name="review_text" id="review_text" class="form-control" style="height:100px" placeholder="Write your review"></textarea>
-					</div>
-					<div class="form-group">
-						<input type="text" id="verify_review" class="form-control" placeholder="Are you human? 3 + 1 =">
-					</div>
-					<input type="submit" value="Submit" class="btn_1" id="submit-review">
-				</form>
-			</div>
-		</div>
-	</div>
-</div><!-- End Modal Review -->
+    <!-- Modal Review -->
+    {#################################    添加评论#}
+
+    <div class="modal fade" id="myReview" tabindex="-1" role="dialog" aria-labelledby="myReviewLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myReviewLabel" style="font-weight:500;">Write your review</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="message-review">
+                    </div>
 
 
-<!-- SPECIFIC SCRIPTS -->
-<script>
-  $('.carousel_in').owlCarousel({
-    center: true,
-    items:1,
-    loop:true,
-	 autoplay:true,
-	 navText: [ '', '' ],
-	addClassActive: true,
-    margin:-1,
-    responsive:{
-        600:{
-            items:1
-        },
-		 1000:{
-            items:2,
-			nav:true,
-        }
-    }
-});
-</script>
-<script src="{% static 'acomodation/js/theia-sticky-sidebar.js' %}"></script>
-<script>
-    jQuery('#sidebar').theiaStickySidebar({
-      additionalMarginTop: 80
-    });
-</script>
-<script type="text/javascript" src="{% static 'acomodation/js/DateTimePicker.js' %}"></script>
-{#<script type="text/javascript" src="{% static 'acomodation/js/DateTimePicker.js' %}"></script>#}
-<script type="text/javascript">$("#dtBox").DateTimePicker();</script>
+                    {#review 表单#}
+                    <form method="post" name="review">
+
+                        <input type="hidden" id="property_id" value="{{ property }}">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Position</label>
+                                    <select class="form-control" name="position_review" id="position_review">
+                                        <option value="">Please review</option>
+                                        <option value="1">Low</option>
+                                        <option value="2">Sufficient</option>
+                                        <option value="3">Good</option>
+                                        <option value="4">Excellent</option>
+                                        <option value="5">Super</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Comfort</label>
+                                    <select class="form-control" name="comfort_review" id="comfort_review">
+                                        <option value="">Please review</option>
+                                        <option value="1">Low</option>
+                                        <option value="2">Sufficient</option>
+                                        <option value="3">Good</option>
+                                        <option value="4">Excellent</option>
+                                        <option value="5">Super</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- End row -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Price</label>
+                                    <select class="form-control" name="price_review" id="price_review">
+                                        <option value="">Please review</option>
+                                        <option value="1">Low</option>
+                                        <option value="2">Sufficient</option>
+                                        <option value="3">Good</option>
+                                        <option value="4">Excellent</option>
+                                        <option value="5">Super</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Quality</label>
+                                    <select class="form-control" name="quality_review" id="quality_review">
+                                        <option value="">Please review</option>
+                                        <option value="1">Low</option>
+                                        <option value="2">Sufficient</option>
+                                        <option value="3">Good</option>
+                                        <option value="4">Excellent</option>
+                                        <option value="5">Super</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- End row -->
+                        <div class="form-group">
+                            <textarea name="review_text" id="review_text" class="form-control" style="height:100px"
+                                      placeholder="Write your review"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="verify_review" class="form-control"
+                                   placeholder="Are you human? 3 + 1 =">
+                        </div>
+
+
+                        {#                        提交按钮#}
+                        <a id="add_review_form" class="btn btn-lg btn-block"
+                           style="color: white; background: #FF3333; width: 200px; margin: auto;">Submit</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div><!-- End Modal Review -->
+
+
+
+    <script>
+
+    $(document).ready(function () {
+
+        $("#add_review_form").click(function () {
+
+            var error = 0;
+
+            var pid = $("#property_id").val();
+
+            var position_review = $("#position_review").val();
+            var comfort_review = $("#comfort_review").val();
+            var price_review = $("#price_review").val();
+            var quality_review= $("#quality_review").val();
+            var review_text = $("#review_text").val();
+            var verify_review = $("#verify_review").val();
+
+
+            if(! position_review ||!comfort_review || !price_review ||!quality_review || !review_text ){
+                alert("please fill out review!");
+                error = 1;
+            }
+
+
+
+            if(verify_review != 4){
+                error=1;
+                alert("wrong verify answer!");
+            }
+
+            if(error ==0){
+                $.ajax({
+                    type:"POST",
+                    url: "{% url 'property:add_review' %}",
+                    data:{
+                        pid:pid,
+                        position_review:position_review,
+                        comfort_review:comfort_review,
+                        price_review:price_review,
+                        quality_review:quality_review,
+                        comment_content:review_text,
+                    },
+                    success: function (data,status) {
+                        if(data==1){
+                            alert("review succeed!");
+                        }else{
+                            alert("something wrong!");
+                        }
+                        location.href ="{% url "property:property_detail" property %}"
+
+                    }
+                })
+            }
+
+
+        })
+
+    })
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+    <!-- SPECIFIC SCRIPTS -->
+    <script>
+        $('.carousel_in').owlCarousel({
+            center: true,
+            items: 1,
+            loop: true,
+            autoplay: true,
+            navText: ['', ''],
+            addClassActive: true,
+            margin: -1,
+            responsive: {
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 2,
+                    nav: true,
+                }
+            }
+        });
+    </script>
+    <script src="{% static 'acomodation/js/theia-sticky-sidebar.js' %}"></script>
+    <script>
+        jQuery('#sidebar').theiaStickySidebar({
+            additionalMarginTop: 80
+        });
+    </script>
+    <script type="text/javascript" src="{% static 'acomodation/js/DateTimePicker.js' %}"></script>
+    {#<script type="text/javascript" src="{% static 'acomodation/js/DateTimePicker.js' %}"></script>#}
+    <script type="text/javascript">$("#dtBox").DateTimePicker();</script>
 {% endblock script %}

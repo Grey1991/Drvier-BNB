@@ -1,11 +1,15 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from django.forms import modelformset_factory
+from django.http import HttpResponse
+
 
 from Property import forms, models
 from Property import forms
 from .models import Property, Images
 from .forms import PropertyForm, ImageForm
+from PendingAndBooking.models import TransAndReview
+from UserAndAdmin.models import User
 import time
 
 IMAGE_FILE_TYPES = ['png', 'jpg', 'jpeg']
@@ -128,8 +132,67 @@ def add_property(request):
     # else:
 
 
+
+
+def add_review(request):
+    if request.method=="POST":
+        reviewForm = forms.AddReviewForm(request.POST)
+        print(reviewForm.errors)
+        if reviewForm.is_valid():
+            pid = reviewForm.cleaned_data["pid"]
+            position_review = reviewForm.cleaned_data["position_review"]
+            comfort_review  = reviewForm.cleaned_data["comfort_review"]
+            price_review = reviewForm.cleaned_data["price_review"]
+            quality_review = reviewForm.cleaned_data["quality_review"]
+            comment_content = reviewForm.cleaned_data["comment_content"]
+
+            # 向 TransAndReview 插入一条review
+            tr = TransAndReview()
+
+            tr.user_ID = request.user
+            tr.pid = Property.objects.get(id= pid)
+            tr.comment_content= comment_content
+
+            tr.position_review = position_review
+            tr.comfort_review = comfort_review
+            tr.price_review = price_review
+            tr.quality_review = quality_review
+
+            tr.ratings = round((position_review + comfort_review + price_review + quality_review)/4)
+
+            tr.save()
+            return HttpResponse(1)
+        else:
+            return HttpResponse(2)
+
+
 def property_detail(request, property_id):
-    property = Property.objects.get(id=property_id)
-    return render(request, 'property_detail.html', {'property': property})
+
+    tr_list = TransAndReview.objects.filter(pid=property_id)
+
+    _sum_rating = []
+    ############ 评论列表
+    review_lists=[]
+    for tr in tr_list:
+        review_list={}
+        review_list['name'] = User.object.filter(email=tr.user_ID)[0].first_name
+        review_list['time'] = tr.end_time
+        review_list['review'] = tr.comment_content
+        _sum_rating.append(tr.ratings)
+        review_list['ratings_p'] = ["1"]*tr.ratings
+        review_list['ratings_n'] = ["1"]*(5 - tr.ratings)
+        review_lists.append(review_list)
+
+    ############# 评论概况
+    review_summary = {}
+    review_summary["num_review"] = len(_sum_rating)
+    if len(_sum_rating):
+        review_summary["average_rating"] = round(sum(_sum_rating) / len(_sum_rating),1)
+    else:
+        review_summary["average_rating"] = 0
+
+    # property = Property.objects.get(id=property_id)
+    property = property_id
+    return render(request, 'property_detail.html', {'property': property,'review_lists': review_lists,'review_summary':review_summary})
 
 
