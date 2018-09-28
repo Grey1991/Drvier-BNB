@@ -1,4 +1,4 @@
-{% extends "loginbase.html" %}
+{% extends "base.html" %}
 {% block title %} index {% endblock %}
 
 {% block content %}
@@ -23,3 +23,10 @@
     </div>
 {% endblock content %}
 
+
+
+{% block script %}
+    <div id="dtBox"></div><!-- End datepicker -->
+    <script type="text/javascript" src="{% static 'acomodation/js/DateTimePicker.js' %}"></script>
+    <script type="text/javascript">$("#dtBox").DateTimePicker();</script>
+{% endblock script %}
