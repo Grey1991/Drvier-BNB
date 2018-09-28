@@ -191,8 +191,8 @@ def property_detail(request, property_id):
     else:
         review_summary["average_rating"] = 0
 
-    # property = Property.objects.get(id=property_id)
-    property = property_id
-    return render(request, 'property_detail.html', {'property': property,'review_lists': review_lists,'review_summary':review_summary})
+    property = Property.objects.get(id=property_id)
+    property_id = property_id
+    return render(request, 'property_detail.html', {'property_id':property_id,'property': property,'review_lists': review_lists,'review_summary':review_summary})
 
 
