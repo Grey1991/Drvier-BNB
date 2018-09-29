@@ -24,14 +24,14 @@
 
     <!---  你的表格等等-->
      <div class="container margin_60_35">
-        <h2 class="main_title"><em></em>Welcome to Dverbnb <span>adding your property detail here</span></h2>
+        <h2 class="main_title"><em></em>Welcome to Dverbnb <span>Adding your property details here</span></h2>
 
          <form action="{% url 'property:add_property' %}" method="post" enctype="multipart/form-data">
              {% csrf_token %}
             <div class="row add_top_20">
                 <div class="col-md-8 col-md-offset-2">
                     <div id="message-contact">
-                        <h3>Step 1: Start with the basics</h3>
+                        <h3><strong>Step 1:</strong> Start with the basics</h3>
                     </div>
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
@@ -48,12 +48,10 @@
                         </div>
                     </div>
                 </div>
-                <hr>
-                <hr>
                 <div class="col-md-8 col-md-offset-2">
-<div id="message-contact">
-                    <h3>Step 2: Where’s your place located?</h3>
-                </div>
+                    <div id="message-contact">
+                        <h3><strong>Step 2:</strong> Where’s your place located?</h3>
+                    </div>
                     <div class="row">
                         <div class="col-md-4 col-sm-6">
                             <div class="form-group">
@@ -91,11 +89,9 @@
                     </div>
 
                 </div>
-                <hr>
-                <hr>
                 <div class="col-md-8 col-md-offset-2">
                     <div id="message-contact">
-                        <h3>Step 3: How many guests&rooms&bed can your place accommodate?</h3>
+                        <h3><strong>Step 3:</strong> How many guests&rooms&bed can your place accommodate?</h3>
                     </div>
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
@@ -146,11 +142,9 @@
                             </div>
                         </div>
                 </div>
-                <hr>
-                <hr>
                 <div class="col-md-8 col-md-offset-2">
                     <div id="message-contact">
-                        <h3>Step 4: What amenities do you offer?</h3>
+                        <h3><strong>Step 4:</strong> What amenities do you offer?</h3>
                     </div>
                     <div class="row">
                         <div class="col-md-4 col-sm-6">
@@ -233,11 +227,9 @@
                         </div>
                     </div>
                 </div>
-                <hr>
-                <hr>
                 <div class="col-md-8 col-md-offset-2">
                     <div id="message-contact">
-                        <h3>Step 5: Is allowded these in your property?</h3>
+                        <h3><strong>Step 5:</strong> Is allowded these in your property?</h3>
                     </div>
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
@@ -266,11 +258,9 @@
                         </div>
                     </div>
                 </div>
-                <hr>
-                <hr>
                 <div class="col-md-8 col-md-offset-2">
                     <div id="message-contact">
-                        <h3>Step 6: Now let’s set the scene about your place.</h3>
+                        <h3><strong>Step 6:</strong> Now let’s set the scene about your place.</h3>
                     </div>
                     <div class="row">
                         <div class="col-md-12 col-sm-6">
@@ -283,15 +273,13 @@
                         </div>
                     </div>
                 </div>
-                <hr>
-                <hr>
             </div>
              <div class="row add_bottom_30">
                 <div class="col-md-6 col-md-offset-2" >
                     <div class="form-group">
-                        <h4>Click the save to check the details of your property.</h4>
+                        <h4><strong>Click the bottom to check the details of your property.</strong></h4>
                     </div>
-                    <input type="submit" value="Save" class="btn_1" id="submit-contact">
+                    <input type="submit" value="Add My Property" class="btn_1" id="submit-contact">
                 </div>
             </div>
          </form>

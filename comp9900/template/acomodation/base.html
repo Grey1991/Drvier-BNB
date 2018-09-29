@@ -129,7 +129,13 @@
                         <a href="#" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
                         <ul>
                             {% if user.is_authenticated %}
-                                <li><a href="{% url 'property:add_property' %}">Become a host</a></li>
+                                <li><a href="{% url 'property:add_property' %}">
+                                    {% if user.property_set.all  %}
+                                        Add a property
+                                    {% else %}
+                                        Become a host
+                                    {% endif %}
+                                </a></li>
                                 <li><a href="#">Trips</a></li>
                                 <li class="submenu">
                                     <a href="javascript:void(0);" class="show-submenu">{{ user.first_name }}<i
@@ -138,6 +144,8 @@
                                         <li><a href="{% url 'userandadmin:editprofile' page_id=1 %}">Edit Profile</a>
                                         </li>
                                         <li><a href="{% url 'userandadmin:accountsetting' %}">Account Setting</a></li>
+                                        <li><a href="{% url 'property:list_property' %}">My properties</a></li>
+
                                         <li><a href="{% url 'userandadmin:logout' %}">Log out</a></li>
                                     </ul>
                                 </li>

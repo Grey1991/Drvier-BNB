@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from django.forms import modelformset_factory
 from django.http import HttpResponse
+from django.shortcuts import render_to_response,get_object_or_404
 
 
 from Property import forms, models
@@ -100,40 +101,90 @@ def add_property(request):
             new_property.couple = couple
             new_property.status = status
 
-            # new_property.longitude = 0.0
-            # new_property.latitude = 0.0
-
             new_property.created_at = time.asctime(time.localtime(time.time()))  #
             new_property.updated_at = time.asctime(time.localtime(time.time()))
             new_property.save()
-
-            # album.album_logo = request.FILES['album_logo']
-            # file_type = album.album_logo.url.split('.')[-1]
-            # file_type = file_type.lower()
-            # if file_type not in IMAGE_FILE_TYPES:
-            #     context = {
-            #         'album': album,
-            #         'form': form,
-            #         'error_message': 'Image file must be PNG, JPG, or JPEG',
-            #     }
-            #     return render(request, 'music/create_album.html', context)
 
             for form in formset.cleaned_data:
                 image = form['image']
                 photo = Images(pid=new_property, image=image)
                 photo.save()
-            # return render(request, 'detail_review.html', {'new_property': new_property})
-            return render(request, 'detail_review.html', {'property': new_property})
-
+            return render(request, 'detail_of_myProperty.html', {'property': new_property})
     else:
         property_form = forms.PropertyForm()
         formset = ImageFormSet(queryset=Images.objects.none())
         return render(request, 'add_property.html', {'property_form': property_form, 'formset': formset})
-    # if not request.user.is_authenticated():
-    #     return render(request, 'login.html')
-    # else:
 
+def delete_property(request,property_id):
+    property = get_object_or_404(Property, pk=int(property_id))
+    property.delete()
+    properties = Property.objects.filter(user_ID = request.user)
+    return render(request,'list_property.html',{'properties':properties})
 
+def release_property(request,property_id):
+    property = Property.objects.get(pk=int(property_id))
+    property.status = True
+    property.save()
+    properties = Property.objects.filter(user_ID = request.user)
+    return render(request,'list_property.html',{'properties':properties})
+
+def edit_property(request,property_id):
+    if request.method == "POST":
+        property = get_object_or_404(Property, pk=int(property_id))
+        print(request.POST.get('types_property'))
+        property.types_property = request.POST.get('types_property')
+        property.price = request.POST.get('price')
+
+        property.types_property = request.POST.get('types_property')
+        property.province = request.POST.get('province')
+        property.city = request.POST.get('city')
+        property.state = request.POST.get('state')
+        property.address = request.POST.get('address')
+        property.postcode = request.POST.get('postcode')
+
+        property.capacity = request.POST.get('capacity')
+        property.num_bathrooms = request.POST.get('num_bathrooms')
+        property.num_bedroom = request.POST.get('num_bedroom')
+        property.num_double_bed = request.POST.get('num_double_bed')
+        property.num_single_bed = request.POST.get('num_single_bed')
+        property.num_sofa_bed = request.POST.get('num_sofa_bed')
+        property.area = request.POST.get('area')
+
+        property.kitchen = request.POST.get('kitchen',False)
+        property.in_unit_washer = request.POST.get('in_unit_washer',False)
+        property.elevator = request.POST.get('elevator',False)
+        property.heating = request.POST.get('heating',False)
+        property.ac = request.POST.get('ac',False)
+        property.tv = request.POST.get('tv',False)
+        property.wifi = request.POST.get('wifi',False)
+        property.blower = request.POST.get('blower',False)
+        property.bathtub = request.POST.get('bathtub',False)
+
+        property.parking = request.POST.get('parking',False)
+        property.gyms = request.POST.get('gyms',False)
+        property.swimming_pool = request.POST.get('swimming_pool',False)
+
+        property.party = request.POST.get('party',False)
+        property.pet = request.POST.get('pet',False)
+        property.smoking = request.POST.get('smoking',False)
+        property.couple = request.POST.get('couple',False)
+        property.status = request.POST.get('status',False)
+        property.updated_at = time.asctime(time.localtime(time.time()))
+        property.save()
+
+        properties = Property.objects.filter(user_ID=request.user)
+        return render(request, 'list_property.html', {'properties': properties})
+    else:
+        property = get_object_or_404(Property, pk=int(property_id))
+        return render(request, 'edit_property.html', {'property_form': property})
+
+def list_property(request):
+    properties = Property.objects.filter(user_ID = request.user)
+    return render(request,'list_property.html',{'properties':properties})
+
+def look_detail_of_myProperty(request,property_id):
+    property = get_object_or_404(Property, pk=int(property_id))
+    return render(request, 'detail_of_myProperty.html', {'property': property})
 
 
 def add_review(request):

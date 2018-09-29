@@ -14,7 +14,6 @@ class PropertyForm(forms.ModelForm):
         labels = {
             'user_ID': 'Your email',
             'province': 'Country / Region',
-            'city': 'Suburb / Town',
             'address': 'Street Address',
             'postcode': 'Post code',
             'capacity': 'Guests',

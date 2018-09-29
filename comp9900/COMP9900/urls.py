@@ -44,6 +44,7 @@ urlpatterns = [
     url(r'^booking/', include("PendingAndBooking.urls")),
 
 
+
 ]
 
 if settings.DEBUG:

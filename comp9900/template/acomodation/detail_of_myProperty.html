@@ -124,15 +124,52 @@
                         </ul>
                     </div>
                 </div>
+                <hr>
+
+
             </div><!-- End col -->
 
-        </div><!-- End row -->
+            <div class="col-md-10 col-md-offset-1">
+                <div class="row add_bottom_30">
+                    <div class="col-md-1">
+                        <a href="{% url 'property:edit_property' property.id %}">
+                            <button type="button" class="btn_1" id="Edit_property">
+                                Edit
+                            </button>
+                        </a>
+                    </div>
+                    <div class="col-md-1 "  >
+                        <a href="{% url 'property:delete_property' property.id %}" onclick="return confirm('Are you sure to delete this property?')">
+                            <button type="button" class="btn_1" id="Delete_property">
+                                Delete
+                            </button>
+                        </a>
+                    </div>
+                    <div class="col-md-2 col-md-offset-6">
+                        <a href="{% url 'property:release_property' property.id %}">
+                            <button type="button" class="btn_1" id="Release_property">
+                                Release now
+                            </button>
+                        </a>
+                    </div>
+                    <div class="col-md-2 ">
+                        <a href="{% url 'property:release_property' property.id %}">
+                            <button type="button" class="btn_1" id="Release_property">
+                                Release later
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
+        </div><!-- End row -->
     </div><!-- End container -->
     <!------------ end detail presentation -------------->
 
 
-    <div id="dtBox"></div><!-- End datepicker -->
+
+
+
 
 {% endblock content %}
 
