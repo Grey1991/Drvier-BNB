@@ -14,6 +14,8 @@ urlpatterns = [
 
     url(r'^(?P<property_id>[0-9]+)/delete_property/$', views.delete_property, name='delete_property'),
     url(r'^(?P<property_id>[0-9]+)/release_property/$', views.release_property, name='release_property'),
+    url(r'^(?P<property_id>[0-9]+)/cancel_release/$', views.cancel_release, name='cancel_release'),
+
     url(r'^(?P<property_id>[0-9]+)/edit_property/$', views.edit_property, name='edit_property'),
 
     url(r'^results/', search.simple_search, name="simple_search"),

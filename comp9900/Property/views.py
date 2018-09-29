@@ -128,6 +128,15 @@ def release_property(request,property_id):
     properties = Property.objects.filter(user_ID = request.user)
     return render(request,'list_property.html',{'properties':properties})
 
+def cancel_release(request,property_id):
+    property = Property.objects.get(pk=int(property_id))
+    property.status = False
+    property.save()
+    properties = Property.objects.filter(user_ID = request.user)
+    return render(request,'list_property.html',{'properties':properties})
+
+
+
 def edit_property(request,property_id):
     if request.method == "POST":
         property = get_object_or_404(Property, pk=int(property_id))

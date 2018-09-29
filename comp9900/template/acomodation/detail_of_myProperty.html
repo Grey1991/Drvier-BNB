@@ -146,15 +146,15 @@
                         </a>
                     </div>
                     <div class="col-md-2 col-md-offset-6">
-                        <a href="{% url 'property:release_property' property.id %}">
-                            <button type="button" class="btn_1" id="Release_property">
+                        <a href="{% url 'property:release_property' property.id%}">
+                            <button type="button" class="btn_1" name="Ture" id="Release_property">
                                 Release now
                             </button>
                         </a>
                     </div>
                     <div class="col-md-2 ">
-                        <a href="{% url 'property:release_property' property.id %}">
-                            <button type="button" class="btn_1" id="Release_property">
+                        <a href="{% url 'property:cancel_release'  property.id %}">
+                            <button type="button" class="btn_1" name = 'False' id="not_Release_property">
                                 Release later
                             </button>
                         </a>
