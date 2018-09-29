@@ -1,0 +1,201 @@
+{% extends "base.html" %}
+{% block title %}
+        <title>Check your property details</title>
+{% endblock %}
+
+
+{% block content %}
+
+
+    <!------------ picture presentation -------------->
+
+    <div class="carousel_in">
+        {% for image in property.images_set.all %}
+            <div><img src="{{ image.image.url }}" alt="" height="450px">
+                <div class="caption"><h3>Detail Picture</h3></div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <!------------ end picture presentation -------------->
+
+    <!------------ detail presentation -------------->
+    {% if property.types_property == "H" %}
+        <h1 class="main_title_in">House</h1>
+    {% elif property.types_property == "A" %}
+        <h1 class="main_title_in">Apartment</h1>
+    {% elif property.types_property == "S" %}
+        <h1 class="main_title_in">Studio</h1>
+    {% elif property.types_property == "O" %}
+        <h1 class="main_title_in">Others</h1>
+    {% endif %}
+    <div class="container add_bottom_60">
+
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1" id="room_detail_desc">
+                <div id="single_room_feat">
+                    <ul>
+                        <li><i class="icon_set_1_icon-7"></i>Wifi</li>
+                        <li><i class="icon_set_2_icon-116"></i>Plasma TV</li>
+                        <li><i class="icon_set_2_icon-104"></i>King size bed</li>
+                        <li><i class="icon_set_2_icon-111"></i>Bathtub</li>
+                        <li><i class="icon_set_2_icon-106"></i>Safe box</li>
+                    </ul>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <h3>Description</h3>
+                    </div>
+                    <div class="col-md-9">
+
+                        <h4>Room facilities</h4>
+
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4">
+                                <ul class="list_ok">
+                                    <li>Coffee machine</li>
+                                    <li>Wifi</li>
+                                    <li> Microwave</li>
+                                    <li>Oven</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <ul class="list_ok">
+                                    <li>Fridge</li>
+                                    <li>Hairdryer</li>
+                                    <li>Towels</li>
+                                    <li>Toiletries</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <ul class="list_ok">
+                                    <li>DVD player</li>
+                                    <li>Air-conditioning</li>
+                                    <li>Tv</li>
+                                    <li>Freezer</li>
+                                </ul>
+                            </div>
+                        </div><!-- End row  -->
+                        <h4>Room Prices</h4>
+                        <!-- start pricing table -->
+                    </div><!-- End col-md-9  -->
+                </div><!-- End row  -->
+
+                <hr>
+
+                <hr>
+                <div class="row">
+                    <div class="col-md-3">
+                        <h3>Policies</h3>
+                    </div>
+                    <div class="col-md-9">
+                        <ul id="policies">
+                            <li><i class="icon_set_1_icon-83"></i><h5>Check-in and check-out.</h5>
+                                <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum
+                                    omnes
+                                    molestie. Sed ad debet scaevola, ne mel lorem legendos. Unum etiam cum te, an elit
+                                    assueverit vix, falli aliquam complectitur ex ius.</p>
+                            </li>
+                            <li><i class="icon_set_1_icon-54"></i><h5>Cancellation</h5>
+                                <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum
+                                    omnes
+                                    molestie. Sed ad debet scaevola, ne mel lorem legendos. Unum etiam cum te, an elit
+                                    assueverit vix, falli aliquam complectitur ex ius.</p>
+                            </li>
+                            <li><i class="icon_set_1_icon-47"></i><h5>Smoking</h5>
+                                <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum
+                                    omnes
+                                    molestie. Sed ad debet scaevola, ne mel lorem legendos. Unum etiam cum te, an elit
+                                    assueverit vix, falli aliquam complectitur ex ius.</p>
+                            </li>
+                            <li><i class="icon_set_1_icon-35"></i><h5>Payments</h5>
+                                <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum
+                                    omnes
+                                    molestie. Sed ad debet scaevola, ne mel lorem legendos. Unum etiam cum te, an elit
+                                    assueverit vix, falli aliquam complectitur ex ius.</p>
+                            </li>
+                            <li><i class="icon_set_1_icon-13"></i><h5>Disable</h5>
+                                <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum
+                                    omnes
+                                    molestie. Sed ad debet scaevola, ne mel lorem legendos. Unum etiam cum te, an elit
+                                    assueverit vix, falli aliquam complectitur ex ius.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- End col -->
+
+        </div><!-- End row -->
+
+    </div><!-- End container -->
+    <!------------ end detail presentation -------------->
+
+
+    <div id="dtBox"></div><!-- End datepicker -->
+
+{% endblock content %}
+
+
+{% block script %}
+    {% load static %}
+
+
+    <!-- SPECIFIC SCRIPTS -->
+    <script>
+        $('.carousel_in').owlCarousel({
+            center: true,
+            items: 1,
+            loop: true,
+            autoplay: true,
+            navText: ['', ''],
+            addClassActive: true,
+            margin: -1,
+            responsive: {
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 2,
+                    nav: true,
+                }
+            }
+        });
+    </script>
+    <script src="{% static 'acomodation/js/theia-sticky-sidebar.js' %}"></script>
+    <script>
+        jQuery('#sidebar').theiaStickySidebar({
+            additionalMarginTop: 80
+        });
+    </script>
+    <script type="text/javascript" src="{% static 'acomodation/js/DateTimePicker.js' %}"></script>
+    <script type="text/javascript" src="{% static 'acomodation/js/DateTimePicker.js' %}"></script>
+    <script type="text/javascript">$("#dtBox").DateTimePicker();</script>
+{% endblock script %}
+
+
+
+{#{% block content %}#}
+{##}
+{#    #}
+{#    #}
+{#    #}
+{#    <h1> add a property successfully </h1>#}
+{#    <div class="container">#}
+{#        <div class="row centered-form">#}
+{#            <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">#}
+{#                <div class="panel panel-default">#}
+{#                    <div class="panel-heading">#}
+{#                        <h3 class="panel-title"> My property#}
+{#                        </h3>#}
+{#                    </div>#}
+{#                    <div class="panel-body">#}
+{#                        <a href="{% url 'property:property_detail' new_property.id %}">#}
+{#                            <h2> check details </h2>#}
+{#                        </a>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#{% endblock content %}#}

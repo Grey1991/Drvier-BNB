@@ -15,7 +15,7 @@ import time
 IMAGE_FILE_TYPES = ['png', 'jpg', 'jpeg']
 
 def add_property(request):
-    ImageFormSet = modelformset_factory(Images, form=ImageForm)
+    ImageFormSet = modelformset_factory(Images, form=ImageForm, extra=3)
     if request.method == "POST":
         property_form = forms.PropertyForm(request.POST)
         formset = ImageFormSet(request.POST, request.FILES, queryset=Images.objects.none())
@@ -122,7 +122,9 @@ def add_property(request):
                 image = form['image']
                 photo = Images(pid=new_property, image=image)
                 photo.save()
-            return render(request, 'add_successfully.html', {'new_property': new_property,'photos':photo})
+            # return render(request, 'detail_review.html', {'new_property': new_property})
+            return render(request, 'detail_review.html', {'property': new_property})
+
     else:
         property_form = forms.PropertyForm()
         formset = ImageFormSet(queryset=Images.objects.none())
