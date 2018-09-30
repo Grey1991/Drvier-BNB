@@ -129,7 +129,7 @@
 
             </div><!-- End col -->
 
-            <div class="col-md-10 col-md-offset-1">
+            <div class="col-md-11 col-md-offset-1">
                 <div class="row add_bottom_30">
                     <div class="col-md-1">
                         <a href="{% url 'property:edit_property' property.id %}">
@@ -145,20 +145,30 @@
                             </button>
                         </a>
                     </div>
-                    <div class="col-md-2 col-md-offset-6">
-                        <a href="{% url 'property:release_property' property.id%}">
-                            <button type="button" class="btn_1" name="Ture" id="Release_property">
-                                Release now
-                            </button>
-                        </a>
-                    </div>
-                    <div class="col-md-2 ">
-                        <a href="{% url 'property:cancel_release'  property.id %}">
-                            <button type="button" class="btn_1" name = 'False' id="not_Release_property">
-                                Release later
-                            </button>
-                        </a>
-                    </div>
+                    {% if property.status %}
+                        <div class="col-md-4 col-md-offset-6 ">
+                            <a href="{% url 'property:cancel_release'  property.id %}">
+                                <button type="button" class="btn_1" name = 'False' id="not_Release_property">
+                                    Cancel Release this property
+                                </button>
+                            </a>
+                        </div>
+                    {% else %}
+                        <div class="col-md-2 col-md-offset-6">
+                            <a href="{% url 'property:release_property' property.id%}">
+                                <button type="button" class="btn_1" name="Ture" id="Release_property">
+                                    Release now
+                                </button>
+                            </a>
+                        </div>
+                        <div class="col-md-2 ">
+                            <a href="{% url 'property:cancel_release'  property.id %}">
+                                <button type="button" class="btn_1" name = 'False' id="not_Release_property">
+                                    Release later
+                                </button>
+                            </a>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
 
