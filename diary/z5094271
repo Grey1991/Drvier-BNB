@@ -8,3 +8,45 @@ week3
 I disscussed with my group members the eqics of our project;
 I mainly worte the epics 3 and epics 4;
 We disscussed the main business of each page and the dirction of each page jump operations
+
+week4
+drae the EM graph
+leaning how to use git
+leaning how to create a model in django env
+
+week5
+create a property model 
+implement a form which is designed to add owner's property information
+discuss with group members the relationships between propertis and hosts
+
+week6
+add upload images function for properties
+create a Image model as a foreign model to the Property model
+relate property model with user model
+
+week7
+design the functino of how visiters to negotiate with host about the details of properties
+represent the details of properties for host
+list the properties for host
+design the add properties page for host
+
+week8
+create a function for a property edit page
+create a function for updating details of properties
+create a function for reviewing the details of properties
+
+week9
+create a function for deleting  properties
+create a function for reviewing the details of properties
+create a function for listing the host properties
+
+week10
+Front desgin :
+(1)represent the details of properties for host
+(2)list the properties for host
+(3)design the add properties page for host
+
+
+
+
+
