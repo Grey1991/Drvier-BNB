@@ -251,8 +251,7 @@
                     <div class="box_style_1">
                         <div id="message-booking"></div>
                         {% if user.is_authenticated %}
-                            <form method="post" action="{% url 'PendingAndBooking:booking' %}" id="check_avail"
-                                  autocomplete="off">
+                            <form method="post" id="check_avail" autocomplete="off">
                                 <div class="row">
                                     <div class="col-md-6 col-sm-6">
                                         <div class="form-group">
@@ -274,36 +273,12 @@
                                         </div>
                                     </div>
                                 </div><!-- End row -->
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-6 col-xs-6">
-                                        <div class="form-group">
-                                            <label>Adults</label>
-                                            <div class="qty-buttons">
-                                                <input type="button" value="-" class="qtyminus" name="adults">
-                                                <input type="text" name="adults" id="adults" value=""
-                                                       class="qty form-control"
-                                                       placeholder="0">
-                                                <input type="button" value="+" class="qtyplus" name="adults">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-6">
-                                        <div class="form-group">
-                                            <label>Children</label>
-                                            <div class="qty-buttons">
-                                                <input type="button" value="-" class="qtyminus" name="children">
-                                                <input type="text" name="children" id="children" value=""
-                                                       class="qty form-control" placeholder="0">
-                                                <input type="button" value="+" class="qtyplus" name="children">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><!-- End row -->
+
                                 <div class="row">
 
                                     <div class="col-md-12 col-sm-6">
                                         <div class="form-group">
-                                            <label>Name</label>
+                                            <label>Contact Name</label>
                                             <input type="text" class="form-control" name="name_booking"
                                                    id="name_booking"
                                                    placeholder="Name and Last name">
@@ -311,12 +286,16 @@
                                     </div>
                                     <div class="col-md-12 col-sm-6">
                                         <div class="form-group">
-                                            <label>Email</label>
-                                            <input type="text" class="form-control" name="email_booking"
-                                                   id="email_booking"
-                                                   placeholder="Your email">
+                                            <label>Contact Phone</label>
+                                            <input type="text" class="form-control" name="Phone_booking"
+                                                   id="Phone_booking"
+                                                   placeholder="Contact Phone">
+                                        </div>
+                                        <div class="alert alert-danger" id='lg_phone_invalid' style="display: none;">
+                                            invalid Phone number!
                                         </div>
                                     </div>
+                                    <input type="hidden" id="property_id" value="{{ property_id }}" name="property_id">
                                     <div class="col-md-12 col-sm-12">
                                         <div class="form-group">
                                             <input type="submit" value="Book now" class="btn_full" id="submit-booking">
@@ -474,73 +453,105 @@
     </div><!-- End Modal Review -->
 
 
-
+    <!------------------add review script----------------->
     <script>
+        $(document).ready(function () {
+            $("#add_review_form").click(function () {
+                var error = 0;
 
-    $(document).ready(function () {
+                var pid = $("#property_id").val();
 
-        $("#add_review_form").click(function () {
+                var position_review = $("#position_review").val();
+                var comfort_review = $("#comfort_review").val();
+                var price_review = $("#price_review").val();
+                var quality_review = $("#quality_review").val();
+                var review_text = $("#review_text").val();
+                var verify_review = $("#verify_review").val();
 
-            var error = 0;
-
-            var pid = $("#property_id").val();
-
-            var position_review = $("#position_review").val();
-            var comfort_review = $("#comfort_review").val();
-            var price_review = $("#price_review").val();
-            var quality_review= $("#quality_review").val();
-            var review_text = $("#review_text").val();
-            var verify_review = $("#verify_review").val();
-
-
-            if(! position_review ||!comfort_review || !price_review ||!quality_review || !review_text ){
-                alert("please fill out review!");
-                error = 1;
-            }
-
-
-
-            if(verify_review != 4){
-                error=1;
-                alert("wrong verify answer!");
-            }
-
-            if(error ==0){
-                $.ajax({
-                    type:"POST",
-                    url: "{% url 'property:add_review' %}",
-                    data:{
-                        pid:pid,
-                        position_review:position_review,
-                        comfort_review:comfort_review,
-                        price_review:price_review,
-                        quality_review:quality_review,
-                        comment_content:review_text,
-                    },
-                    success: function (data,status) {
-                        if(data==1){
-                            alert("review succeed!");
-                        }else{
-                            alert("something wrong!");
+                if (!position_review || !comfort_review || !price_review || !quality_review || !review_text) {
+                    alert("please fill out review!");
+                    error = 1;
+                }
+                if (verify_review != 4) {
+                    error = 1;
+                    alert("wrong verify answer!");
+                }
+                if (error == 0) {
+                    $.ajax({
+                        type: "POST",
+                        url: "{% url 'property:add_review' %}",
+                        data: {
+                            pid: pid,
+                            position_review: position_review,
+                            comfort_review: comfort_review,
+                            price_review: price_review,
+                            quality_review: quality_review,
+                            comment_content: review_text,
+                        },
+                        success: function (data, status) {
+                            if (data == 1) {
+                                alert("review succeed!");
+                                location.href = "{% url "property:property_detail" property_id %}"
+                            } else {
+                                alert("something wrong!");
+                            }
                         }
-                        location.href ="{% url "property:property_detail" property_id %}"
-
-                    }
-                })
-            }
-
-
+                    })
+                }
+            })
         })
-
-    })
-
-
-
-
-
     </script>
+    <!------------------end add review script----------------->
+
+     <!------------------booking script----------------->
+    <script>
+        $(document).ready(function () {
+            $("#submit-booking").click(function () {
+                var error = 0;
+
+                var pid = $("#property_id").val();
+
+                var check_in = $("#check_in").val();
+                var check_out = $("#check_out").val();
+                var name_booking = $("#name_booking").val();
+                var phone_booking = $("#Phone_booking").val();
 
 
+                if (!check_in || !check_out || !name_booking || !phone_booking) {
+                    alert("please fill out review!");
+                    error = 1;
+                }
+                if (isNaN(phone_booking)) {
+                    $("#lg_phone_invalid").css('display', 'block');
+                    error = 1;
+                    alert("invalid phone number!");
+                }
+                if (error == 0) {
+                    $.ajax({
+                        type: "POST",
+                        url: "{% url 'PendingAndBooking:booking' %}",
+                        data: {
+                            pid: pid,
+                            check_in: check_in,
+                            check_out: check_out,
+                            name_booking: phone_booking,
+                        },
+                        success: function (data, status) {
+                            if (data == 1) {
+                                alert("booking succeed!");
+                            } else {
+                                alert("something wrong!");
+                            }
+                            location.href = "{% url "property:property_detail" property_id %}"
+                        }
+                    })
+                }
+
+                return false;
+            })
+        })
+    </script>
+    <!------------------end booking script----------------->
 
 
 
