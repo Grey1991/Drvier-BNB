@@ -20,26 +20,56 @@
     <!------------ end picture presentation -------------->
 
     <!------------ detail presentation -------------->
-    {% if property.types_property == "H" %}
-        <h1 class="main_title_in">House</h1>
-    {% elif property.types_property == "A" %}
-        <h1 class="main_title_in">Apartment</h1>
-    {% elif property.types_property == "S" %}
-        <h1 class="main_title_in">Studio</h1>
-    {% elif property.types_property == "O" %}
-        <h1 class="main_title_in">Others</h1>
-    {% endif %}
-    <div class="container add_bottom_60">
 
+    <div class="row col-md-8 col-md-offset-2" >
+        <div class="col-md-6 col-md-offset-1">
+            {% if property.types_property == "H" %}
+                <h1>House</h1>
+            {% elif property.types_property == "A" %}
+                <h1>Apartment</h1>
+            {% elif property.types_property == "S" %}
+                <h1>Studio</h1>
+            {% elif property.types_property == "O" %}
+                <h1>Others</h1>
+            {% endif %}
+        </div>
+        <div class="class= col-md-4 col-md-offset-1">
+            <h3 class="main_title_in price" >
+                from <strong>${{ property.price }}</strong>/night
+            </h3>
+        </div>
+    </div>
+
+    <div class="container add_bottom_60">
         <div class="row">
             <div class="col-md-10 col-md-offset-1" id="room_detail_desc">
                 <div id="single_room_feat">
                     <ul>
-                        <li><i class="icon_set_1_icon-7"></i>Wifi</li>
-                        <li><i class="icon_set_2_icon-116"></i>Plasma TV</li>
-                        <li><i class="icon_set_2_icon-104"></i>King size bed</li>
-                        <li><i class="icon_set_2_icon-111"></i>Bathtub</li>
-                        <li><i class="icon_set_2_icon-106"></i>Safe box</li>
+                        <li><i class="icon_set_1_icon-58" ></i>Breakfast</li>
+                        {% if property.wifi %}
+                            <li><i class="icon_set_1_icon-7"></i>Wifi</li>
+                        {% endif %}
+                        {% if property.tv %}
+                            <li><i class="icon_set_2_icon-116"></i>TV</li>
+                        {% endif %}
+                        {% if property.num_double_bed %}
+                            <li><i class="icon_set_2_icon-104"></i>Double size bed</li>
+                        {% endif %}
+                        {% if property.num_single_bed %}
+                            <li><i class="icon_set_2_icon-114"></i>Single Bed</li>
+                        {% endif %}
+                        {% if property.bathtub %}
+                            <li><i class="icon_set_2_icon-111"></i>Bathtub</li>
+                        {% endif %}
+                        {% if property.parking %}
+                            <li><i class="icon_set_1_icon-27"></i>Parking</li>
+                        {% endif %}
+                        {% if property.swimming_pool %}
+                            <li><i class="icon_set_2_icon-110"></i>Swimming Pool</li>
+                        {% endif %}
+                        {% if property.gyms %}
+                            <li><i class="icon_set_2_icon-117"></i>Gym</li>
+                        {% endif %}
                     </ul>
                 </div>
 
@@ -48,42 +78,59 @@
                         <h3>Description</h3>
                     </div>
                     <div class="col-md-9">
-
                         <h4>Room facilities</h4>
-
                         <div class="row">
                             <div class="col-md-4 col-sm-4">
                                 <ul class="list_ok">
-                                    <li>Coffee machine</li>
-                                    <li>Wifi</li>
-                                    <li> Microwave</li>
-                                    <li>Oven</li>
+                                    {% if property.kitchen %}
+                                        <li>kitchen</li>
+                                    {% endif %}
+                                    {% if property.in_unit_washer %}
+                                        <li>In-unit-Washer</li>
+                                    {% endif %}
+                                    {% if property.wifi %}
+                                        <li>WIfI</li>
+                                    {% endif %}
+                                    {% if property.elevator %}
+                                        <li>Elevator</li>
+                                    {% endif %}
                                 </ul>
                             </div>
                             <div class="col-md-4 col-sm-4">
                                 <ul class="list_ok">
-                                    <li>Fridge</li>
-                                    <li>Hairdryer</li>
-                                    <li>Towels</li>
-                                    <li>Toiletries</li>
+                                    {% if property.heating %}
+                                        <li>Heating</li>
+                                    {% endif %}
+                                    {% if property.ac %}
+                                        <li>Air-conditioning</li>
+                                    {% endif %}
+                                    {% if property.tv %}
+                                        <li>TV</li>
+                                    {% endif %}
+                                    {% if property.blower %}
+                                        <li>Hairdryer</li>
+                                    {% endif %}
                                 </ul>
                             </div>
                             <div class="col-md-4 col-sm-4">
                                 <ul class="list_ok">
-                                    <li>DVD player</li>
-                                    <li>Air-conditioning</li>
-                                    <li>Tv</li>
-                                    <li>Freezer</li>
+                                    {% if property.bathtub %}
+                                        <li>Bathtub</li>
+                                    {% endif %}
+                                    {% if property.parking %}
+                                        <li>Parking</li>
+                                    {% endif %}
+                                    {% if property.swimming_pool %}
+                                        <li>Swimming Pool</li>
+                                    {% endif %}
+                                    {% if property.gyms %}
+                                        <li>Gym</li>
+                                    {% endif %}
                                 </ul>
                             </div>
                         </div><!-- End row  -->
-                        <h4>Room Prices</h4>
-                        <!-- start pricing table -->
                     </div><!-- End col-md-9  -->
                 </div><!-- End row  -->
-
-                <hr>
-
                 <hr>
                 <div class="row">
                     <div class="col-md-3">
@@ -91,36 +138,36 @@
                     </div>
                     <div class="col-md-9">
                         <ul id="policies">
-                            <li><i class="icon_set_1_icon-83"></i><h5>Check-in and check-out.</h5>
-                                <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum
-                                    omnes
-                                    molestie. Sed ad debet scaevola, ne mel lorem legendos. Unum etiam cum te, an elit
-                                    assueverit vix, falli aliquam complectitur ex ius.</p>
-                            </li>
-                            <li><i class="icon_set_1_icon-54"></i><h5>Cancellation</h5>
-                                <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum
-                                    omnes
-                                    molestie. Sed ad debet scaevola, ne mel lorem legendos. Unum etiam cum te, an elit
-                                    assueverit vix, falli aliquam complectitur ex ius.</p>
-                            </li>
-                            <li><i class="icon_set_1_icon-47"></i><h5>Smoking</h5>
-                                <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum
-                                    omnes
-                                    molestie. Sed ad debet scaevola, ne mel lorem legendos. Unum etiam cum te, an elit
-                                    assueverit vix, falli aliquam complectitur ex ius.</p>
-                            </li>
-                            <li><i class="icon_set_1_icon-35"></i><h5>Payments</h5>
-                                <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum
-                                    omnes
-                                    molestie. Sed ad debet scaevola, ne mel lorem legendos. Unum etiam cum te, an elit
-                                    assueverit vix, falli aliquam complectitur ex ius.</p>
-                            </li>
-                            <li><i class="icon_set_1_icon-13"></i><h5>Disable</h5>
-                                <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum
-                                    omnes
-                                    molestie. Sed ad debet scaevola, ne mel lorem legendos. Unum etiam cum te, an elit
-                                    assueverit vix, falli aliquam complectitur ex ius.</p>
-                            </li>
+                            {% if property.smoking %}
+                                <li><i class="icon_set_1_icon-47"></i><h5>Smoking</h5>
+                                    <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum
+                                        omnes
+                                        molestie. </p>
+                                </li>
+                            {% endif %}
+
+                            {% if property.pet %}
+                                <li><i class="icon_set_1_icon-22"></i><h5>Pets</h5>
+                                    <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum
+                                        omnes
+                                        molestie. </p>
+                                </li>
+                            {% endif %}
+                            {% if property.party %}
+                                <li><i class="icon_set_1_icon-99"></i><h5>Play a Party</h5>
+                                    <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum
+                                        omnes
+                                        molestie. </p>
+                                </li>
+                            {% endif %}
+                            {% if property.couple %}
+                                <li><i class="icon_set_1_icon-82"></i><h5>Couple</h5>
+                                    <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum
+                                        omnes
+                                        molestie. </p>
+                                </li>
+                            {% endif %}
+
                         </ul>
                     </div>
                 </div>
@@ -134,14 +181,14 @@
                     <div class="col-md-1">
                         <a href="{% url 'property:edit_property' property.id %}">
                             <button type="button" class="btn_1" id="Edit_property">
-                                Edit
+                                <span class="icon-cog"></span>
                             </button>
                         </a>
                     </div>
                     <div class="col-md-1 "  >
                         <a href="{% url 'property:delete_property' property.id %}" onclick="return confirm('Are you sure to delete this property?')">
                             <button type="button" class="btn_1" id="Delete_property">
-                                Delete
+                                <span class="icon-trash"></span>
                             </button>
                         </a>
                     </div>
@@ -175,9 +222,6 @@
         </div><!-- End row -->
     </div><!-- End container -->
     <!------------ end detail presentation -------------->
-
-
-
 
 
 
@@ -220,29 +264,3 @@
     <script type="text/javascript">$("#dtBox").DateTimePicker();</script>
 {% endblock script %}
 
-
-
-{#{% block content %}#}
-{##}
-{#    #}
-{#    #}
-{#    #}
-{#    <h1> add a property successfully </h1>#}
-{#    <div class="container">#}
-{#        <div class="row centered-form">#}
-{#            <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">#}
-{#                <div class="panel panel-default">#}
-{#                    <div class="panel-heading">#}
-{#                        <h3 class="panel-title"> My property#}
-{#                        </h3>#}
-{#                    </div>#}
-{#                    <div class="panel-body">#}
-{#                        <a href="{% url 'property:property_detail' new_property.id %}">#}
-{#                            <h2> check details </h2>#}
-{#                        </a>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
-{#{% endblock content %}#}

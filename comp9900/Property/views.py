@@ -140,7 +140,6 @@ def cancel_release(request,property_id):
 def edit_property(request,property_id):
     if request.method == "POST":
         property = get_object_or_404(Property, pk=int(property_id))
-        print(request.POST.get('types_property'))
         property.types_property = request.POST.get('types_property')
         property.price = request.POST.get('price')
 
@@ -181,8 +180,7 @@ def edit_property(request,property_id):
         property.updated_at = time.asctime(time.localtime(time.time()))
         property.save()
 
-        properties = Property.objects.filter(user_ID=request.user)
-        return render(request, 'list_property.html', {'properties': properties})
+        return render(request, 'detail_of_myProperty.html', {'property': property})
     else:
         property = get_object_or_404(Property, pk=int(property_id))
         return render(request, 'edit_property.html', {'property_form': property})
