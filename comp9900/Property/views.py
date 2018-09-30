@@ -177,6 +177,7 @@ def edit_property(request,property_id):
         property.smoking = request.POST.get('smoking',False)
         property.couple = request.POST.get('couple',False)
         property.status = request.POST.get('status',False)
+        
         property.updated_at = time.asctime(time.localtime(time.time()))
         property.save()
 
