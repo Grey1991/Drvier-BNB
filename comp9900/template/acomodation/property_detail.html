@@ -291,8 +291,11 @@
                                                    id="Phone_booking"
                                                    placeholder="Contact Phone">
                                         </div>
-                                        <div class="alert alert-danger" id='lg_phone_invalid' style="display: none;">
+                                        <div class="alert alert-danger" id='bk_phone_invalid' style="display: none;">
                                             invalid Phone number!
+                                        </div>
+                                        <div class="alert alert-danger" id='bk_property_invalid' style="display: none;">
+                                            This property is unavailable, please check another date or other properties!
                                         </div>
                                     </div>
                                     <input type="hidden" id="property_id" value="{{ property_id }}" name="property_id">
@@ -491,10 +494,11 @@
                         success: function (data, status) {
                             if (data == 1) {
                                 alert("review succeed!");
-                                location.href = "{% url "property:property_detail" property_id %}"
+
                             } else {
                                 alert("something wrong!");
                             }
+                            location.href = "{% url "property:property_detail" property_id %}"
                         }
                     })
                 }
@@ -514,15 +518,15 @@
                 var check_in = $("#check_in").val();
                 var check_out = $("#check_out").val();
                 var name_booking = $("#name_booking").val();
-                var phone_booking = $("#Phone_booking").val();
+                var Phone_booking = $("#Phone_booking").val();
 
 
-                if (!check_in || !check_out || !name_booking || !phone_booking) {
+                if (!check_in || !check_out || !name_booking || !Phone_booking) {
                     alert("please fill out review!");
                     error = 1;
                 }
-                if (isNaN(phone_booking)) {
-                    $("#lg_phone_invalid").css('display', 'block');
+                if (isNaN(Phone_booking)) {
+                    $("#bk_phone_invalid").css('display', 'block');
                     error = 1;
                     alert("invalid phone number!");
                 }
@@ -534,15 +538,19 @@
                             pid: pid,
                             check_in: check_in,
                             check_out: check_out,
-                            name_booking: phone_booking,
+                            name_booking: name_booking,
+                            Phone_booking: Phone_booking,
                         },
                         success: function (data, status) {
-                            if (data == 1) {
+                            if (data == 'succeed') {
                                 alert("booking succeed!");
+                                location.href = "{% url "property:property_detail" property_id %}"
                             } else {
-                                alert("something wrong!");
+                                {#alert("This property is unavaliable, please check another date or other properties!");#}
+                                $("#bk_property_invalid").css('display', 'block');
+
+
                             }
-                            location.href = "{% url "property:property_detail" property_id %}"
                         }
                     })
                 }
