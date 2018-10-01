@@ -31,21 +31,21 @@
 
     <div class="container margin_60">
         <div class="row">
-            <div class="col-lg-9 col-md-10 col-md-offset-1">
+            <div class="col-lg-9 col-md-12 col-md-offset-1">
 
                 <!--------------------  room list ---------------------->
                 {% for tran in my_trans %}
                     <div class="row">
                         <div class="room_desc clearfix" {# onclick="location.href='{% url "property:property_detail" trip.pid %}';" #} >
                             <div class="col-md-4">
-{#                                <figure><img src="{{ trip.property_set.first.images_set.first.image.url }}" alt="" class="img-responsive"></figure>#}
+                                <figure><img src="{{ tran.pid.images_set.first.image.url }}" alt="" class="img-responsive"></figure>
                             </div>
                             <div class="col-md-6 room_list_desc">
-                                <p><strong>Property Id:&nbsp;</strong>{{ tran.pid_id }}</p>
+                                <p><strong>Property Id:&nbsp;</strong>{{ tran.pid_id }}&nbsp;&nbsp;&nbsp;&nbsp;<strong>User Id:&nbsp;</strong>{{ tran.user_ID_id }}</p>
                                 <p><strong>Arrival time:&nbsp;</strong>{{ tran.start_time }}&nbsp;&nbsp;&nbsp;&nbsp;<strong>Departure time:&nbsp;</strong>{{ tran.end_time }}</p>
                                 <p><strong>Contant name:&nbsp;</strong>{{ tran.contact_name }}</p>
                                 <p><strong>Contant phone:&nbsp;</strong>{{ tran.contact_phone }}</p>
-                                <p><strong>User Id:&nbsp;</strong>{{ tran.user_ID_id }}</p>
+
 {#                                <ul>#}
 {#                                    {% if property.num_double_bed > 0 %}#}
 {#                                        <li>#}

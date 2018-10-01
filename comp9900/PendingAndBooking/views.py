@@ -59,7 +59,15 @@ def paynow(request,trip_id):
     # print (total_money)
     return render(request,'paynow.html',{'total_money':total_money, 'trip_id':trip_id})
 
-
+def trips(request):
+    template = 'my_trips.html'
+    user_ID = request.user
+    trip_list = Pmodels.TransAndReview.objects.filter(Q(user_ID__exact=user_ID)).distinct()
+    # trip_property_list = []
+    # for trip in trip_list:
+    #     property = models.Property.objects.filter(pk=trip.pid_id)
+    my_trips = sorted(trip_list, key=lambda x: x.start_time, reverse=True)
+    return render(request, template, {'my_trips':my_trips})
 
 def payment(request,trip_id):
     template = 'my_trips.html'
@@ -71,14 +79,6 @@ def payment(request,trip_id):
     trip_list = Pmodels.TransAndReview.objects.filter(Q(user_ID__exact=user_ID)).distinct()
     my_trips = sorted(trip_list, key=lambda x: x.start_time, reverse=True)
     return render(request, template, {'my_trips': my_trips})
-
-
-def trips(request):
-    template = 'my_trips.html'
-    user_ID = request.user
-    trip_list = Pmodels.TransAndReview.objects.filter(Q(user_ID__exact=user_ID)).distinct()
-    my_trips = sorted(trip_list, key=lambda x: x.start_time, reverse=True)
-    return render(request, template, {'my_trips':my_trips})
 
 def my_trans(request):
     template = 'my_trans.html'
