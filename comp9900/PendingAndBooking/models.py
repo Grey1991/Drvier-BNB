@@ -18,7 +18,6 @@ class TransAndReview(models.Model):
     status_choies = (
         ('B', 'Booking'),
         ('P', 'Pending'),
-        ('D', 'Denied'),
         ('PB', 'Pending paying'),
         ('C', 'Comfirming'),
         ('S', 'Success'),

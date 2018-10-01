@@ -29,7 +29,7 @@
          <form action="{% url 'PendingAndBooking:finish_pending' %}" method="post" enctype="multipart/form-data">
              {% csrf_token %}
             <input type="hidden" name="trip_id" value="{{ trip_id }}">
-{#            <input type="hidden" name="pending_id" value="{{ pending_trans.id }}">#}
+            <input type="hidden" name="pending_id" value="{{ pending_id }}">
             <div class="row add_top_20">
                 <div class="col-md-8 col-md-offset-2">
                     <div id="message-contact">

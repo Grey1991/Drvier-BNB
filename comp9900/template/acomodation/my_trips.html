@@ -67,13 +67,6 @@
                                             Pending
                                         </button>
                                     </div>
-                                {% elif trip.status == "D" %}
-                                    <div class="col-md-2 ">
-                                        <button type="button" class="btn_1" style="width: 100px" name='pending denied'
-                                                id="pending_denied">
-                                            Pending denied
-                                        </button>
-                                    </div>
                                 {% elif trip.status == "PB" %}
                                     <div class="col-md-2 ">
                                         <a href="{% url 'PendingAndBooking:pending_paynow' trip.id %}">

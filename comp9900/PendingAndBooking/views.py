@@ -177,22 +177,24 @@ def show_pending(request, tran_id):
     trip = Pmodels.TransAndReview.objects.get(id=tran_id)
     print(trip.id)
     print('property id is {}'.format(trip.pid.id))
-    return render(request, 'show_pending.html', {'pending_trans':pending_trans,'trip_id':trip.id,'trip':trip,'property':trip.pid})
+    return render(request, 'show_pending.html', {'pending_trans':pending_trans,'pending_id':pending_trans.id,'trip_id':trip.id,'trip':trip,'property':trip.pid})
 
 def finish_pending(request):
     agree = request.POST.get('agree')
     print('finish agree is {}'.format(agree))
     trip_id = request.POST.get('trip_id')
     print('finish trip id is {}'.format(trip_id))
-    # pending_id = request.POST.get('pending_trans_id')
-    # print('finish pending id is {}'.format(pending_id))
+    pending_id = request.POST.get('pending_id')
+    print('finish pending id is {}'.format(pending_id))
     trip = Pmodels.TransAndReview.objects.get(id=trip_id)
+    pending_trans = Pmodels.PendingAndTrans.objects.get(id=pending_id)
 
     if agree == 'Disagree':
-        trip.status = 'D'
+        pending_trans.delete()
+        trip.delete()
     else:
         trip.status = 'PB'
-    trip.save()
+        trip.save()
 
     template = 'my_trans.html'
     user_ID = request.user
