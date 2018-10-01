@@ -7,7 +7,7 @@ import re
 
 # Create your views here.
 def booking(request):
-    template = 'property_list.html'
+    template = 'paynow.html'
 
     pid = request.POST.get('pid')
     check_in = request.POST.get('check_in')
@@ -42,8 +42,59 @@ def booking(request):
         tr.contact_name = contact_name
         tr.contact_phone = contact_phone
         tr.save()
-        return HttpResponse('succeed')
+        trans_id = tr.id
+        print(trans_id)
+        return HttpResponse(trans_id)
     else:
         return HttpResponse('failed')
 
 
+def paynow(request,trip_id):
+    print(trip_id)
+    # print("this is here")
+    trip = Pmodels.TransAndReview.objects.get(pk=trip_id)
+    property = models.Property.objects.get(pk=trip.pid_id)
+    # print("price is {}".format(property.price))
+    total_money = (trip.end_time-trip.start_time).days * property.price
+    # print (total_money)
+    return render(request,'paynow.html',{'total_money':total_money, 'trip_id':trip_id})
+
+
+
+def payment(request,trip_id):
+    template = 'my_trips.html'
+    print('here')
+    trip = Pmodels.TransAndReview.objects.get(pk=trip_id)
+    trip.status = 'C'
+    trip.save()
+    user_ID = request.user
+    trip_list = Pmodels.TransAndReview.objects.filter(Q(user_ID__exact=user_ID)).distinct()
+    my_trips = sorted(trip_list, key=lambda x: x.start_time, reverse=True)
+    return render(request, template, {'my_trips': my_trips})
+
+
+def trips(request):
+    template = 'my_trips.html'
+    user_ID = request.user
+    trip_list = Pmodels.TransAndReview.objects.filter(Q(user_ID__exact=user_ID)).distinct()
+    my_trips = sorted(trip_list, key=lambda x: x.start_time, reverse=True)
+    return render(request, template, {'my_trips':my_trips})
+
+def my_trans(request):
+    template = 'my_trans.html'
+    user_ID = request.user
+    property_list = models.Property.objects.filter(Q(user_ID__exact=user_ID)).values_list('id', flat=True).distinct()
+    trans_list = Pmodels.TransAndReview.objects.filter(Q(pid__in=property_list)).distinct()
+    my_trans = sorted(trans_list, key=lambda x: x.start_time, reverse=True)
+    return render(request, template, {'my_trans':my_trans})
+
+def confirm(request,tran_id):
+    tran = Pmodels.TransAndReview.objects.get(pk=tran_id)
+    tran.status = 'S'
+    tran.save()
+    template = 'my_trans.html'
+    user_ID = request.user
+    property_list = models.Property.objects.filter(Q(user_ID__exact=user_ID)).values_list('id', flat=True).distinct()
+    trans_list = Pmodels.TransAndReview.objects.filter(Q(pid__in=property_list)).distinct()
+    my_trans = sorted(trans_list, key=lambda x: x.start_time, reverse=True)
+    return render(request, template, {'my_trans': my_trans})

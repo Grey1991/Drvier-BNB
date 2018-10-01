@@ -36,7 +36,7 @@
                 <!--------------------  room list ---------------------->
                 {% for property in properties %}
                     <div class="row">
-                        <div class="room_desc clearfix" onclick="location.href='{% url "property:property_detail" property.id %}';">
+                        <div class="room_desc clearfix" onclick="location.href='{% url "property:property_detail" property.id 0%}';">
                             <div class="col-md-7">
                                 <figure><img src="{{ property.images_set.first.image.url }}" alt="" class="img-responsive"></figure>
                             </div>

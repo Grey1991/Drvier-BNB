@@ -2,6 +2,7 @@ from django.forms import Textarea,NumberInput
 from django import forms
 from Property.models import Property,  Images
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
+import datetime
 
 class PropertyForm(forms.ModelForm):
     """
@@ -87,6 +88,7 @@ class ImageForm(forms.ModelForm):
 class AddReviewForm(forms.Form):
 
     pid =  forms.IntegerField(widget=forms.TextInput(attrs={'class':'form-control'}))
+    trip_id = forms.IntegerField(widget=forms.TextInput(attrs={'class': 'form-control'}))
     position_review = forms.IntegerField(widget=forms.TextInput(attrs={'class':'form-control'}))
     comfort_review = forms.IntegerField(widget=forms.TextInput(attrs={'class':'form-control'}))
     price_review= forms.IntegerField(widget=forms.TextInput(attrs={'class':'form-control'}))

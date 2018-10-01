@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+    <title>Trip list</title>
+
+{#    {% load static %}#}
+{#    <!-- Favicons-->#}
+{#    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">#}
+{#    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">#}
+{#    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">#}
+{#    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">#}
+{#    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">#}
+
+{% endblock %}
+
+{% block content %}
+
+
+    <!-- SubHeader =============================================== -->
+    {% load static %}
+
+    <section class="parallax-window" id="short" data-parallax="scroll"
+             data-image-src="{% static 'acomodation/img/sub_header_short.jpg' %}" data-natural-width="1400"
+             data-natural-height="350">
+        <div id="subheader">
+            <h1>My Trans</h1>
+        </div><!-- End subheader -->
+    </section><!-- End section -->
+    <!-- End SubHeader ============================================ -->
+
+    <div class="container margin_60">
+        <div class="row">
+            <div class="col-lg-9 col-md-10 col-md-offset-1">
+
+                <!--------------------  room list ---------------------->
+                {% for tran in my_trans %}
+                    <div class="row">
+                        <div class="room_desc clearfix" {# onclick="location.href='{% url "property:property_detail" trip.pid %}';" #} >
+                            <div class="col-md-4">
+{#                                <figure><img src="{{ trip.property_set.first.images_set.first.image.url }}" alt="" class="img-responsive"></figure>#}
+                            </div>
+                            <div class="col-md-6 room_list_desc">
+                                <p><strong>Property Id:&nbsp;</strong>{{ tran.pid_id }}</p>
+                                <p><strong>Arrival time:&nbsp;</strong>{{ tran.start_time }}&nbsp;&nbsp;&nbsp;&nbsp;<strong>Departure time:&nbsp;</strong>{{ tran.end_time }}</p>
+                                <p><strong>Contant name:&nbsp;</strong>{{ tran.contact_name }}</p>
+                                <p><strong>Contant phone:&nbsp;</strong>{{ tran.contact_phone }}</p>
+                                <p><strong>User Id:&nbsp;</strong>{{ tran.user_ID_id }}</p>
+{#                                <ul>#}
+{#                                    {% if property.num_double_bed > 0 %}#}
+{#                                        <li>#}
+{#                                            <div class="tooltip_styled tooltip-effect-4">#}
+{#                                                <span class="tooltip-item"><i class="icon_set_2_icon-104"></i></span>#}
+{#                                                <div class="tooltip-content">King size bed X {{ property.num_double_bed }}</div>#}
+{#                                            </div>#}
+{#                                        </li>#}
+{#                                    {% endif %}#}
+{#                                    {% if property.wifi %}#}
+{#                                        <li>#}
+{#                                            <div class="tooltip_styled tooltip-effect-4">#}
+{#                                                <span class="tooltip-item"><i class="icon_set_1_icon-86"></i></span>#}
+{#                                                <div class="tooltip-content">Free Wifi</div>#}
+{#                                            </div>#}
+{#                                        </li>#}
+{#                                    {% endif %}#}
+{#                                    {% if property.num_bathrooms > 0 %}#}
+{#                                        <li>#}
+{#                                            <div class="tooltip_styled tooltip-effect-4">#}
+{#                                                <span class="tooltip-item"><i class="icon_set_2_icon-118"></i></span>#}
+{#                                                <div class="tooltip-content">Shower x {{ property.num_bathrooms }}</div>#}
+{#                                            </div>#}
+{#                                        </li>#}
+{#                                    {% endif %}#}
+{#                                    {% if property.tv %}#}
+{#                                        <li>#}
+{#                                            <div class="tooltip_styled tooltip-effect-4">#}
+{#                                                <span class="tooltip-item"><i class="icon_set_2_icon-116"></i></span>#}
+{#                                                <div class="tooltip-content">Plasma TV</div>#}
+{#                                            </div>#}
+{#                                        </li>#}
+{#                                    {% endif %}#}
+{#                                    {% if property.parking %}#}
+{#                                        <li>#}
+{#                                            <div class="tooltip_styled tooltip-effect-4">#}
+{#                                                <span class="tooltip-item"><i class="icon_set_1_icon-27"></i></span>#}
+{#                                                <div class="tooltip-content">Parking Area</div>#}
+{#                                            </div>#}
+{#                                        </li>#}
+{#                                    {% endif %}#}
+{#                                    {% if property.pet %}#}
+{#                                        <li>#}
+{#                                            <div class="tooltip_styled tooltip-effect-4">#}
+{#                                                <span class="tooltip-item"><i class="icon_set_1_icon-22"></i></span>#}
+{#                                                <div class="tooltip-content">Pets</div>#}
+{#                                            </div>#}
+{#                                        </li>#}
+{#                                    {% endif %}#}
+{##}
+{#                                </ul>#}
+{#                                <div class="price">from <strong>${{ property.price }}</strong> /night#}
+
+{#                                    <small><span class="icon_set_1_icon-58">Breakfast included</span></small>#}
+{#                                </div>#}
+                            </div>
+                            <div class="col-md-1">
+                                {% if tran.status == "C" %}
+                                    <div class="col-md-2 ">
+                                        <a href="{% url 'PendingAndBooking:confirm' tran.id %}">
+                                            <button type="button" class="btn_1" style="width: 100px" name='confirm' id="confirm">
+                                                Confirm
+                                            </button>
+                                        </a>
+                                    </div>
+                                {% elif tran.status == "B" %}
+                                    <div class="col-md-2 ">
+                                        <button type="button" class="btn_1"  style="width: 100px" name='wait payment' id="wait_payment">
+                                            Paying
+                                        </button>
+                                    </div>
+                                {% elif tran.status == "S" %}
+                                    <div class="col-md-2 ">
+                                        <a href="{% url 'property:look_detail_of_myProperty' tran.pid_id %}">
+                                            <button type="button" class="btn_1" style="width: 100px" name='see detail' id="see_detail">
+                                                See detail
+                                            </button>
+                                        </a>
+                                    </div>
+
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div><!-- End row room -->
+                {% endfor %}
+            </div>
+
+
+        </div><!-- End row -->
+    </div><!-- End container -->
+{% endblock %}
+
+
+
+{% block script %}
+<script src="{% static 'acomodation/js/theia-sticky-sidebar.js' %}"></script>
+<script>
+    jQuery('.sidebar').theiaStickySidebar({
+      additionalMarginTop: 80
+    });
+</script>
+{% endblock script %}
+

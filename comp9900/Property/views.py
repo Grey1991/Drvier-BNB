@@ -12,6 +12,7 @@ from .forms import PropertyForm, ImageForm
 from PendingAndBooking.models import TransAndReview
 from UserAndAdmin.models import User
 import time
+import datetime
 
 IMAGE_FILE_TYPES = ['png', 'jpg', 'jpeg']
 
@@ -200,24 +201,27 @@ def add_review(request):
         reviewForm = forms.AddReviewForm(request.POST)
         print(reviewForm.errors)
         if reviewForm.is_valid():
-            pid = reviewForm.cleaned_data["pid"]
+            trip_id = reviewForm.cleaned_data["trip_id"]
             position_review = reviewForm.cleaned_data["position_review"]
             comfort_review  = reviewForm.cleaned_data["comfort_review"]
             price_review = reviewForm.cleaned_data["price_review"]
             quality_review = reviewForm.cleaned_data["quality_review"]
             comment_content = reviewForm.cleaned_data["comment_content"]
 
-            # 向 TransAndReview 插入一条review
-            tr = TransAndReview()
 
-            tr.user_ID = request.user
-            tr.pid = Property.objects.get(id= pid)
-            tr.comment_content= comment_content
+            print('trip_id here is {}'.format(trip_id))
 
+
+            #  get trip
+            tr = TransAndReview.objects.get(id=trip_id)
+
+            # add comment
+            tr.comment_content = comment_content
             tr.position_review = position_review
             tr.comfort_review = comfort_review
             tr.price_review = price_review
             tr.quality_review = quality_review
+
 
             tr.ratings = round((position_review + comfort_review + price_review + quality_review)/4)
 
@@ -227,9 +231,10 @@ def add_review(request):
             return HttpResponse(2)
 
 
-def property_detail(request, property_id):
+def property_detail(request, property_id, trip_id):
 
-    tr_list = TransAndReview.objects.filter(pid=property_id)
+    tr_list = TransAndReview.objects.filter(pid=property_id,status='S')
+    print('trip_id is {}'.format(trip_id))
 
     _sum_rating = []
     ############ 评论列表
@@ -254,6 +259,7 @@ def property_detail(request, property_id):
 
     property = Property.objects.get(id=property_id)
     property_id = property_id
-    return render(request, 'property_detail.html', {'property_id':property_id,'property': property,'review_lists': review_lists,'review_summary':review_summary})
+    # print(property_id)
+    return render(request, 'property_detail.html', {'property_id':property_id,'property': property,'review_lists': review_lists,'review_summary':review_summary,'trip_id':trip_id})
 
 

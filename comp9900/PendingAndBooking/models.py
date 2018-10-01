@@ -9,17 +9,18 @@ class TransAndReview(models.Model):
     user_ID = models.ForeignKey('UserAndAdmin.User', on_delete=models.CASCADE)
     pid = models.ForeignKey('Property.Property', verbose_name='owner', on_delete=models.CASCADE, related_name='TransAndReview.pid+')
     comment_time = models.DateTimeField(null=True)
-    comment_content = models.CharField(max_length=500, default='')
+    comment_content = models.CharField(max_length=500, default='Very good!')
     start_time = models.DateField(null=False)
     end_time = models.DateField(null=False)
     ratings = models.IntegerField(validators=[MaxValueValidator(5), MinValueValidator(1)],null=True, default=5)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True, null=True)
     status_choies = (
+        ('B', 'Booking'),
         ('C', 'Comfirming'),
         ('S', 'Success'),
     )
-    status = models.CharField(max_length=20, choices=status_choies, default='C')
+    status = models.CharField(max_length=20, choices=status_choies, default='B')
 
     #### review
     position_review = models.IntegerField(validators=[MaxValueValidator(5), MinValueValidator(1)],null=True, default=5)

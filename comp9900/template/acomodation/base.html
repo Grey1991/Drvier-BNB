@@ -136,7 +136,7 @@
                                         Become a host
                                     {% endif %}
                                 </a></li>
-                                <li><a href="#">Trips</a></li>
+                                <li><a href="{% url 'PendingAndBooking:trips'%}">Trips</a></li>
                                 <li class="submenu">
                                     <a href="javascript:void(0);" class="show-submenu">{{ user.first_name }}<i
                                             class="icon-down-open-mini"></i></a>
@@ -145,6 +145,7 @@
                                         </li>
                                         <li><a href="{% url 'userandadmin:accountsetting' %}">Account Setting</a></li>
                                         <li><a href="{% url 'property:list_property' %}">My properties</a></li>
+                                        <li><a href="{% url 'PendingAndBooking:my_trans' %}">My trans</a></li>
 
                                         <li><a href="{% url 'userandadmin:logout' %}">Log out</a></li>
                                     </ul>
@@ -434,16 +435,6 @@
         };
     });
 
-
-
-
-
-
-
-
-
-
-
 </script>
 
 
@@ -451,7 +442,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-sm-12">
-                <img src="{% static 'acomodation/image/2.png' %}" width="141" height="40" alt=""
+                <h3>Author</h3>
+                <img src="{% static 'acomodation/image/2.png' %}" width="141" height="100" alt=""
                      id="logo_footer" data-retina="true">
                 <ul id="contact_details_footer">
                     <li>Belmore Rd 2031, Sydney<br><a href="mailto:Grey1991ss@mail.com">Email: Grey1991ss@gmail.com</a></li>
@@ -485,14 +477,6 @@
                     <li><a href="#">Activities</a></li>
                     <li><a href="#">Contact us</a></li>
                     <li><a href="#">Gallery</a></li>
-                </ul>
-            </div>
-            <div class="col-md-3 col-sm-4">
-                <h3>Change language</h3>
-                <ul>
-                    <li><a href="#">English</a></li>
-                    <li><a href="#">French</a></li>
-                    <li><a href="#">Spanish</a></li>
                 </ul>
             </div>
             <div class="col-md-3 col-sm-4" id="newsletter">

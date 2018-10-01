@@ -10,13 +10,13 @@
 
     {% load static %}
     <!-- Favicons-->
-    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'image/apple-touch-icon-57x57-precomposed.png' %}">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="image/apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114"
-          href="image/apple-touch-icon-114x114-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"
-          href="image/apple-touch-icon-144x144-precomposed.png">
+{#    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">#}
+{#    <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'image/apple-touch-icon-57x57-precomposed.png' %}">#}
+{#    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="image/apple-touch-icon-72x72-precomposed.png">#}
+{#    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114"#}
+{#          href="image/apple-touch-icon-114x114-precomposed.png">#}
+{#    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"#}
+{#          href="image/apple-touch-icon-144x144-precomposed.png">#}
 
 
 {% endblock %}
@@ -138,8 +138,8 @@
         <div class="container margin_60">
             <div class="row">
                 <div class="col-md-5 col-md-offset-1">
-                    <figure class="room_pic"><a href="#"><img src="{% static 'acomodation/image/house_2.jpg' %}"
-                                                              alt="" class="img-responsive"></a><span class="wow zoomIn"
+                    <figure class="room_pic"><img src="{% static 'acomodation/image/house_2.jpg' %}"
+                                                              alt="" class="img-responsive"><span class="wow zoomIn"
                                                                                                       data-wow-delay="0.2s"><sup>$</sup>380<small>Per night</small></span>
                     </figure>
                 </div>
@@ -203,7 +203,12 @@
                                 </div>
                             </li>
                         </ul>
-                        <a href="room_list.html" class="btn_1_outline">Read more</a>
+                        <form method="post" action="{% url 'property:simple_search' %}">
+                            {% csrf_token %}
+                            <input type="hidden" name="type" value="H">
+                            <button class="btn_1_outline" type="submit">Read more</button>
+
+                        </form>
                     </div><!-- End room_desc_home -->
                 </div>
             </div><!-- End row -->
@@ -213,8 +218,8 @@
     <div class="container margin_60">
         <div class="row">
             <div class="col-md-5 col-md-offset-1 col-md-push-5">
-                <figure class="room_pic left"><a href="#"><img src="{% static 'acomodation/image/apartment_1.jpg' %}"
-                                                               alt="" class="img-responsive"></a><span
+                <figure class="room_pic left"><img src="{% static 'acomodation/image/apartment_1.jpg' %}"
+                                                               alt="" class="img-responsive"><span
                         class="wow zoomIn" data-wow-delay="0.2s"><sup>$</sup>220<small>Per night</small></span></figure>
             </div>
             <div class="col-md-4 col-md-offset-1 col-md-pull-6">
@@ -276,7 +281,12 @@
                             </div>
                         </li>
                     </ul>
-                    <a href="room_list.html" class="btn_1_outline">Read more</a>
+                    <form method="post" action="{% url 'property:simple_search' %}">
+                            {% csrf_token %}
+                            <input type="hidden" name="type" value="A">
+                            <button class="btn_1_outline" type="submit">Read more</button>
+
+                        </form>
                 </div><!-- End room_desc_home -->
             </div>
         </div><!-- End row -->
@@ -286,8 +296,8 @@
         <div class="container margin_60">
             <div class="row">
                 <div class="col-md-5 col-md-offset-1">
-                    <figure class="room_pic"><a href="#"><img src="{% static 'acomodation/image/studio_1.jpg' %}"
-                                                              alt="" class="img-responsive"></a><span class="wow zoomIn"
+                    <figure class="room_pic"><img src="{% static 'acomodation/image/studio_1.jpg' %}"
+                                                              alt="" class="img-responsive"><span class="wow zoomIn"
                                                                                                       data-wow-delay="0.2s"><sup>$</sup>150<small>Per night</small></span>
                     </figure>
                 </div>
@@ -343,7 +353,13 @@
                                 </div>
                             </li>
                         </ul>
-                        <a href="room_list.html" class="btn_1_outline">Read more</a>
+                        <form method="post" action="{% url 'property:simple_search' %}">
+                            {% csrf_token %}
+                            <input type="hidden" name="type" value="S">
+                            <button class="btn_1_outline" type="submit">Read more</button>
+
+                        </form>
+{#                        <a href="room_list.html" class="btn_1_outline">Read more</a>#}
                     </div><!-- End room_desc_home -->
                 </div>
             </div><!-- End row -->
