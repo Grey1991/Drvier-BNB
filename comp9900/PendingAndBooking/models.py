@@ -8,7 +8,7 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 class TransAndReview(models.Model):
     user_ID = models.ForeignKey('UserAndAdmin.User', on_delete=models.CASCADE)
     pid = models.ForeignKey('Property.Property', verbose_name='owner', on_delete=models.CASCADE, related_name='TransAndReview.pid+')
-    comment_time = models.DateTimeField(null=True)
+    # comment_time = models.DateTimeField(null=True)
     comment_content = models.CharField(max_length=500, default='Very good!')
     start_time = models.DateField(null=False)
     end_time = models.DateField(null=False)
@@ -17,6 +17,9 @@ class TransAndReview(models.Model):
     updated_at = models.DateTimeField(auto_now=True, null=True)
     status_choies = (
         ('B', 'Booking'),
+        ('P', 'Pending'),
+        ('D', 'Denied'),
+        ('PB', 'Pending paying'),
         ('C', 'Comfirming'),
         ('S', 'Success'),
     )
@@ -38,18 +41,12 @@ class TransAndReview(models.Model):
 
 
 
-class PendingTrans(models.Model):
-    user_ID = models.ForeignKey('UserAndAdmin.User', on_delete=models.CASCADE)
-    pid = models.ForeignKey('Property.Property', verbose_name='owner', on_delete=models.CASCADE, related_name='PendingTrans.pid+')
-    start_time = models.DateTimeField(auto_now_add=True)
-    end_time = models.DateTimeField(auto_now_add=True)
+class PendingAndTrans(models.Model):
+    price = models.FloatField(default=0.0)
     capacity = models.IntegerField(default=0)
     smoking = models.BooleanField(default=False)
     party = models.BooleanField(default=False)
     pet = models.BooleanField(default=False)
     couple = models.BooleanField(default=False)
-    blower = models.BooleanField(default=False)
-    bathtub = models.BooleanField(default=False)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True, null=True)
+    trans_ID = models.ForeignKey('PendingAndBooking.TransAndReview', on_delete=models.CASCADE,null=True)
 
