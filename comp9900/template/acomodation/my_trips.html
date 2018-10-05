@@ -57,9 +57,24 @@
                                     </div>
                                 {% elif trip.status == "C" %}
                                     <div class="col-md-2 ">
-                                        <button type="button" class="btn_1" style="width: 100px" name='wait confirm' id="wait_dconfirm">
+                                        <button type="button" class="btn_1" style="width: 100px" name='wait confirm' id="wait_confirm">
                                             Confirming
                                         </button>
+                                    </div>
+                                {% elif trip.status == "P" %}
+                                    <div class="col-md-2 ">
+                                        <button type="button" class="btn_1" style="width: 100px" name='wait pending' id="wait_pending">
+                                            Pending
+                                        </button>
+                                    </div>
+                                {% elif trip.status == "PB" %}
+                                    <div class="col-md-2 ">
+                                        <a href="{% url 'PendingAndBooking:pending_paynow' trip.id %}">
+                                            <button type="button" class="btn_1" style="width: 100px" name='pending_success'
+                                                    id="pending_success">
+                                                Pending pay
+                                            </button>
+                                        </a>
                                     </div>
                                 {% elif trip.status == "S" %}
                                     <div class="col-md-2 ">
