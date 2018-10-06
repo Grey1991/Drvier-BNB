@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}
-    <title>Show Pending Form</title>
+    <title>Show Negotiation Form</title>
         <!-- SPECIFIC CSS -->
         {#    ........#}
 {% endblock %}
@@ -14,7 +14,7 @@
     <section class="parallax-window" id="short" data-parallax="scroll" data-image-src="{% static 'acomodation/img/sub_header_short.jpg' %}" data-natural-width="1400"
              data-natural-height="350">
         <div id="subheader">
-            <h1>Show Pending Form</h1>
+            <h1>Show Negotiation Form</h1>
         </div><!-- End subheader -->
     </section><!-- End section -->
     <!-- End SubHeader ============================================ -->
@@ -120,14 +120,14 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <div class="form-group">
-                                <h4>Arrival time: {{ trip.start_time }}</h4>
-                                <h4>Departure time:{{ trip.end_time }}</h4>
+                                <h4>Check-in: {{ trip.start_time }}</h4>
+                                <h4>Check-out:{{ trip.end_time }}</h4>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-group">
                                 <h4>Contact name: {{ trip.contact_name }}</h4>
-                                <h4>Contanct phone {{ trip.contact_phone }}</h4>
+                                <h4>Contact phone {{ trip.contact_phone }}</h4>
                             </div>
                         </div>
                     </div>

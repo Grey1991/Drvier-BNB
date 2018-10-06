@@ -65,7 +65,7 @@
                                     <div class="col-md-2 ">
                                         <a href="{% url 'PendingAndBooking:show_pending' tran.id %}">
                                             <button type="button" class="btn_1"  style="width: 100px" name='wait pending' id="wait_pending">
-                                                Pending
+                                                Negotiating
                                             </button>
                                         </a>
                                     </div>
@@ -73,7 +73,7 @@
                                     <div class="col-md-2 ">
                                         <button type="button" class="btn_1" style="width: 100px" name='wait payment'
                                                 id="wait_payment">
-                                            Pending paying
+                                            Negotiated paying
                                         </button>
                                     </div>
                                 {% elif tran.status == "S" %}
