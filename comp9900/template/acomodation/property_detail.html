@@ -595,6 +595,60 @@
     </script>
     <!------------------end booking script----------------->
 
+    <!------------------pending script----------------->
+    <script>
+        $(document).ready(function () {
+            $("#submit-pending").click(function () {
+                var error = 0;
+
+                var pid = $("#property_id").val();
+
+                var check_in = $("#check_in").val();
+                var check_out = $("#check_out").val();
+                var name_booking = $("#name_booking").val();
+                var Phone_booking = $("#Phone_booking").val();
+
+
+                if (!check_in || !check_out || !name_booking || !Phone_booking) {
+                    alert("please fill out review!");
+                    error = 1;
+                }
+                if (isNaN(Phone_booking)) {
+                    $("#bk_phone_invalid").css('display', 'block');
+                    error = 1;
+                    alert("invalid phone number!");
+                }
+                if (error == 0) {
+                    $.ajax({
+                        type: "POST",
+                        url: "{% url 'PendingAndBooking:pending' %}",
+                        data: {
+                            pid: pid,
+                            check_in: check_in,
+                            check_out: check_out,
+                            name_booking: name_booking,
+                            Phone_booking: Phone_booking,
+                        },
+                        success: function (data, status) {
+                            if (data == 'failed') {
+                                $("#bk_property_invalid").css('display', 'block');
+                            } else {
+                                alert("pending succeed!");
+                                {#url+=data;#}
+                                console.log(data)
+                                {#var view_data = data.view_data;#}
+                                location.href = `/booking/${data}/pending_request/`;
+                            }
+                        }
+                    })
+                }
+
+                return false;
+            })
+        })
+    </script>
+    <!------------------end booking script----------------->
+
 
 
 
