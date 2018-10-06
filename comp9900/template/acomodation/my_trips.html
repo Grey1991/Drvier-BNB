@@ -64,7 +64,7 @@
                                 {% elif trip.status == "P" %}
                                     <div class="col-md-2 ">
                                         <button type="button" class="btn_1" style="width: 100px" name='wait pending' id="wait_pending">
-                                            Pending
+                                            Negotiating
                                         </button>
                                     </div>
                                 {% elif trip.status == "PB" %}
@@ -72,7 +72,7 @@
                                         <a href="{% url 'PendingAndBooking:pending_paynow' trip.id %}">
                                             <button type="button" class="btn_1" style="width: 100px" name='pending_success'
                                                     id="pending_success">
-                                                Pending pay
+                                                Negotiated pay
                                             </button>
                                         </a>
                                     </div>

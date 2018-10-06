@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}
-    <title>Pending Form</title>
+    <title>Negotiation Form</title>
         <!-- SPECIFIC CSS -->
         {#    ........#}
 {% endblock %}
@@ -14,7 +14,7 @@
     <section class="parallax-window" id="short" data-parallax="scroll" data-image-src="{% static 'acomodation/img/sub_header_short.jpg' %}" data-natural-width="1400"
              data-natural-height="350">
         <div id="subheader">
-            <h1>Pending Form</h1>
+            <h1>Negotiation Form</h1>
         </div><!-- End subheader -->
     </section><!-- End section -->
     <!-- End SubHeader ============================================ -->
@@ -24,15 +24,14 @@
 
     <!---  你的表格等等-->
      <div class="container margin_60_35">
-        <h2 class="main_title"><em></em>Pending with Host <span>Write your request here</span></h2>
-
+        <h2 class="main_title"><em></em>Negotiate with Host <span>Write your request here</span></h2>
          <form action="{% url 'PendingAndBooking:add_pending' %}" method="post" enctype="multipart/form-data">
              {% csrf_token %}
             <input type="hidden" name="trip_id" value="{{ trip_id }}">
             <div class="row add_top_20">
                 <div class="col-md-8 col-md-offset-2">
                     <div id="message-contact">
-                        <h3><strong>Step 1:</strong> Do you want to pending the price?</h3>
+                        <h3><strong>Step 1:</strong> Do you want to negotiating the price?</h3>
                     </div>
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
@@ -52,7 +51,7 @@
                 </div>
                 <div class="col-md-8 col-md-offset-2">
                     <div id="message-contact">
-                        <h3><strong>Step 2:</strong> Do you want to pending these with the host?</h3>
+                        <h3><strong>Step 2:</strong> Do you want to negotiating these with the host?</h3>
                     </div>
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
@@ -101,7 +100,7 @@
              <div class="row add_bottom_30">
                 <div class="col-md-6 col-md-offset-2" >
                     <div class="form-group">
-                        <h4><strong>Click the bottom to sent the pending form to the host.</strong></h4>
+                        <h4><strong>Click the bottom to sent the negotiating form to the host.</strong></h4>
                     </div>
                     <input type="submit" value="Sent Pending form" class="btn_1" id="submit-pending_request">
                 </div>
