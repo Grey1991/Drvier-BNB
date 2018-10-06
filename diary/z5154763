@@ -9,3 +9,47 @@ I modified the draft proposal by adding the Team Skill Set part, and discuss abo
 Discussed with teammates about epics, mainly wrote and modified the Cloud-based architectures and Mobile Application cross-platform epics.
 Discussed and designed the function of each page and other details.
 Learn about django and some UI technology.
+
+Week4
+Discussed the design of database with group members, helped to design ER graph.
+Discussed the basic function of the website and template of our website.
+Designed drafts of some basic front end pages like index, search results, and room details.
+
+Week5
+Write git ignore file.
+Finish search function with date, type, city, price in the back-end.
+Finish search result page, with pagination function.
+Add fine testing data in database for search, result-presentation and detail function.
+
+Week6
+Finish design and coding of template of front-end.
+Design and finish nav bar and footer in base template.
+Design and finish search bar and presentation part in index page.
+
+Week7
+Design and finish search result list page.
+Design and finish image presentation, room information presentation part.
+Design and finish review presentation, and booking&negotiation entrance part of room-detail page.
+
+Week8
+Design and finish show my-trips of users function and front-end page.
+Modify trans-and-review module in database and add testing data.
+Add change trips-status function in back-end.
+Finish my-transaction status changing performance in front-end page.
+
+Week9
+Design and finish booking function in the back-end.
+Handle booking without login both in front and back end.
+Finish booking filter function and add front-end warning when booking is unavailable.
+
+Week10
+Design and finish payment function in the back-end.
+Finish the booking status changing of my-trips and my-trans function both in front and back end.
+Finish the page-jump function when booking and payment are successful.
+
+
+
+
+
+
+
