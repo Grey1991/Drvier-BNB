@@ -24,7 +24,7 @@
 
     <!---  你的表格等等-->
      <div class="container margin_60_35">
-        <h2 class="main_title"><em></em>This is pending form for your property pid: {{ property.id }}<span>Sent by user: {{ trip.user_ID_id }}</span></h2>
+        <h2 class="main_title"><em></em>This is negotiation form for your property pid: {{ property.id }}<span>Sent by user: {{ trip.user_ID_id }}</span></h2>
 
          <form action="{% url 'PendingAndBooking:finish_pending' %}" method="post" enctype="multipart/form-data">
              {% csrf_token %}
@@ -52,7 +52,7 @@
                 </div>
                 <div class="col-md-8 col-md-offset-2">
                     <div id="message-contact">
-                        <h4><strong>Part 2:</strong>These are the pending about these four aspects</h4>
+                        <h4><strong>Part 2:</strong>These are the negotiation about these four aspects</h4>
                     </div>
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
