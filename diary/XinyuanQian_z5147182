@@ -1,28 +1,49 @@
-week2
+Week2
 Group formed. I created the Trello & Bitbucket accounts for the team as long as helped teammates getting familiar with Git commends.
 I also discussed with the team several available software tools and libraries that we can use for the three topics.
 Proposal depends on the final decission of the choice of topics. More details needed on next week's lab.
 
-week3
+Week3
 I finished and uploaded the draft proposal. Ready to discuss more details about epics.
 I held the scrum meeting to discusse epics and schedule. Then finish the last version of proposal.
 I learned Google Material Design and Django briefly and recommended to our group.
 I uploaded the proposal for our team.
 
-week4
+Week4
 Finishing configuration of cloud database including AWS account, start RDS database, config RDS, and connection to RDS.
 Preparation for Front-end Work, which is to compare and studay similar websites, to design detailed pages in our website, to sellect our techniques that would be used, and to learn bootstrap html and css.
 
-week5
+Week5
 Finishing the design of database structure including designing all the fables, fields, and relation between tables.
 Making the ER-Diagram.
 Implementation of the database in model.py.
 Allocation of agile structure on Trello and assigning the tasks to group members as long as specific steps and deadlines.
 
-week6
+Week6
 Implementation of "transaction and review table" and "pending transaction" table in database(models.py).
 Fixing thr time-zone problem of our website.
 Adding Pending APP to the project and making it work.
 Learning some front-end technology namely JS and JQuery.
 
+Week7
+Finish coding of show my-trans of hosts function.
+Finish front-end coding of the my-transactions of hosts presentation page.
+Finish change my-transaction status function and fix the performance in front-end page.
 
+
+Week8
+Design and finish negotiation function.
+Modify the pending-and-trans module in database and add testing data.
+Design and finish coding of front-end of negotiation-form page.
+Finish agree-negotiation and disagree-negotiation page jump function. 
+
+
+Week9
+Design and finish payment function and front-end pages.
+Finish the negotiation status changing of my-trips and my-trans function both in front and back end.
+Finish the page-jump function when negotiation is successful.
+
+
+Week10
+Intergrate codes and test the website.
+Finish overview and manual part of the report.
