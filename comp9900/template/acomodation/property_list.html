@@ -127,56 +127,79 @@
                         </div><!-- End row room -->
                     {% endfor %}
                     <!-------   pagination ----------->
-                    <div class="pagination">
-                        <span class="step-links">
-                            {% if properties.has_previous %}
-                                <form action="{% url 'property:simple_search' %}" method="GET">
-                                {% csrf_token %}
-                                    <input type="hidden" value="1" name="page">
-                                    <input type="hidden" value="{{ check_in }}" name="check_in">
-                                    <input type="hidden" value="{{ check_out }}" name="check_out">
-                                    <input type="hidden" value="{{ type }}" name="type">
-                                    <input type="hidden" value="{{ city }}" name="city">
-                                    <input type="hidden" value="{{ price }}" name="price">
-                                    <button type="submit">&laquo; first</button>
-                                </form>
-                                <form action="{% url 'property:simple_search' %}" method="GET">
-                                {% csrf_token %}
-                                    <input type="hidden" value="{{ properties.previous_page_number }}" name="page">
-                                    <input type="hidden" value="{{ check_in }}" name="check_in">
-                                    <input type="hidden" value="{{ check_out }}" name="check_out">
-                                    <input type="hidden" value="{{ type }}" name="type">
-                                    <input type="hidden" value="{{ city }}" name="city">
-                                    <input type="hidden" value="{{ price }}" name="price">
-                                    <button type="submit">previous</button>
-                                </form>
-                            {% endif %}
-                            <span class="current">Page {{ properties.number }} of {{ properties.paginator.num_pages }}.</span>
+                    <br>
+                    <br>
 
-                            {% if properties.has_next %}
-                                <form action="{% url 'property:simple_search' %}" method="GET">
-                                    {% csrf_token %}
-                                    <input type="hidden" value="{{ properties.next_page_number }}" name="page">
-                                    <input type="hidden" value="{{ check_in }}" name="check_in">
-                                    <input type="hidden" value="{{ check_out }}" name="check_out">
-                                    <input type="hidden" value="{{ type }}" name="type">
-                                    <input type="hidden" value="{{ city }}" name="city">
-                                    <input type="hidden" value="{{ price }}" name="price">
-                                    <button type="submit">next</button>
-                                </form>
-                                <form action="{% url 'property:simple_search' %}" method="GET">
-                                    {% csrf_token %}
-                                    <input type="hidden" value="{{ properties.paginator.num_pages }}" name="page">
-                                    <input type="hidden" value="{{ check_in }}" name="check_in">
-                                    <input type="hidden" value="{{ check_out }}" name="check_out">
-                                    <input type="hidden" value="{{ type }}" name="type">
-                                    <input type="hidden" value="{{ city }}" name="city">
-                                    <input type="hidden" value="{{ price }}" name="price">
-                                    <button type="submit">last &raquo;</button>
-                                </form>
-                            {% endif %}
+{#                    <div class="pagination">#}
+                        <span class="step-links">
+                            <div class="col-md-11 col-md-offset-1">
+                                <div class="row add_bottom_30">
+                                    {% if properties.has_previous %}
+                                        <div class="col-md-2">
+                                            <form action="{% url 'property:simple_search' %}" method="GET">
+                                            {% csrf_token %}
+                                                <input type="hidden" value="1" name="page">
+                                                <input type="hidden" value="{{ check_in }}" name="check_in">
+                                                <input type="hidden" value="{{ check_out }}" name="check_out">
+                                                <input type="hidden" value="{{ type }}" name="type">
+                                                <input type="hidden" value="{{ city }}" name="city">
+                                                <input type="hidden" value="{{ price }}" name="price">
+                                                <button type="submit" class="btn_1" style="width: 90px;">&laquo; first</button>
+
+    {#                                            <button type="submit">&laquo; first</button>#}
+                                            </form>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <form action="{% url 'property:simple_search' %}" method="GET">
+                                            {% csrf_token %}
+                                                <input type="hidden" value="{{ properties.previous_page_number }}"
+                                                       name="page">
+                                                <input type="hidden" value="{{ check_in }}" name="check_in">
+                                                <input type="hidden" value="{{ check_out }}" name="check_out">
+                                                <input type="hidden" value="{{ type }}" name="type">
+                                                <input type="hidden" value="{{ city }}" name="city">
+                                                <input type="hidden" value="{{ price }}" name="price">
+                                                <button type="submit" class="btn_1" style="width: 90px;">previous</button>
+                                            </form>
+                                        </div>
+                                    {% endif %}
+                                    <div class="col-md-2">
+                                        Page {{ properties.number }} of {{ properties.paginator.num_pages }}.
+                                    </div>
+{#                                    <span class="current">Page {{ properties.number }} of {{ properties.paginator.num_pages }}.</span>#}
+
+                                    {% if properties.has_next %}
+                                        <div class="col-md-2">
+                                            <form action="{% url 'property:simple_search' %}" method="GET">
+                                                {% csrf_token %}
+                                                <input type="hidden" value="{{ properties.next_page_number }}" name="page">
+                                                <input type="hidden" value="{{ check_in }}" name="check_in">
+                                                <input type="hidden" value="{{ check_out }}" name="check_out">
+                                                <input type="hidden" value="{{ type }}" name="type">
+                                                <input type="hidden" value="{{ city }}" name="city">
+                                                <input type="hidden" value="{{ price }}" name="price">
+                                                <button type="submit" class="btn_1" style="width: 90px;">next</button>
+                                            </form>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <form action="{% url 'property:simple_search' %}" method="GET">
+                                                {% csrf_token %}
+                                                <input type="hidden" value="{{ properties.paginator.num_pages }}"
+                                                       name="page">
+                                                <input type="hidden" value="{{ check_in }}" name="check_in">
+                                                <input type="hidden" value="{{ check_out }}" name="check_out">
+                                                <input type="hidden" value="{{ type }}" name="type">
+                                                <input type="hidden" value="{{ city }}" name="city">
+                                                <input type="hidden" value="{{ price }}" name="price">
+                                                <button type="submit" class="btn_1" style="width: 90px;">last &raquo;</button>
+                                            </form>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
                         </span>
-                    </div>
+{#                    </div>#}
+
                     <!-------- end pagination ------------>
                 {% endif %}
 
