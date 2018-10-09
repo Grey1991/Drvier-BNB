@@ -44,8 +44,9 @@ def simple_search(request):
         price = int(price)
     if not city:
         city = ''
-    if type == 'ALL':
+    if type == 'ALL' or not type:
         type = ''
+
 
 
     print('check_in: {},check_out: {},type: {},capacity: {},city: {},price: {}'.format(check_in,check_out,type,capacity,city,price),sep='\n')
@@ -92,8 +93,8 @@ def simple_search(request):
     except EmptyPage:
         properties = paginator.page(paginator.num_pages)
 
-
-
+    empty = len(property_list)
+    print("empty is:",empty)
     context = {
         'properties': properties,
         'city': city,
@@ -102,6 +103,7 @@ def simple_search(request):
         'capacity': capacity,
         'price': price,
         'type': type,
+        'empty': empty,
     }
     return render(request, template, context)
 

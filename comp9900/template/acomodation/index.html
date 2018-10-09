@@ -9,22 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {% load static %}
-    <!-- Favicons-->
-{#    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">#}
-{#    <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'image/apple-touch-icon-57x57-precomposed.png' %}">#}
-{#    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="image/apple-touch-icon-72x72-precomposed.png">#}
-{#    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114"#}
-{#          href="image/apple-touch-icon-114x114-precomposed.png">#}
-{#    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"#}
-{#          href="image/apple-touch-icon-144x144-precomposed.png">#}
-
 
 {% endblock %}
 
 
 {% block content %}
-
-
 
     <!-- Searchbar =============================================== -->
     <div class="parallax-window" id="booking" data-parallax="scroll"
@@ -79,13 +68,13 @@
                         <div id="group_3">
                             <div id="container_5">
                                 <label>City</label>
-                                <input type="text" class="form-control" name="city" id="name_booking"
+                                <input type="text" class="form-control" name="city" id="city"
                                        placeholder="e.g. Sydney">
                             </div>
                             <div id="container_6">
-                                <label>Price</label>
-                                <input type="text" class="form-control" name="price" id="email_booking"
-                                       placeholder="$500">
+                                <label>Price($)</label>
+                                <input type="text" class="form-control" name="price" id="price"
+                                       placeholder="500">
                             </div>
                         </div><!-- End group_3 -->
                         <div id="container_7">
@@ -102,7 +91,7 @@
     <div class="container margin_60_35">
         <h1 class="main_title"><em></em>Welcome to Driver bnb <span>House and Apartment&amp;Studio</span></h1>
         <p class="lead styled">
-            Say something!
+            We have a lot of great rooms here
         </p>
         <div class="row">
             <div class="col-sm-6">
@@ -148,9 +137,7 @@
                         <h3>House </h3>
                         <p>
                             A house will provide you more space and a quiet environment for your family and friends.
-                            Your
-                            will be offerd one or more parking
-                            area and also a yard. You may take your four legs friend with you and perhaps you will get a
+                            Your will be offerd one or more parking area and also a yard. You may take your four legs friend with you and perhaps you will get a
                             chance to enjoy a personal swimming pool.
                         </p>
                         <ul>
@@ -445,6 +432,8 @@
     <div id="dtBox"></div><!-- End datepicker -->
     <script type="text/javascript" src="{% static 'acomodation/js/DateTimePicker.js' %}"></script>
     <script type="text/javascript">$("#dtBox").DateTimePicker();</script>
+
+
 {% endblock script %}
 
 
