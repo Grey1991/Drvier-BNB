@@ -21,7 +21,8 @@
                     First Name
                 </label>
                 <div class="col-sm-9">
-                    <input id="user_first_name" name="user[first_name]" size="30" type="text" value="{{ user.first_name }}">
+                    <input id="user_first_name" name="user[first_name]" size="30" type="text"
+                           value="{{ user.first_name }}">
                 </div>
             </div>
             <br>
@@ -31,7 +32,8 @@
                     Last Name
                 </label>
                 <div class="col-sm-9">
-                    <input id="user_last_name" name="user[last_name]" size="30" type="text" value="{{ user.last_name }}">
+                    <input id="user_last_name" name="user[last_name]" size="30" type="text"
+                           value="{{ user.last_name }}">
                 </div>
             </div>
             <br>
@@ -60,7 +62,7 @@
                 </label>
                 <div class="col-sm-9">
                     <div class="form-inline" id="birth-date">
-                        <select id="profile_date_year" name="profile[date][year]" class="form-control">
+                        <select id="profile_date_year" name="profile[date][year]"  class="form-control">
                             <option value="" selected="selected">Year</option>
                             <option value="2003">2003</option>
                             <option value="2002">2002</option>
@@ -321,7 +323,6 @@
 
 
     <script>
-
         $(document).ready(function () {
             $("#save_form").click(function () {
                 var first_name = document.getElementById("user_first_name").value;
@@ -333,34 +334,26 @@
                 var language = document.getElementById("user_profile_info_preferred_language").value;
                 var location = document.getElementById('user_profile_info_current_city').value;
                 var user_description = document.getElementById("user_profile_info_about").value;
-
                 $.ajax({
                     type: "POST",
                     url: "{% url 'userandadmin:editprofile' page_id=1 %}",
                     data: {
                         first_name: first_name,
                         last_name: last_name,
-                        gender : gender,
-                        date_of_birth :birth_year +","+  birth_month + ","+ birth_day,
-                        language : language,
-                        location :location,
-                        user_description:user_description,
+                        gender: gender,
+                        date_of_birth: birth_year + "," + birth_month + "," + birth_day,
+                        language: language,
+                        location: location,
+                        user_description: user_description,
                     },
                     success: function (data, status) {
                         if (data == 1) {
                             alert("saved!");
                         }
                     }
-
                 })
-
-
             });
-
-
         })
-
-
     </script>
 
 

@@ -35,18 +35,20 @@ def register(request):
 
             new_user = models.User()
             new_user.first_name = first_name
+            new_user.set_active()
             new_user.last_name = last_name
             new_user.set_password(password)
             new_user.email = email
             new_user.save()
-            #  发送邮件
-            #
+
+            # 发送邮件
+
             # subject = "Thank you for your registration "
             # message = "welcome to NSWLodge! we are very much appreciate your bussiness./n we will be in touch soon."
             # from_email = settings.EMAIL_HOST_USER
             # to_list = [new_user.email]
-            # send_mail(subject,message,from_email,to_list,fail_silently=True)
-
+            # send = send_mail(subject,message,from_email,to_list,fail_silently=True)
+            # print(send)
 
         return HttpResponse(2)
     else:
@@ -87,6 +89,7 @@ def logout(request):
 
 def editprofile(request,page_id):
     print(page_id)
+    print("editprofile user {}".format(request.user.first_name))
     if page_id == '1':
         if request.method == "POST":
             profileForm = forms.editprofileForm(request.POST)
@@ -106,13 +109,15 @@ def editprofile(request,page_id):
                 user.first_name = first_name
                 user.last_name = last_name
 
-                userProfile = models.UserProfile()
-                userProfile.user = request.user
+                if not user.userprofile:
+                    userProfile = models.UserProfile()
+                    userProfile.user = request.user
 
                 user.userprofile.GENDER_CHOICES = gender
                 user.userprofile.language = language
                 user.userprofile.user_description = user_description
                 user.userprofile.location = location
+                user.userprofile.save()
                 user.save()
 
                 return HttpResponse(1)

@@ -234,7 +234,6 @@ def add_review(request):
 def property_detail(request, property_id, trip_id):
 
     tr_list = TransAndReview.objects.filter(pid=property_id,status='S')
-    print('trip_id is {}'.format(trip_id))
 
     _sum_rating = []
     ############ 评论列表
@@ -248,6 +247,7 @@ def property_detail(request, property_id, trip_id):
         review_list['ratings_p'] = ["1"]*tr.ratings
         review_list['ratings_n'] = ["1"]*(5 - tr.ratings)
         review_lists.append(review_list)
+
 
     ############# 评论概况
     review_summary = {}

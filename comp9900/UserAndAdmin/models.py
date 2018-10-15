@@ -101,6 +101,9 @@ class User(AbstractBaseUser, PermissionsMixin):
     def get_short_name(self):
         return self.email
 
+    def set_active(self):
+        self.active = True
+
     @property
     def is_staff(self):
         return self.staff
