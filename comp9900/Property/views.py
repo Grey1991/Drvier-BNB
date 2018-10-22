@@ -242,13 +242,15 @@ def property_detail(request, property_id, trip_id):
         review_list={}
         review_list['name'] = User.object.filter(email=tr.user_ID)[0].first_name
         review_list['time'] = tr.end_time
+        if tr.comment_content == 'danjieniubi':
+            continue
         review_list['review'] = tr.comment_content
         _sum_rating.append(tr.ratings)
         review_list['ratings_p'] = ["1"]*tr.ratings
         review_list['ratings_n'] = ["1"]*(5 - tr.ratings)
         review_lists.append(review_list)
 
-
+    review_lists = sorted(review_lists,key=lambda x: x["time"],reverse=True)
     ############# 评论概况
     review_summary = {}
     review_summary["num_review"] = len(_sum_rating)

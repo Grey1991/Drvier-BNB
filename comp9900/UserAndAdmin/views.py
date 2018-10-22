@@ -33,6 +33,7 @@ def register(request):
                 return HttpResponse(1)
                 # 当一切都OK的情况下，创建新用户
 
+
             new_user = models.User()
             new_user.first_name = first_name
             new_user.set_active()
@@ -40,6 +41,10 @@ def register(request):
             new_user.set_password(password)
             new_user.email = email
             new_user.save()
+
+            up = models.UserProfile()
+            up.user = new_user
+            up.save()
 
             # 发送邮件
 
@@ -105,13 +110,14 @@ def editprofile(request,page_id):
                 user_description = profileForm.cleaned_data['user_description']
 
                 user = request.user
-                user.date_of_birth = '-'.join(date_of_birth.split(","))
+                if date_of_birth:
+                    user.date_of_birth = '-'.join(date_of_birth.split(","))
                 user.first_name = first_name
                 user.last_name = last_name
 
-                if not user.userprofile:
-                    userProfile = models.UserProfile()
-                    userProfile.user = request.user
+                # if not user.userprofile:
+                #     userProfile = models.UserProfile()
+                #     userProfile.user = request.user
 
                 user.userprofile.GENDER_CHOICES = gender
                 user.userprofile.language = language
@@ -121,7 +127,12 @@ def editprofile(request,page_id):
                 user.save()
 
                 return HttpResponse(1)
-        return render(request,'editprofile_editprofile.html')
+        year = 1888
+        month = ""
+        day = ""
+        if request.user.date_of_birth:
+            year,month,day = str(request.user.date_of_birth).split("-")
+        return render(request,'editprofile_editprofile.html',{"year":year, "month":month,"day":day})
     elif page_id == '2':
         return render(request,'editprofile_photos.html')
     else:
